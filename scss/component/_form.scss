@@ -1,0 +1,73 @@
+form {
+    position: relative;
+    z-index: 30;
+
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+        outline: none;
+        padding: 14px 19px;
+        border-radius: 10px;
+        border: 1px solid var(--Gray);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        color: var(--Title);
+
+        &::placeholder {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            color: var(--Title);
+        }
+    }
+
+    input:-webkit-autofill {
+        background-color: transparent !important;
+        box-shadow: transparent !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        background-color: transparent;
+        overflow: hidden;
+        padding: 0;
+    }
+}
+
+fieldset {
+    width: 100%;
+}
+
+.cols {
+    @include d-flex();
+
+    &.g-20 {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,133 @@
+.calendar-table {
+    max-width: 100%;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.fc-view-harness-active {
+    height: 936px !important;
+}
+
+.fc-scroller {
+    overflow: hidden !important;
+}
+
+.fc-toolbar {
+    display: none !important;
+}
+
+.fc-timegrid-event {
+    inset: 0px -5px 0px -2px !important;
+    border-radius: 0;
+}
+
+.fc-timegrid-body {
+    width: 100% !important;
+
+    .fc-col-header {
+        width: 100% !important;
+    }
+
+    .fc-scroller {
+        width: 100% !important;
+    }
+}
+
+.custom-event {
+    background-color: var(--gray-light) !important;
+    border: none !important;
+    justify-content: space-between;
+}
+
+.custom-title {
+    color: var(--color-title);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: auto;
+}
+
+.custom-time {
+    color: var(--color-paragraph);
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: auto;
+}
+
+.custom-location {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: auto;
+    color: var(--color-title);
+}
+
+
+.fc .fc-timegrid-slot-label {
+    color: var(--color-title);
+}
+
+.fc .fc-col-header-cell-cushion {
+    line-height: 64.5px;
+    text-transform: none;
+}
+
+.calender-item {
+    text-align: center;
+    @include d-flex();
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.column-layout {
+    padding: 30px 0 !important;
+
+    .custom-location {
+        @include d-flex();
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .icon-calendar {
+        width: 40px;
+        height: 40px;
+        @include flex(center, center);
+        border-radius: 50%;
+        background-color: var(--white);
+
+        i {
+            font-size: 16px;
+            color: var(--color-title);
+        }
+    }
+}
+
+.row-layout {
+    padding: 30px 0 !important;
+
+    .custom-location {
+        @include d-flex();
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icon-calendar {
+        i {
+            font-size: 16px;
+            color: var(--color-title);
+        }
+    }
+}
+
+.fc-col-header {
+    margin-bottom: 0;
+}
+
+.fc-direction-ltr {
+    .fc-timegrid-slot-label-frame {
+        text-align: center;
+    }
+}

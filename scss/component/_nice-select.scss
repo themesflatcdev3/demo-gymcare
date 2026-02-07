@@ -1,0 +1,51 @@
+.nice-select {
+    border-color: var(--border) !important;
+    border-radius: 999px;
+    position: relative;
+
+    &::before {
+        content: '\e923';
+        font-family: $fontIcon;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 6px;
+        @include transition3();
+        color: var(--color-paragraph);
+    }
+
+    &::after {
+        display: none;
+    }
+
+    >span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--color-paragraph);
+    }
+
+    &.no-border {
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    &.open {
+        z-index: 50;
+
+        &::before {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &.style-radius-50 {
+        border-radius: 999px;
+        border-color: var(--border-12);
+
+        &::before {
+            color: var(--color-paragraph);
+        }
+    }
+
+}
