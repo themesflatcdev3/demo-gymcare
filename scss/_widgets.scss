@@ -1,3 +1,58 @@
+.tf-marquee {
+    @include d-flex();
+    overflow: hidden;
+    width: 100%;
+    .marquee-wrapper {
+        @include d-flex();
+        animation: infiniteScroll 50s linear infinite;
+        align-items: center;
+        transition: animation-duration 300ms;
+
+        .initial-child-container {
+            flex: 0 0 auto;
+            @include d-flex();
+            min-width: auto;
+            flex-direction: row;
+            align-items: center;
+            gap: 70px;
+
+            .marquee-child-item {
+                display: inline-flex;
+            }
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+    &.marquee-1 {
+        padding: 10px 0;
+        background-color: var(--Neon);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .box-page-title {
     max-width: 66.4%;
     width: 100%;
@@ -206,36 +261,6 @@
             position: absolute;
             bottom: 0;
             right: 162px;
-        }
-    }
-}
-
-.tf-marquee {
-    @include d-flex();
-    overflow: hidden;
-    width: 100%;
-
-    .marquee-wrapper {
-        @include d-flex();
-        animation: infiniteScroll 50s linear infinite;
-        align-items: center;
-        transition: animation-duration 300ms;
-
-        .initial-child-container {
-            flex: 0 0 auto;
-            @include d-flex();
-            min-width: auto;
-            flex-direction: row;
-            align-items: center;
-            gap: 50px;
-
-            .marquee-child-item {
-                display: inline-flex;
-            }
-        }
-
-        &:hover {
-            animation-play-state: paused;
         }
     }
 }

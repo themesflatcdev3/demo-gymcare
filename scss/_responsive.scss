@@ -10,7 +10,7 @@
 @media (min-width: 992px) {
     .page-title {
         .page-title-content {
-            background-attachment: fixed;
+            // background-attachment: fixed;
         }
     }
 
@@ -322,9 +322,6 @@
     }
 
     .page-title {
-        .page-title-content {
-            padding: 230px 130px;
-        }
 
         &.page-details {
             .page-title-content {
@@ -662,9 +659,6 @@
     }
 
     .header {
-        .main-menu {
-            padding-left: 407px;
-        }
 
         &.style-absolute {
             .main-menu {
@@ -850,10 +844,6 @@
         .footer-right {
             max-width: 35%;
         }
-    }
-
-    .nav-btn {
-        display: none;
     }
 
     .page-title-home {
@@ -1079,7 +1069,8 @@
 
     .header {
         .header-content {
-            padding: 15px;
+            padding-top: 15px;
+            padding-right: 15px;
             @include transition3();
         }
 

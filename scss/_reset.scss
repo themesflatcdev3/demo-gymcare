@@ -124,10 +124,6 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    background: var(--white); //change
-}
-
 ol,
 ul {
     list-style: none;
@@ -566,17 +562,24 @@ h6,
     letter-spacing: -0.02em;
 }
 
+.text-1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
 /* link style
 -------------------------------------------------------------- */
 a {
     text-decoration: none;
-    color: var(--color-title);
+    color: var(--Title);
     cursor: pointer;
     @include transition3;
 
     &:hover,
     &:focus {
-        color: var(--Neon);
+        color: var(--Title);
         outline: 0;
         @include transition3;
     }
@@ -648,86 +651,43 @@ a {
     display: flex;
 }
 
-.body-2 {
-    font-size: 18px;
-    line-height: 23px;
-}
-
-.caption-1 {
-    font-size: 14px;
-    line-height: 18px;
-}
-
 .w-max-content{
     width: max-content;
 }
 
-.bg-2 {
-    background-color: var(--bg-2);
+.link {
+    @include transition3;
+    &:hover {
+        color: var(--Neon);
+    }
 }
 
-.bg-cayent {
-    background-color: var(--cayent)
+.text-Neon {
+    color: var(--Neon) !important;
 }
 
-.bg-green {
-    background-color: var(--green)
+.text-Black {
+    color: var(--Black) !important;
 }
 
-.bg-pink {
-    background-color: var(--pink)
+.text-Gray {
+    color: var(--Gray) !important;
 }
 
-.color-title {
-    color: var(--color-title) !important;
+.text-White {
+    color: var(--White) !important;
 }
 
-.color-paragraph {
-    color: var(--color-paragraph) !important;
+.text-Red {
+    color: var(--Red) !important;
 }
 
-.color-white {
-    color: var(--white) !important;
+.text-Title {
+    color: var(--Title) !important;
 }
 
-.color-red {
-    color: var(--red);
-}
-
-.color-red-2 {
-    color: var(--red-2) !important;
-}
-
-.color-black-2 {
-    color: var(--black-2) !important;
-}
-
-.color-yellow {
-    color: var(--yellow) !important;
-}
-
-.color-yellow-2 {
-    color: var(--yellow-2) !important;
-}
-
-.color-yellow-3 {
-    color: var(--yellow-3) !important;
-}
-
-.color-black-4 {
-    color: var(--black-4) !important;
-}
-
-.color-black-5 {
-    color: var(--black-5) !important;
-}
-
-.color-blue-4 {
-    color: var(--blue-4) !important;
-}
-
-.color-text-3 {
-    color: var(--color-text-3) !important;
+.text-Paragraph {
+    color: var(--Paragraph) !important;
 }
 
 .lsp-0 {
@@ -872,6 +832,10 @@ a {
 
 .mt-70 {
     margin-top: 70px !important;
+}
+
+.mb-7 {
+    margin-bottom: 7px;
 }
 
 .mb-10 {
