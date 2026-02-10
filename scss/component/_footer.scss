@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     background-color: var(--Black);
     .footer-inner {
         padding: 120px 15px 100px;
@@ -8,6 +9,8 @@
         display: flex;
         gap: 30px;
         .heading {
+            margin-top: -50px;
+            margin-left: -170px;
             font-weight: 700;
             font-size: 170px;
             line-height: 213px;
@@ -40,6 +43,7 @@
     .footer-newsletter {
         .title {
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .text {
             color: #FFFFFFA6;
@@ -52,13 +56,49 @@
         align-items: center;
         margin-bottom: 70px;
     }
-    .list-menu {
+    .footer-cols {
+        display: flex;
+        gap: 30px 0px;
+        justify-content: space-between;
+        .title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+            margin-bottom: 15px;
+        }
         .menu-item {
+            position: relative;
             color: #FFFFFFA6;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            @include transition3;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 10px;
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color: transparent;
+                transform: rotate(45deg);
+            }
+            &:hover {
+                color: var(--Neon);
+                padding-left: 15px;
+                &::before {
+                    background-color: var(--Neon);
+                }
+            }
+        }
+        .list-menu {
+            display: flex;
+            gap: 0 53px;
         }
     }
     .bottom {
-        padding: 120px 15px 100px;
+        padding: 50px 15px 50px;
         max-width: 1320px;
         margin-left: auto;
         margin-right: auto;

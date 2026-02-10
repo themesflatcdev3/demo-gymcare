@@ -658,7 +658,7 @@ a {
 .link {
     @include transition3;
     &:hover {
-        color: var(--Neon);
+        text-decoration: underline;
     }
 }
 
@@ -792,6 +792,10 @@ a {
 
 .g-10 {
     gap: 10px;
+}
+
+.g-12 {
+    gap: 12px;
 }
 
 .g-15 {
@@ -953,4 +957,15 @@ a {
 .mx-30{
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.tf-grid-layout {
+    display: grid;
+    gap: 70px 30px;
+}
+
+.text-gradient-1 {
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px #FFFFFF4D;
+    -webkit-text-fill-color: transparent;
 }

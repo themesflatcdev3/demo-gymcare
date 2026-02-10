@@ -31,9 +31,17 @@
         background-color: transparent;
         border: 1px solid #0000001A;
         &:hover {
-            background-color: var(--Neon);
-            border-color: var(--Neon);
+            color: var(--White);
+            background-color: var(--Black);
+            border-color: var(--Black);
         }
+    }
+
+    &.style-sm {
+        padding: 11px 23px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
     }
 
 }
