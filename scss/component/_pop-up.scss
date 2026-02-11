@@ -78,12 +78,12 @@
         text-align: end;
     }
     .desc{
-        color: var(--color-paragraph);
+        color: var(--Paragraph);
         margin-bottom: 40px;
     }
 
     .title-content {
-        color: var(--color-title);
+        color: var(--Title);
         margin-bottom: 15px;
     }
 
@@ -92,13 +92,6 @@
         li {
             padding-top: 3px;
             padding-bottom: 3px;
-
-            a{
-                color: var(--color-paragraph);
-                &:hover{
-                    color: var(--red);
-                }
-            }
         }
     }
 

@@ -432,18 +432,6 @@ input[type="submit"] {
     border: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 6px;
-    background: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    vertical-align: sub;
-    /* Addresses excess padding in IE8/9 */
-}
-
 input[type="search"] {
     -webkit-appearance: textfield;
     /* Addresses appearance set to searchfield in S5, Chrome */

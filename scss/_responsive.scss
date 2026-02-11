@@ -537,9 +537,6 @@
         margin-right: 30px;
     }
 
-    .footer {
-        margin: 0 30px 30px;
-    }
 }
 
 @media (min-width: 1501px) {
@@ -2200,12 +2197,6 @@
         padding-right: 15px !important;
     }
 
-    .cols {
-        &.g-30 {
-            gap: 15px;
-        }
-    }
-
     .box-cta {
         &.style-1 {
             padding: 30px 15px;
@@ -2740,11 +2731,7 @@
     }
 
     .cols {
-        flex-wrap: wrap;
-
-        .item {
-            max-width: 100% !important;
-        }
+        flex-direction: column;
     }
 
     .section-appointmrent {
