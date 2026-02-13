@@ -32,6 +32,68 @@
 }
 
 
+.wg-video {
+    position: relative;
+    z-index: 5;
+    @include flex(center, center);
+}
+
+.popup-youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75px;
+    height: 75px;
+    @include flex(center, center);
+    border: 1px solid #FFFFFF1A;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.16) 100%);
+    backdrop-filter: blur(40px);
+    border-radius: 50%;
+    .icon {
+        position: relative;
+        z-index: 2;
+        color: var(--White);
+        font-size: 24px;
+    }
+    .wave {
+        width: 150%;
+        height: 150%;
+        background-color: transparent;
+        border: 1px solid #FFFFFF1A;
+    }
+
+    &:hover {
+        background-color: var(--Neon);
+        .icon {
+            i {
+                color: var(--White);
+            }
+        }
+        .wave {
+            border: 1px solid var(--Neon);
+        }
+    }
+}
+
+.box-gradient-1 {
+    display: inline-flex;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
+}
+
+.heading-section {
+    display: flex;
+    // align-items: start;
+    >* {
+        width: 50%;
+    }
+}
+
+
+
+
 
 
 
@@ -278,148 +340,6 @@
     text-fill-color: transparent;
 }
 
-.wg-video {
-    background-image: url(../image/section/wg-video.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 5;
-    height: 700px;
-    border-radius: 15px;
-    @include flex(center, center);
-
-    &.img-2 {
-        background-image: url(../image/section/wg-video-img2.jpg);
-        height: 430px;
-    }
-
-    &.img-3 {
-        background-image: url(../image/section/img-wg-video-3.jpg);
-        height: auto;
-    }
-
-    &.style-color-black-2 {
-        .popup-youtube {
-            .icon {
-                i {
-                    color: var(--black-2);
-                    font-size: 18px;
-                }
-            }
-
-            &:hover {
-                background-color: var(--black-2);
-
-                .icon {
-                    i {
-                        color: var(--white);
-                    }
-                }
-
-                .wave {
-                    border: 1px solid var(--black-2);
-                }
-            }
-        }
-    }
-
-    &.style-2 {
-        background-image: url(../image/section/bg-wg-video-style-2-h1.jpg);
-        background-position: left;
-        height: 822px;
-
-        .popup-youtube {
-            position: absolute;
-            top: 23%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
-    &.style-3 {
-        background-image: url(../image/section/wg-video-style-3.jpg);
-        height: 600px;
-        border-radius: 10px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(2, 13, 43, 0.2);
-            border-radius: 10px;
-        }
-
-        .popup-youtube {
-            position: absolute;
-            top: 21.8%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            i {
-                color: var(--blue-4);
-            }
-
-            &:hover {
-                background-color: var(--blue-4);
-
-                .wave {
-                    border-color: var(--blue-4);
-                }
-            }
-        }
-    }
-}
-
-.popup-youtube {
-    width: 100px;
-    height: 100px;
-    @include flex(center, center);
-    background-color: var(--white);
-    border-radius: 50%;
-    backdrop-filter: blur(20px);
-
-    .icon {
-        @include flex(center, center);
-        position: relative;
-        z-index: 2;
-
-        i {
-            font-size: 16px;
-            color: var(--yellow-3);
-
-            &.icon-color-red {
-                color: var(--red);
-            }
-        }
-    }
-
-    .wave {
-        width: 150%;
-        height: 150%;
-        background-color: transparent;
-        border: 1px solid var(--white);
-    }
-
-
-
-    &:hover {
-        background-color: var(--red);
-
-        .icon {
-            i {
-                color: var(--white);
-            }
-        }
-
-        .wave {
-            border: 1px solid var(--red);
-        }
-    }
-}
 
 .wave {
     position: absolute;
