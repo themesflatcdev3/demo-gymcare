@@ -171,27 +171,28 @@
 .sidebar-wrap {
     display: grid;
     gap: 50px;
-    .sidebar-categories .categories-item {
-        color: var(--Paragraph);
-        padding-left: 17px;
-        position: relative;
+}
+
+.categories-item {
+    color: var(--Paragraph);
+    padding-left: 17px;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: var(--Paragraph);
+        transform: translateY(-50%) rotate(45deg);
+        @include transition3;
+    }
+    &:hover {
+        color: var(--Title);
+        text-decoration: underline;
         &::before {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            content: '';
-            width: 5px;
-            height: 5px;
-            background-color: var(--Paragraph);
-            transform: translateY(-50%) rotate(45deg);
-            @include transition3;
-        }
-        &:hover {
-            color: var(--Title);
-            text-decoration: underline;
-            &::before {
-                background-color: var(--Title);
-            }
+            background-color: var(--Title);
         }
     }
 }
