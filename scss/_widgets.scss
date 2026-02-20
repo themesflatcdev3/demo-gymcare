@@ -113,7 +113,7 @@
     }
     .image {
         width: 48.8372%;
-        height: 200px;
+        height: 270px;
         @include transition3();
         img {
             width: 100%;
@@ -127,7 +127,6 @@
         opacity: 0;
         visibility: hidden;
         padding-right: 20px;
-        width: 0%;
         width: 331px;
         margin-left: -331px;
         @include transition3();
@@ -152,7 +151,7 @@
         }
         .image {
             width: 31.783%;
-            height: 270px;
+            // height: 270px;
         }
         .content {
             display: block;
@@ -163,8 +162,80 @@
     }
 }
 
+.features-item {
+    display: block;
+    position: relative;
+    padding: 35px;
+    border-radius: 14px;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background-color: var(--Gray);
+        z-index: 1;
+        @include transition3;
+    }
+    .image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .icon {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+    .title {
+        position: relative;
+        z-index: 2;
+        color: var(--Title);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        @include transition3;
+    }
+    .text {
+        position: relative;
+        z-index: 2;
+        color: var(--Paragraph);
+        @include transition3;
+    }
+    &:hover {
+        &::before {
+            background-color: #000000B2;
+        }
+        svg path {
+            fill: var(--Neon);
+        }
+        .title,
+        .text {
+            color: var(--White);
+        }
+    }
+}
 
-
+.team-item {
+    .image {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+    }
+    .name {
+        display: flex;
+        color: var(--Title);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+}
 
 
 
@@ -544,582 +615,6 @@
 
 }
 
-.features-item {
-    padding: 38px 50px 29px;
-    border: 1px solid var(--border);
-    position: relative;
-    @include transition3();
-    border-radius: 15px;
-    overflow: hidden;
-
-    .icon {
-        position: relative;
-        margin-bottom: 22px;
-
-        i {
-            font-size: 55px;
-            color: var(--red);
-        }
-    }
-
-    .title {
-        color: var(--color-title);
-        margin-bottom: 16px;
-        position: relative;
-        letter-spacing: -0.05px;
-    }
-
-    .desc {
-        color: var(--color-paragraph);
-        margin-bottom: 20px;
-        position: relative;
-        max-width: 464px;
-    }
-
-    .number-features {
-        position: absolute;
-        top: 13px;
-        right: 0px;
-        height: 300px;
-        width: 356px;
-        font-weight: 600;
-        font-size: 300px;
-        line-height: 300px;
-    }
-
-
-    &:hover {
-        background-color: var(--white);
-        border-color: var(--white);
-        box-shadow: 10px 4px 60px rgba(193, 193, 193, 0.25);
-    }
-
-    &.style-2 {
-        padding: 40px 40px 38px;
-        border: 0;
-        background-color: var(--white);
-        border-radius: 10px;
-
-        .icon {
-            margin-bottom: 26px;
-            max-width: max-content;
-            @include transition5();
-
-            i {
-                color: var(--black-2);
-            }
-        }
-
-        .title {
-            letter-spacing: -0.4px;
-            margin-bottom: 20px;
-        }
-
-        .desc {
-            margin-bottom: 27px;
-        }
-
-        &:hover {
-            .icon {
-                transform: rotateY(180deg);
-            }
-
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.10);
-        }
-    }
-
-    &.style-3 {
-        padding: 40px 50px 42px;
-        min-height: 484px;
-        @include d-flex();
-        flex-direction: column;
-        justify-content: space-between;
-        border: 0;
-
-        .icon {
-            margin-bottom: 15px;
-
-            i {
-                font-size: 45px;
-            }
-        }
-
-        .title {
-            border-bottom: 1px solid var(--border-4);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-
-        li {
-            @include d-flex();
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-            border-bottom: 1px solid var(--border-4);
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        .number-phone {
-            @include d-flex();
-            align-items: center;
-            gap: 14px;
-
-            .number-phone-icon {
-                width: 36px;
-                height: 36px;
-                background-color: var(--yellow-2);
-                @include flex(center, center);
-                border-radius: 50%;
-
-                i {
-                    color: var(--color-title);
-                    font-size: 15px;
-                }
-            }
-
-            a,
-            span {
-                color: var(--white);
-            }
-        }
-
-        .tf-btn {
-            padding-left: 40px;
-            padding-right: 40px;
-
-            span {
-                display: -webkit-box;
-                -webkit-line-clamp: 1;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-        }
-
-        &:hover {
-            box-shadow: unset;
-        }
-    }
-
-    &.style-4 {
-        padding: 30px 39px 22px;
-        border-radius: 10px;
-        background-color: transparent;
-
-        .icon {
-            margin-bottom: 30px;
-            width: 80px;
-            height: 80px;
-            background-color: var(--gray-4);
-            border-radius: 50%;
-            @include flex(center, center);
-            @include transition5();
-
-            i {
-                font-size: 40px;
-                color: var(--black-4);
-                @include transition5();
-            }
-        }
-
-        .title-box {
-            margin-bottom: 14px;
-
-            a {
-                color: var(--black-4);
-            }
-        }
-
-        .desc {
-            margin-bottom: 17px;
-            @include transition5();
-        }
-
-        .tf-btn {
-            gap: 9px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            top: auto;
-            left: 0;
-            bottom: 0;
-            background-color: var(--black-4);
-            @include transition5();
-        }
-
-        &:hover {
-            border-color: var(--black-4);
-            box-shadow: unset;
-
-            &::before {
-                height: 100%;
-                bottom: auto;
-                top: 0;
-            }
-
-            .icon {
-                background-color: var(--yellow-3);
-
-                i {
-                    color: var(--color-title);
-                }
-            }
-
-            .title-box {
-                position: relative;
-
-                a {
-                    color: var(--white);
-                }
-            }
-
-            .desc {
-                color: var(--white);
-            }
-
-            .tf-btn {
-
-                span,
-                i {
-                    color: var(--white);
-                }
-            }
-        }
-    }
-
-    &.style-3-2 {
-        min-height: 391px;
-        padding: 43px 50px 39px;
-        row-gap: 34px;
-
-        .top-item {
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border-5);
-        }
-
-        .icon {
-            margin-bottom: 0;
-
-            i {
-                font-size: 50px;
-            }
-        }
-
-        .title {
-            border-bottom: 0;
-            padding-bottom: 0;
-            margin-bottom: 0;
-            padding-bottom: 7px;
-        }
-
-        li {
-            padding-bottom: 0;
-            margin-bottom: 20px;
-            border-bottom: 0;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-    }
-
-    &.style-bg-blue-2 {
-        background-color: var(--blue-2);
-
-        .icon {
-            i {
-                color: var(--white);
-            }
-        }
-
-        .title {
-            a {
-                color: var(--white);
-            }
-        }
-
-        li {
-            span {
-                color: var(--white);
-            }
-        }
-    }
-
-    &.style-bg-yellow-2 {
-        background-color: var(--yellow-2);
-
-        .icon {
-            i {
-                color: var(--color-title);
-            }
-        }
-
-        .title {
-            border-bottom-color: var(--border-8);
-
-            a {
-                color: var(--color-title);
-            }
-        }
-    }
-
-    &.style-bg-3 {
-        background-color: var(--bg-3);
-
-        .icon {
-            i {
-                color: var(--white);
-            }
-        }
-
-        .title {
-            a {
-                color: var(--white);
-            }
-        }
-
-        .text {
-            color: var(--white);
-        }
-    }
-
-    &.style-bg-gray-6 {
-        background-color: var(--gray-6);
-
-        .icon {
-            i {
-                color: var(--black-5);
-            }
-        }
-
-        .title {
-            a {
-                color: var(--black-5);
-            }
-        }
-
-        li {
-            span {
-                color: var(--black-5);
-            }
-        }
-    }
-
-    &.style-bg-gray-5 {
-        background-color: var(--gray-5);
-
-        .icon {
-            i {
-                color: var(--black-5);
-            }
-        }
-
-        .title {
-            a {
-                color: var(--black-5);
-            }
-        }
-
-        li {
-            span {
-                color: var(--black-5);
-            }
-        }
-    }
-
-    &.style-bg-4 {
-        background-color: var(--bg-4);
-        padding: 40px 50px 39px;
-
-        .icon {
-            i {
-                color: var(--black-5);
-            }
-        }
-
-        .title {
-            a {
-                color: var(--black-5);
-            }
-        }
-
-        .text {
-            color: var(--black-5);
-        }
-
-        .number-phone {
-            .number-phone-icon {
-                background-color: var(--black-5);
-
-                i {
-                    color: var(--white);
-                }
-            }
-
-            span,
-            a {
-                color: var(--black-5);
-            }
-        }
-    }
-
-    &.style-5 {
-        padding: 40px 15px;
-        border-radius: 7px;
-        background-color: var(--white);
-        text-align: center;
-        border: 0;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: auto;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: var(--blue-4);
-            @include transition5();
-        }
-
-        .icon {
-            margin-bottom: 46px;
-            @include transition5();
-        }
-
-        i {
-            font-size: 65px;
-            color: var(--blue-4);
-            @include transition5();
-        }
-
-        .title {
-            margin-bottom: 0;
-            letter-spacing: -0.4px;
-
-            a {
-                color: var(--black-4);
-            }
-        }
-
-        .desc {
-            margin-bottom: 17px;
-        }
-
-        &:hover {
-            box-shadow: none;
-
-            &::before {
-                top: 0;
-                bottom: auto;
-                height: 100%;
-            }
-
-            .icon {
-                transform: rotateY(-180deg);
-
-                i {
-                    color: var(--white);
-                }
-            }
-
-            .title {
-
-                a {
-                    color: var(--white);
-                }
-            }
-        }
-    }
-
-    &.style-6 {
-        padding: 40px 50px;
-        border-radius: 15px;
-
-        .icon {
-            margin-bottom: 21px;
-        }
-
-        .title {
-            margin-bottom: 72px;
-        }
-
-        .desc {
-            margin-bottom: 21px;
-        }
-
-        .number-features {
-            top: -30px;
-            right: 20px;
-            font-size: 200px;
-            line-height: 200px;
-            width: 235px;
-        }
-
-        .tf-btn {
-            padding-left: 48px;
-            padding-right: 50px;
-
-        }
-
-        &:hover {
-            box-shadow: none;
-            border-color: var(--border);
-        }
-    }
-
-    &.bg-gray-1 {
-        background-color: var(--gray-1);
-    }
-
-    &.bg-gray-2 {
-        background-color: var(--gray-2);
-    }
-
-    &.bg-gray-3 {
-        background-color: var(--gray-3);
-    }
-
-    &.style-bg-gray-dark {
-        background-color: var(--gray-dark);
-    }
-
-    &.style-bg-gray-light {
-        background-color: var(--gray-light);
-    }
-
-    &.style-bg-5 {
-        background: #FFECEA;
-
-        .number-phone {
-            .number-phone-icon {
-                background-color: var(--red);
-
-                i {
-                    color: var(--white);
-                }
-            }
-
-            span,
-            a {
-                color: var(--color-title);
-            }
-        }
-    }
-
-}
-
 .about-item {
     .number-item {
         width: 50px;
@@ -1459,163 +954,6 @@
             }
         }
     }
-}
-
-.team-item {
-    padding: 30px 40px;
-
-    .name-team {
-        margin-bottom: 5px;
-
-        a {
-            color: var(--color-title);
-            letter-spacing: 0.4px;
-
-            &:hover {
-                color: var(--red);
-            }
-        }
-    }
-
-    .position {
-        color: var(--color-paragraph);
-
-        &:hover {
-            color: var(--red);
-        }
-    }
-
-    .top-item {
-        margin-bottom: 36px;
-    }
-
-    .image {
-        border-radius: 50%;
-        max-width: 210px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
-    }
-
-    .bottom-btn {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .post-social {
-        justify-content: center;
-        gap: 7px;
-    }
-
-    .tf-btn {
-        padding: 16px 29px 15px 30px;
-    }
-
-    &.style-border {
-        border: 1px solid var(--border);
-        border-radius: 7px;
-        @include transition3();
-        text-align: center;
-        padding: 28px 15px 33px;
-
-        .top-item {
-            margin-bottom: 27px;
-        }
-
-        .name-team {
-            margin-bottom: 3px;
-
-            a {
-                letter-spacing: unset;
-            }
-        }
-
-        .image {
-            margin-bottom: 35px;
-        }
-
-        &:hover {
-            background-color: var(--white);
-            box-shadow: 10px 4px 60px rgba(193, 193, 193, 0.15);
-        }
-    }
-
-    &.style-2 {
-        padding: 0;
-
-        .top-item {
-            margin-bottom: 30px;
-            position: relative;
-
-            .tf-btn-plus {
-                position: absolute;
-                top: 0;
-                right: 0;
-                opacity: 0;
-                visibility: hidden;
-                @include transition3();
-            }
-
-            .tf-btn {
-                width: max-content;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                opacity: 0;
-                visibility: hidden;
-                @include transition3();
-            }
-        }
-
-        .image {
-            border-radius: 7px;
-            max-width: 100%;
-            margin-bottom: 0;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .name-team {
-            margin-bottom: 5px;
-
-            a {
-                color: var(--color-title);
-                letter-spacing: unset;
-
-                &:hover {
-                    color: var(--red);
-                }
-            }
-        }
-
-        .tf-btn {
-            @include d-flex();
-            justify-content: center;
-        }
-
-        &:hover {
-            .top-item {
-                .tf-btn-plus {
-                    top: 10px;
-                    right: 10px;
-                    opacity: 1;
-                    visibility: visible;
-                }
-
-                .tf-btn {
-                    opacity: 1;
-                    visibility: visible;
-                    bottom: 20px;
-                }
-            }
-        }
-    }
-
 }
 
 .lab-item {
