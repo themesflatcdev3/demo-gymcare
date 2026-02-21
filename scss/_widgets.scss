@@ -237,7 +237,97 @@
     }
 }
 
+.pricing-item {
+    padding: 38px 48px;
+    border-radius: 14px;
+    border: 2px solid #727577;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.16) 98.45%);
+    background: #000000E5;
+    backdrop-filter: blur(40px);
+    .icon {
+        margin-bottom: 30px;
+    }
+    .title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: var(--White);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .sub {
+        color: #FFFFFFA6;
+        margin-bottom: 40px;
+    }
+    .price {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        color: var(--White);
+    }
+    .per {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: var(--White);
+        margin-bottom: 10px;
+    }
+    .desc {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        color: var(--White);
+        text-transform: uppercase;
+        margin-top: 40px;
+        margin-bottom: 21px;
+    }
+    .list-text {
+        display: grid;
+        gap: 15px;
+        margin-bottom: 50px;
+        .text-item {
+            color: #FFFFFFA6;
+            padding-left: 17px;
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #FFFFFFA6;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+    }
+}
 
+.tf-switch-check {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    -webkit-appearance: none;
+    background-color: var(--Neon);
+    border-radius: 99px;
+    transition: 0.3s;
+    &::before {
+        content: "";
+        border-radius: 99px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: var(--Black);
+        transition: 0.2s;
+    }
+    &:checked {
+        &::before {
+            left: 35px;
+        }
+    }
+}
 
 
 
@@ -3033,95 +3123,6 @@
         }
     }
 }
-
-.pricing-item {
-    padding: 10px;
-    background-image: url(../image/section/pricing-item-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-
-    .pricing-content {
-        padding: 48px 50px 45px;
-        max-width: 610px;
-        background-color: var(--white);
-        border-radius: 10px;
-
-        .title {
-            margin-bottom: 30px;
-            padding-bottom: 31px;
-            border-bottom: 1px solid var(--border-7);
-            letter-spacing: -0.6px;
-        }
-    }
-
-    li {
-        @include d-flex();
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 20px;
-        padding-top: 20px;
-        border-bottom: 1px solid var(--border);
-        gap: 15px;
-
-        h6 {
-            color: var(--color-paragraph);
-        }
-
-        .name-price {
-            position: relative;
-            padding-left: 20px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 5px;
-                height: 5px;
-                background-color: var(--red);
-                border-radius: 50%;
-            }
-        }
-
-        &:first-child {
-            padding-top: 0;
-        }
-
-        &:last-child {
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-    }
-
-    &.style-right {
-        @include d-flex();
-        justify-content: end;
-
-        .pricing-content {
-            flex-grow: 1;
-        }
-    }
-
-    &.img-2 {
-        background-image: url(../image/section/pricing-item-2.jpg);
-    }
-
-    &.img-3 {
-        background-image: url(../image/section/pricing-item-3.jpg);
-    }
-
-    &.img-4 {
-        background-image: url(../image/section/pricing-item-4.jpg);
-    }
-
-    &.img-5 {
-        background-image: url(../image/section/pricing-item-5.jpg);
-    }
-}
-
 
 .progress-circle-svg {
     position: relative;

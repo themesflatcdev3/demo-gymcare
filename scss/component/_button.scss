@@ -46,6 +46,18 @@
         line-height: 18px;
     }
 
+    &.style-2 {
+        padding: 15px;
+        color: var(--Paragraph);
+        background-color: transparent;
+        border: 1px solid #FFFFFF1A;
+        &:hover {
+            color: var(--Title);
+            background-color: var(--Neon);
+            border-color: var(--Neon);
+        }
+    }
+
 }
 
 .tf-btn-newsletter {

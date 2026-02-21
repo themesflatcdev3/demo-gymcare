@@ -448,10 +448,6 @@ textarea {
   /* Improves readability and alignment in all browsers */
 }
 
-input[type=checkbox] {
-  display: inline;
-}
-
 button,
 input[type=button],
 input[type=reset],
@@ -2019,6 +2015,17 @@ a:hover, a:focus {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+}
+.tf-btn.style-2 {
+  padding: 15px;
+  color: var(--Paragraph);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+}
+.tf-btn.style-2:hover {
+  color: var(--Title);
+  background-color: var(--Neon);
+  border-color: var(--Neon);
 }
 
 .tf-btn-newsletter {
@@ -5397,6 +5404,96 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 5px;
 }
 
+.pricing-item {
+  padding: 38px 48px;
+  border-radius: 14px;
+  border: 2px solid #727577;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.16) 98.45%);
+  background: rgba(0, 0, 0, 0.8980392157);
+  backdrop-filter: blur(40px);
+}
+.pricing-item .icon {
+  margin-bottom: 30px;
+}
+.pricing-item .title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--White);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.pricing-item .sub {
+  color: rgba(255, 255, 255, 0.6509803922);
+  margin-bottom: 40px;
+}
+.pricing-item .price {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--White);
+}
+.pricing-item .per {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--White);
+  margin-bottom: 10px;
+}
+.pricing-item .desc {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--White);
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 21px;
+}
+.pricing-item .list-text {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.pricing-item .list-text .text-item {
+  color: rgba(255, 255, 255, 0.6509803922);
+  padding-left: 17px;
+  position: relative;
+}
+.pricing-item .list-text .text-item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.6509803922);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.tf-switch-check {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  background-color: var(--Neon);
+  border-radius: 99px;
+  transition: 0.3s;
+}
+.tf-switch-check::before {
+  content: "";
+  border-radius: 99px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: var(--Black);
+  transition: 0.2s;
+}
+.tf-switch-check:checked::before {
+  left: 35px;
+}
+
 .box-page-title {
   max-width: 66.4%;
   width: 100%;
@@ -7788,88 +7885,6 @@ a.mapboxgl-ctrl-logo {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.pricing-item {
-  padding: 10px;
-  background-image: url(../image/section/pricing-item-1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.pricing-item .pricing-content {
-  padding: 48px 50px 45px;
-  max-width: 610px;
-  background-color: var(--white);
-  border-radius: 10px;
-}
-.pricing-item .pricing-content .title {
-  margin-bottom: 30px;
-  padding-bottom: 31px;
-  border-bottom: 1px solid var(--border-7);
-  letter-spacing: -0.6px;
-}
-.pricing-item li {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border-bottom: 1px solid var(--border);
-  gap: 15px;
-}
-.pricing-item li h6 {
-  color: var(--color-paragraph);
-}
-.pricing-item li .name-price {
-  position: relative;
-  padding-left: 20px;
-}
-.pricing-item li .name-price::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  background-color: var(--red);
-  border-radius: 50%;
-}
-.pricing-item li:first-child {
-  padding-top: 0;
-}
-.pricing-item li:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-.pricing-item.style-right {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: end;
-}
-.pricing-item.style-right .pricing-content {
-  flex-grow: 1;
-}
-.pricing-item.img-2 {
-  background-image: url(../image/section/pricing-item-2.jpg);
-}
-.pricing-item.img-3 {
-  background-image: url(../image/section/pricing-item-3.jpg);
-}
-.pricing-item.img-4 {
-  background-image: url(../image/section/pricing-item-4.jpg);
-}
-.pricing-item.img-5 {
-  background-image: url(../image/section/pricing-item-5.jpg);
 }
 
 .progress-circle-svg {
