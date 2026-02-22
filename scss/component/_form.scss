@@ -59,6 +59,16 @@ form {
                 color: var(--Title);
             }
         }
+        &.style-3 {
+            padding: 15px 19px;
+            font-size: 20px;
+            border: 1px solid #FFFFFF1A;
+            background: #FFFFFF0D;
+            color: var(--White);
+            &::placeholder {
+                color: var(--White);
+            }
+        }
     }
 
     input:-webkit-autofill {
@@ -79,6 +89,16 @@ form {
             color: var(--Title);
             &::placeholder {
                 color: var(--Title);
+            }
+        }
+        &.style-3 {
+            padding: 15px 19px;
+            font-size: 20px;
+            border: 1px solid #FFFFFF1A;
+            background: #FFFFFF0D;
+            color: var(--White);
+            &::placeholder {
+                color: var(--White);
             }
         }
     }
@@ -151,4 +171,9 @@ fieldset {
         transform: translateY(-50%);
         right: 10px;
     }
+}
+
+.form-booking {
+    display: grid;
+    gap: 20px;
 }

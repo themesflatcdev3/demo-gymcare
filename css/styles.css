@@ -2300,6 +2300,44 @@ form input[type=tel].style-2::placeholder,
 form input[type=color].style-2::placeholder {
   color: var(--Title);
 }
+form textarea.style-3,
+form input[type=text].style-3,
+form input[type=password].style-3,
+form input[type=datetime].style-3,
+form input[type=datetime-local].style-3,
+form input[type=date].style-3,
+form input[type=month].style-3,
+form input[type=time].style-3,
+form input[type=week].style-3,
+form input[type=number].style-3,
+form input[type=email].style-3,
+form input[type=url].style-3,
+form input[type=search].style-3,
+form input[type=tel].style-3,
+form input[type=color].style-3 {
+  padding: 15px 19px;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  background: rgba(255, 255, 255, 0.0509803922);
+  color: var(--White);
+}
+form textarea.style-3::placeholder,
+form input[type=text].style-3::placeholder,
+form input[type=password].style-3::placeholder,
+form input[type=datetime].style-3::placeholder,
+form input[type=datetime-local].style-3::placeholder,
+form input[type=date].style-3::placeholder,
+form input[type=month].style-3::placeholder,
+form input[type=time].style-3::placeholder,
+form input[type=week].style-3::placeholder,
+form input[type=number].style-3::placeholder,
+form input[type=email].style-3::placeholder,
+form input[type=url].style-3::placeholder,
+form input[type=search].style-3::placeholder,
+form input[type=tel].style-3::placeholder,
+form input[type=color].style-3::placeholder {
+  color: var(--White);
+}
 form input:-webkit-autofill {
   background-color: transparent !important;
   box-shadow: transparent !important;
@@ -2319,6 +2357,16 @@ form textarea.style-2 {
 }
 form textarea.style-2::placeholder {
   color: var(--Title);
+}
+form textarea.style-3 {
+  padding: 15px 19px;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  background: rgba(255, 255, 255, 0.0509803922);
+  color: var(--White);
+}
+form textarea.style-3::placeholder {
+  color: var(--White);
 }
 form button,
 form input[type=button],
@@ -2394,6 +2442,11 @@ fieldset {
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
+}
+
+.form-booking {
+  display: grid;
+  gap: 20px;
 }
 
 /*------------ slider ---------------- */
@@ -3290,281 +3343,82 @@ form.form-search-siderbar .tf-btn-search i {
 
 /*------------ testimonial ---------------- */
 .testimonials-item {
-  padding: 50px 60px 43px;
-  background-color: var(--gray-light);
-  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
 }
-.testimonials-item .rating {
-  margin-bottom: 13px;
-  gap: 7px;
-}
-.testimonials-item .rating i {
-  color: var(--red);
-  font-size: 18px;
-}
-.testimonials-item .title {
-  margin-bottom: 70px;
-}
-.testimonials-item .desc {
-  margin-bottom: 78.38px;
-  letter-spacing: 0.2px;
-}
-.testimonials-item .icon {
-  margin-bottom: 14px;
-}
-.testimonials-item .icon i {
-  font-size: 51px;
-  color: var(--color-title);
-}
-.testimonials-item .user-testimonials {
-  gap: 10px 6px;
-  flex-wrap: wrap;
-}
-.testimonials-item .user-testimonials .position {
-  color: var(--color-paragraph);
-}
-.testimonials-item.style-1 {
-  height: 100%;
-}
-.testimonials-item.style-video {
-  padding: 0;
+.testimonials-item .reviews {
   position: relative;
+  text-align: end;
+  flex-shrink: 0;
+  width: 190px;
+  padding: 30px;
+  border-radius: 14px;
   overflow: hidden;
-  height: 100%;
+  background-color: var(--Neon);
 }
-.testimonials-item.style-video .image {
-  height: 100%;
-}
-.testimonials-item.style-video .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.testimonials-item.style-video .popup-youtube {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 25px;
-}
-.testimonials-item.style-video .icon {
-  margin-bottom: 0;
-}
-.testimonials-item.style-video .testimonials-content {
-  position: absolute;
-  padding: 30px 40px;
-  bottom: 0;
-  left: 0;
-}
-.testimonials-item.style-video .user-testimonials .name-user a {
-  color: var(--white);
-}
-.testimonials-item.style-video .user-testimonials .position {
-  color: var(--white);
-}
-.testimonials-item.style-2 {
-  background-color: var(--bg-2);
-  position: relative;
-  padding: 48px 80px;
-}
-.testimonials-item.style-2 .rating {
-  margin-bottom: 20px;
-}
-.testimonials-item.style-2 .img-item {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.testimonials-item.style-2 .title a {
-  color: var(--black-2);
-  letter-spacing: -0.6px;
-}
-.testimonials-item.style-2 .desc {
-  letter-spacing: 0px;
-  margin-bottom: 85.38px;
-}
-.testimonials-item.style-2 .icon i {
-  color: var(--black-2);
-}
-.testimonials-item.style-3 {
-  position: relative;
-  padding: 70px 50px 40px;
-  background-color: var(--white);
-  border-radius: 7px;
-}
-.testimonials-item.style-3 .rating {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.testimonials-item.style-3 .user-testimonials {
-  padding-bottom: 37px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid var(--border-3);
-  gap: 20px;
-}
-.testimonials-item.style-3 .user-testimonials .img-avartar {
-  max-width: 50px;
-  border-radius: 50%;
-}
-.testimonials-item.style-3 .desc {
-  display: -webkit-box;
-  margin-bottom: 0;
-  letter-spacing: 0px;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.testimonials-item.style-3 .name-user {
-  margin-bottom: 3px;
-}
-.testimonials-item.style-3 .position {
-  letter-spacing: -0.3px;
-}
-.testimonials-item.style-4 {
-  background-color: var(--bg-2);
-  position: relative;
-  padding: 50px 60px;
-}
-.testimonials-item.style-4 .img-item {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.testimonials-item.style-4 .bottom-item {
-  padding: 20px 30px;
-  background-color: var(--white);
-  border-radius: 15px;
-}
-.testimonials-item.style-4 .user-testimonials .img-avartar {
-  display: block;
-  max-width: 65px;
-}
-.testimonials-item.style-4 .icon {
-  margin-bottom: 0;
-}
-.testimonials-item.style-4 .icon i {
-  color: var(--yellow-3);
-}
-.testimonials-item.style-4 .title {
-  margin-bottom: 50px;
-}
-.testimonials-item.style-4 .desc {
-  margin-bottom: 50px;
-  letter-spacing: -0.56px;
-}
-.testimonials-item.style-4 .rating i {
-  color: var(--yellow-3);
-}
-.testimonials-item.style-5 {
-  background-image: url(../image/testimonials-item/testimonials-item-style-5.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  border-radius: 10px;
-  padding: 10px;
-}
-.testimonials-item.style-5 .heading-section {
-  max-width: 719px;
-  margin: 90px 0;
-}
-.testimonials-item.style-5 .box-funfact {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 49px 51px 35px;
-  max-width: 365px;
-  width: 100%;
-}
-.testimonials-item.style-5 .box-funfact .rating {
-  margin-bottom: 5px;
-}
-.testimonials-item.style-5 .box-funfact .rating i {
-  font-size: 18px;
-}
-.testimonials-item.style-5 .testimonials-content {
-  max-width: 670px;
-  padding: 70px 71px;
-  background-color: var(--white);
-  border-radius: 10px;
-  position: relative;
-}
-.testimonials-item.style-5 .testimonials-content .img-item {
-  position: absolute;
-  top: 63%;
-  left: 0;
-  transform: translateY(-50%);
-}
-.testimonials-item.style-5 .testimonials-content .rating {
-  margin-bottom: 20px;
-}
-.testimonials-item.style-5 .testimonials-content .rating i {
-  color: var(--black-5);
-}
-.testimonials-item.style-5 .testimonials-content .title {
-  margin-bottom: 50px;
-}
-.testimonials-item.style-5 .testimonials-content .title a {
-  color: var(--black-5);
-}
-.testimonials-item.style-5 .testimonials-content .desc {
-  letter-spacing: -0.8px;
-  margin-bottom: 88.38px;
-}
-.testimonials-item.style-5 .testimonials-content .icon {
-  margin-bottom: 17px;
-}
-.testimonials-item.style-5 .testimonials-content .img-avartar {
-  display: block;
-  max-width: 85px;
-  border-radius: 50%;
-}
-.testimonials-item.style-5 .testimonials-content .img-avartar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.testimonials-item.style-5 .testimonials-content .user-testimonials {
-  margin-bottom: 30px;
-}
-.testimonials-item.style-5::before {
-  content: "";
+.testimonials-item .reviews .bg-icon {
   position: absolute;
   top: 0;
   left: 0;
+}
+.testimonials-item .reviews .icon {
+  margin-bottom: 50px;
+  color: var(--Black);
+}
+.testimonials-item .reviews .number {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 65px;
+  color: var(--Black);
+}
+.testimonials-item .reviews .text {
+  font-weight: 600;
+  color: var(--Black);
+}
+.testimonials-item .image {
+  margin-left: 30px;
+  margin-right: 70px;
+  flex-shrink: 0;
+  width: 300px;
+  height: 370px;
+}
+.testimonials-item .image img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(2, 13, 43, 0.5) 0%, rgba(2, 13, 43, 0) 100%);
-  border-radius: 15px;
+  object-fit: cover;
+  border-radius: 14px;
 }
-.testimonials-item.style-6 {
-  background-color: var(--bg-2);
-  padding: 40px 70px 34px;
-  position: relative;
+.testimonials-item .content {
+  padding: 17px 0 16px;
 }
-.testimonials-item.style-6 .img-item {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.testimonials-item .ratings {
+  margin-bottom: 20px;
 }
-.testimonials-item.style-6 .rating {
-  margin-bottom: 13px;
-}
-.testimonials-item.style-6 .title {
+.testimonials-item .desc {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: var(--Title);
+  text-transform: uppercase;
   margin-bottom: 40px;
 }
-.testimonials-item.style-6 .desc {
-  margin-bottom: 40px;
+.testimonials-item .quote-icon {
+  margin-bottom: 15px;
 }
-.testimonials-item.style-6 .user-testimonials {
-  padding-bottom: 6px;
+.testimonials-item .title {
+  color: var(--Title);
+  text-transform: uppercase;
+  margin-bottom: 3px;
 }
-.testimonials-item.style-6 .icon {
-  margin-bottom: 0;
+
+.ratings {
+  display: flex;
+  gap: 7px;
 }
-.testimonials-item.style-6 .icon i {
-  color: var(--red);
-  font-size: 46px;
+.ratings .icon {
+  font-size: 24px;
+  color: #FBA402;
 }
 
 .sw-pagination-tes.style-color-black-2 {
@@ -5492,6 +5346,75 @@ a.mapboxgl-ctrl-logo {
 }
 .tf-switch-check:checked::before {
   left: 35px;
+}
+
+.list-avatar {
+  display: flex;
+}
+.list-avatar .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--Black);
+  background-color: var(--Black);
+}
+.list-avatar .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.list-avatar .item:not(:first-child) {
+  margin-left: -7px;
+}
+
+.registation-wrap {
+  padding: 20px 30px;
+  display: grid;
+  gap: 20px;
+  border-radius: 14px;
+  background-color: var(--Neon);
+}
+.registation-wrap .text {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--Title);
+  text-transform: uppercase;
+}
+
+.booking-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 70px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.booking-box .image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+.booking-box::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  z-index: -1;
+  background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 90%);
+}
+.booking-box .sub-heading {
+  margin-bottom: 10px;
+}
+.booking-box .heading {
+  margin-bottom: 50px;
+  color: var(--White);
 }
 
 .box-page-title {

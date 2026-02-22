@@ -329,6 +329,74 @@
     }
 }
 
+.list-avatar {
+    display: flex;
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--Black);
+        background-color: var(--Black);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:not(:first-child) {
+            margin-left: -7px;
+        }
+    }
+}
+
+.registation-wrap {
+    padding: 20px 30px;
+    display: grid;
+    gap: 20px;
+    border-radius: 14px;
+    background-color: var(--Neon);
+    .text {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: var(--Title);
+        text-transform: uppercase;
+    }
+}
+
+.booking-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 70px;
+    border-radius: 14px;
+    overflow: hidden;
+    .image {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        z-index: -2;
+    }
+    &::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+        z-index: -1;
+        background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 90%);
+    }
+    .sub-heading {
+        margin-bottom: 10px;
+    }
+    .heading {
+        margin-bottom: 50px;
+        color: var(--White);
+    }
+}
 
 
 
