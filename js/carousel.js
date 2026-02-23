@@ -1,4 +1,4 @@
-if ($(".tf-sw-slideshow").length > 0) {
+if ($(".tf-sw-slideshow").length) {
     var tfSwSlideshow = $(".tf-sw-slideshow");
     var preview = tfSwSlideshow.data("preview");
     var tablet = tfSwSlideshow.data("tablet");
@@ -59,7 +59,7 @@ if ($(".tf-sw-slideshow").length > 0) {
     var swiper = new Swiper(".tf-sw-slideshow", swiperSlider);
 }
 
-if ($(".tf-swiper").length > 0) {
+if ($(".tf-swiper").length) {
     $(".tf-swiper").each(function () {
         const config = $(this).data("swiper");
         if (this.swiper) {
@@ -67,45 +67,4 @@ if ($(".tf-swiper").length > 0) {
         }
         new Swiper(this, config);
     });
-}
-
-if ($(".flat-thumbs-tes").length > 0) {
-    var spaceThumbLg = $(".tf-thumb-tes").data("space-lg");
-    var spaceThumb = $(".tf-thumb-tes").data("space");
-    var spaceTesLg = $(".tf-tes-main").data("space-lg");
-    var spaceTes = $(".tf-tes-main").data("space");
-    var effect = $(".flat-thumbs-tes").data("effect") || "slide";
-    const swThumb = new Swiper(".tf-thumb-tes", {
-        speed: 800,
-        spaceBetween: spaceThumb,
-        effect: effect,
-        fadeEffect: effect === "fade" ? { crossFade: true } : undefined,
-        breakpoints: {
-            768: {
-                spaceBetween: spaceThumbLg,
-            },
-        },
-    });
-    const swTesMain = new Swiper(".tf-tes-main", {
-        speed: 800,
-        navigation: {
-            nextEl: ".nav-next-tes",
-            prevEl: ".nav-prev-tes",
-        },
-        effect: effect,
-        fadeEffect: effect === "fade" ? { crossFade: true } : undefined,
-        pagination: {
-            el: ".sw-pagination-tes",
-            clickable: true,
-        },
-        spaceBetween: spaceTes,
-        breakpoints: {
-            768: {
-                spaceBetween: spaceTesLg,
-            },
-        },
-    });
-
-    swThumb.controller.control = swTesMain;
-    swTesMain.controller.control = swThumb;
 }

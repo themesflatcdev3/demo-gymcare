@@ -492,7 +492,7 @@ h5,
 h6,
 .h6 {
     font-family: $font-main;
-    color: var(--on-suface-container);
+    color: var(--Black);
     margin: 0;
     text-rendering: optimizeLegibility;
 }
@@ -952,4 +952,20 @@ a {
     -webkit-background-clip: text;
     -webkit-text-stroke: 1px #FFFFFF4D;
     -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px var(--Title);
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-3 {
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px var(--White);
+    -webkit-text-fill-color: transparent;
+}
+
+.p-10 {
+    padding: 10px;
 }
