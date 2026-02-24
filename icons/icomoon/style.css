@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?40tyrk');
-  src:  url('fonts/icomoon.eot?40tyrk#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?40tyrk') format('truetype'),
-    url('fonts/icomoon.woff?40tyrk') format('woff'),
-    url('fonts/icomoon.svg?40tyrk#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?paupgo');
+  src:  url('fonts/icomoon.eot?paupgo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?paupgo') format('truetype'),
+    url('fonts/icomoon.woff?paupgo') format('woff'),
+    url('fonts/icomoon.svg?paupgo#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,78 +25,165 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-play:before {
-  content: "\e9d7";
+.icon-moon:before {
+  content: "\e90d";
 }
-.icon-chevron-down:before {
-  content: "\e934";
+.icon-house-line:before {
+  content: "\e900";
 }
-.icon-chevron-up:before {
-  content: "\e937";
+.icon-notebook:before {
+  content: "\e901";
 }
-.icon-fb:before {
+.icon-ArrowUp:before {
   content: "\e902";
 }
-.icon-gym-svgrepo-com-1:before {
+.icon-ArrowsOut:before {
   content: "\e903";
 }
-.icon-star:before {
+.icon-BellSimple:before {
+  content: "\e904";
+}
+.icon-CaretDown:before {
+  content: "\e905";
+}
+.icon-CaretLeft:before {
   content: "\e906";
 }
-.icon-time:before {
+.icon-chat:before {
   content: "\e907";
 }
-.icon-x:before {
+.icon-Faders:before {
   content: "\e908";
 }
-.icon-search:before {
+.icon-CheckCircle:before {
   content: "\e909";
 }
-.icon-basecamp:before {
+.icon-CloudArrowUp:before {
+  content: "\e90a";
+}
+.icon-Copy:before {
   content: "\e90b";
 }
-.icon-share-2:before {
-  content: "\e9ee";
-}
-.icon-chevron-left:before {
-  content: "\e935";
-}
-.icon-chevron-right:before {
-  content: "\e936";
-}
-.icon-arrow-up-right:before {
-  content: "\e917";
-}
-.icon-send:before {
-  content: "\e9ea";
-}
-.icon-facebook-f:before {
-  content: "\e926";
-}
-.icon-instagram:before {
-  content: "\e930";
-}
-.icon-linkedin-in:before {
-  content: "\e932";
-}
-.icon-twitter-x:before {
-  content: "\e954";
-}
-.icon-arrow-down:before {
+.icon-CurrencyCircleDollar:before {
   content: "\e90c";
 }
-.icon-arrow-left:before {
+.icon-DiscordLogo:before {
+  content: "\e90e";
+}
+.icon-DownloadSimple:before {
+  content: "\e90f";
+}
+.icon-EnvelopeSimple:before {
   content: "\e910";
 }
-.icon-arrow-up:before {
-  content: "\e914";
+.icon-Export:before {
+  content: "\e911";
+}
+.icon-Eye:before {
+  content: "\e912";
+}
+.icon-FacebookLogo:before {
+  content: "\e913";
 }
 .icon-arrow-right:before {
-  content: "\e912";
+  content: "\e914";
+}
+.icon-Flag:before {
+  content: "\e915";
+}
+.icon-GlobeSimple:before {
+  content: "\e916";
+}
+.icon-code-solid:before {
+  content: "\e917";
+}
+.icon-image:before {
+  content: "\e918";
+}
+.icon-Info:before {
+  content: "\e919";
+}
+.icon-LockKey:before {
+  content: "\e91a";
+}
+.icon-MapPin:before {
+  content: "\e91b";
+}
+.icon-web:before {
+  content: "\e91c";
+}
+.icon-Plus:before {
+  content: "\e91d";
+}
+.icon-question:before {
+  content: "\e91e";
+}
+.icon-SealQuestion:before {
+  content: "\e91f";
+}
+.icon-Share:before {
+  content: "\e920";
+}
+.icon-ShareFat:before {
+  content: "\e921";
+}
+.icon-SignOut:before {
+  content: "\e922";
+}
+.icon-Star:before {
+  content: "\e923";
+}
+.icon-Star-fill:before {
+  content: "\e924";
+}
+.icon-Sun:before {
+  content: "\e925";
+}
+.icon-TelegramLogo:before {
+  content: "\e926";
+}
+.icon-ThumbsDown:before {
+  content: "\e927";
+}
+.icon-ThumbsUp:before {
+  content: "\e928";
+}
+.icon-Trash:before {
+  content: "\e929";
+}
+.icon-UserCircle:before {
+  content: "\e92a";
+}
+.icon-video:before {
+  content: "\e92b";
+}
+.icon-X:before {
+  content: "\e92c";
+}
+.icon-XCircle:before {
+  content: "\e92d";
+}
+.icon-XLogo:before {
+  content: "\e92e";
+}
+.icon-Archive:before {
+  content: "\e92f";
+}
+.icon-ArrowsClockwise:before {
+  content: "\e930";
 }
 .icon-check:before {
   content: "\e931";
 }
-.icon-close:before {
-  content: "\e92b";
+.icon-search:before {
+  content: "\e949";
+}
+.icon-eye:before {
+  content: "\e97c";
+}
+.icon-eye-off:before {
+  content: "\e97d";
+}
+.icon-chevrons-right:before {
+  content: "\e93a";
 }

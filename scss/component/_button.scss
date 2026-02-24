@@ -24,6 +24,7 @@
         background-color: var(--Black);
         &:hover {
             background-color: var(--Neon);
+            color: var(--Black);
         }
     }
 
@@ -103,7 +104,8 @@
 }
 
 .tf-btn-default {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
     gap: 7px;
     font-weight: 700;
@@ -111,5 +113,16 @@
     line-height: 20px;
     .icon {
         font-size: 18px;
+    }
+    &:hover {
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: currentColor;
+        }
     }
 }
