@@ -102,7 +102,10 @@
 
             &.active {
                 .item-link {
-                    color: var(--Title)
+                    color: var(--Title);
+                    span {
+                        text-decoration: underline
+                    }
                 }
             }
         }

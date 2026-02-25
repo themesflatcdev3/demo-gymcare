@@ -1,6 +1,61 @@
 (function ($) {
     "use strict";
 
+    var changetext = function () {
+        if ($(".text-color-change").length) {
+            $(".text-color-change").each(function () {
+                const $el = $(this)[0];
+
+                $el.wordSplit?.revert();
+                $el.charSplit?.revert();
+
+                $el.wordSplit = new SplitText($el, { type: "words", wordsClass: "word-wrapper" });
+                $el.charSplit = new SplitText($el.wordSplit.words, { type: "chars", charsClass: "char-wrapper" });
+
+                gsap.set($el.charSplit.chars, { color: "#646464" });
+
+                gsap.to($el.charSplit.chars, {
+                    color: "#111111",
+                    stagger: { each: 0.03, from: "start" },
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: $el,
+                        start: "top 70%",
+                        end: "bottom 20%",
+                        scrub: true,
+                        toggleActions: "play none none reverse",
+                    },
+                });
+            });
+        }
+        if ($(".text-color-change-white").length) {
+            $(".text-color-change-white").each(function () {
+                const $el = $(this)[0];
+
+                $el.wordSplit?.revert();
+                $el.charSplit?.revert();
+
+                $el.wordSplit = new SplitText($el, { type: "words", wordsClass: "word-wrapper" });
+                $el.charSplit = new SplitText($el.wordSplit.words, { type: "chars", charsClass: "char-wrapper" });
+
+                gsap.set($el.charSplit.chars, { color: "#FFFFFFA6" });
+
+                gsap.to($el.charSplit.chars, {
+                    color: "#fff",
+                    stagger: { each: 0.03, from: "start" },
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: $el,
+                        start: "top 70%",
+                        end: "bottom 20%",
+                        scrub: true,
+                        toggleActions: "play none none reverse",
+                    },
+                });
+            });
+        }
+    };
+
     var animateText = function () {
         if ($(".text-anime").length) {
             let staggerAmount = 0.03,
@@ -189,6 +244,7 @@
     };
 
     $(window).on("load", function () {
+        changetext();
         animateText();
         animateImgItem();
         animateImgScroll();

@@ -186,6 +186,10 @@ textarea {
     overflow-y: auto;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
 img {
     height: auto;
     max-width: 100%;
@@ -550,6 +554,13 @@ h6,
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.text-2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
@@ -672,6 +683,14 @@ a {
 
 .text-Paragraph {
     color: var(--Paragraph) !important;
+}
+
+.text-gray-1 {
+    color: #FFFFFFA6 !important;
+}
+
+.bg-Black {
+    background-color: var(--Black) !important;
 }
 
 .lsp-0 {
@@ -966,8 +985,8 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.p-10 {
-    padding: 10px;
+.px-20 {
+    padding: 0 20px;
 }
 
 .fs-24 {

@@ -66,7 +66,7 @@
         position: relative;
         z-index: 2;
         color: var(--White);
-        font-size: 24px;
+        font-size: 30px;
     }
     .wave {
         width: 150%;
@@ -95,12 +95,11 @@
     background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
 }
 
-.heading-section {
-    display: flex;
-    // align-items: start;
-    >* {
-        width: 50%;
-    }
+.box-gradient-2 {
+    display: inline-flex;
+    padding: 7px 14px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
 }
 
 .training-item {
@@ -116,6 +115,7 @@
         .number {
             width: 110px;
             flex-shrink: 0;
+            @include transition3();
         }
         .title {
             line-height: 50px;
@@ -125,7 +125,7 @@
     }
     .image {
         width: 48.8372%;
-        height: 270px;
+        height: 200px;
         @include transition3();
         img {
             width: 100%;
@@ -138,15 +138,17 @@
         display: none;
         opacity: 0;
         visibility: hidden;
+        padding-top: 17px;
         padding-right: 20px;
         width: 331px;
+        height: 100%;
         margin-left: -331px;
         @include transition3();
         .desc {
             font-weight: 500;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-        ul {
+        .list-text {
             margin-bottom: 40px;
         }
         .categories-item {
@@ -156,14 +158,35 @@
             text-transform: uppercase;
         }
     }
+    &.active {
+        gap: 76px;
+        .heading {
+            width: 30.7752%;
+            .number {
+                color: var(--Neon);
+            }
+        }
+        .image {
+            width: 31.783%;
+            height: 270px;
+        }
+        .content {
+            display: block;
+            margin-left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     &:hover {
         gap: 76px;
         .heading {
             width: 30.7752%;
+            .number {
+                color: var(--Neon);
+            }
         }
         .image {
             width: 31.783%;
-            // height: 270px;
         }
         .content {
             display: block;
@@ -1021,6 +1044,70 @@
     }
 }
 
+.odometer {
+    font-family: $font-main !important;
+}
+
+.counter-1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 220px;
+    line-height: 220px;
+    color: var(--Title);
+  
+    .odometer-formatting-mark {
+        display: none;
+    }
+    .odometer-value {
+        width: 100%;
+    }
+    .pre {
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 1.5px var(--Title);
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.counter-2 {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 106px;
+    color: var(--White);
+    position: relative;
+    .odometer-formatting-mark {
+        display: none;
+    }
+    .odometer-value {
+        width: 100%;
+    }
+    .pre {
+        position: absolute;
+        font-weight: 300;
+        font-size: 50px;
+        line-height: 50px;
+        color: var(--Neon);
+        top: -20px;
+        right: -20px;
+    }
+}
+
+.fact-item {
+    .counter {
+        margin-bottom: 10px;
+    }
+    .text {
+        border-radius: 7px;
+        padding: 5px 14px;
+        background-color: var(--Neon);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: var(--Title);
+    }
+}
 
 
 
@@ -1389,31 +1476,6 @@
     i {
         color: var(--red);
     }
-}
-
-.counter-item {
-
-    .number-counter {
-        gap: 5px;
-
-        &.fs-65 {
-            font-size: 65px;
-            line-height: 100%;
-        }
-
-        span {
-            font-family: $font-main;
-        }
-    }
-
-    .odometer-formatting-mark {
-        display: none;
-    }
-
-    .odometer-value {
-        width: 100%;
-    }
-
 }
 
 .about-item {
