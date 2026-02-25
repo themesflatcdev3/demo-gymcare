@@ -826,6 +826,10 @@ a:hover, a:focus {
   gap: 0px !important;
 }
 
+.g-7 {
+  gap: 7px;
+}
+
 .g-10 {
   gap: 10px;
 }
@@ -9037,6 +9041,44 @@ a.mapboxgl-ctrl-logo {
   display: flex;
   width: 2px;
   background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.section-pricing-package {
+  position: relative;
+}
+.section-pricing-package > .img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.section-pricing-package::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, #000000 100%);
+}
+.section-pricing-package .pricing-option {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.section-pricing-package .pricing-option .text {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 23px;
+}
+.section-pricing-package .pricing-option .option-save {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 3px 8px;
+  background-color: var(--Neon);
+  border-radius: 7px;
 }
 
 .line-h2 {

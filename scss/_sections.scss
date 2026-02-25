@@ -401,7 +401,41 @@
 }
 
 .section-pricing-package {
-    
+    position: relative;
+    >.img-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    &::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, #000000 100%);
+    }
+    .pricing-option {
+        margin-top: 50px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .text {
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 23px;
+        }
+        .option-save {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 3px 8px;
+            background-color: var(--Neon);
+            border-radius: 7px;
+        }
+    }
 }
 
 
