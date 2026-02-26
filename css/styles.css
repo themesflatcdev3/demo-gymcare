@@ -1145,6 +1145,25 @@ a:hover, a:focus {
 .header .nav-icon .nav-btn {
   display: flex;
 }
+.header.style-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+.header.style-box .header-content {
+  background-color: var(--Black);
+  max-width: 1781px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  border-radius: 14px;
+}
+.header.style-box .header-right {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
 .sub-menu {
   position: absolute;
   width: 233px;
@@ -9116,6 +9135,11 @@ a.mapboxgl-ctrl-logo {
   right: 0;
   bottom: 42px;
   z-index: 1;
+}
+
+.section-hero-2 {
+  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
 
 .line-h2 {
