@@ -127,6 +127,9 @@
         }
     }
     
+    &.style-box {
+        
+    }
 
 }
 
@@ -583,11 +586,11 @@
                 position: relative;
 
                 &::after {
-                    content: "\e905";
+                    content: "\e936";
                     position: absolute;
                     font-family: "icomoon";
                     position: absolute;
-                    font-size: 10px;
+                    font-size: 20px;
                     right: 0;
                     top: 50%;
                     line-height: 16px;
@@ -640,7 +643,6 @@
     box-shadow: 10px 4px 60px rgba(193, 193, 193, 0.25);
 
     .header-content {
-        padding: 0;
         border-color: transparent;
     }
 

@@ -539,6 +539,14 @@
 
 }
 
+@media (min-width: 1440px) {
+    .section-choose-us {
+        .choose-us-grid {
+            padding-right: 10px;
+        }
+    }
+}
+
 @media (min-width: 1501px) {
 
     .features-item {
@@ -672,6 +680,28 @@
 }
 
 @media (max-width: 1440px) {
+
+    .section-fitness-courses .heading .top {
+        margin: 0;
+    }
+
+    .about-wrap {
+        .about-inner {
+            gap: 50px;
+        }
+    }
+    .section-hero {
+        .text-bg {
+            font-size: 120px;
+            line-height: 175px;
+        }
+        .box-content {
+            padding: 70px 30px 70px;
+        }
+        .right {
+            padding-right: 0px;
+        }
+    }
 
     .footer {
         .footer-inner {
@@ -864,6 +894,66 @@
 }
 
 @media (max-width: 1200px) {
+    .section-hero {
+        .title {
+            font-size: 70px;
+            line-height: 70px;
+        }
+        .box-content {
+            padding: 70px 30px 70px;
+        }
+        .right {
+            padding-right: 0px;
+            .wg-video {
+                margin-bottom: 100px;    
+            }
+        }
+    }
+
+    .counter-1 {
+        font-size: 100px;
+        line-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .about-wrap {
+        .heading {
+            >* {
+                &:first-child {
+                    width: 30%;
+                }
+            }
+        }
+        .about-inner {
+            .image-left .text-bg {
+                font-size: 70px;
+                line-height: 70px;
+            }
+            .content-right .year {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .funfact-box .heading-section .title {
+        min-width: 250px;
+    }
+
+    .tf-spacing-1 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .tf-spacing-2 {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    
+    .tf-spacing-3 {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
     .info-doctor-details {
         .info-content {
             padding-left: 15px;
@@ -1078,15 +1168,13 @@
 
     .header {
         .header-content {
-            padding-top: 15px;
-            padding-right: 15px;
-            @include transition3();
+            padding: 15px;
         }
 
         &.header-bg {
             .header-content {
-                padding-left: 0;
-                padding-right: 0;
+                // padding-left: 0;
+                // padding-right: 0;
             }
         }
 
@@ -1116,6 +1204,186 @@
 }
 
 @media (max-width: 991px) {
+
+    .about-wrap {
+        .heading {
+            margin-bottom: 50px;
+        }
+        .about-inner {
+            .content-right .year {
+                flex-direction: column;
+                align-items: start;
+                gap: 0;
+            }
+        }
+    }
+
+    .counter-1 {
+        font-size: 70px;
+        line-height: 70px;
+        margin-bottom: 0px;
+    }
+
+    .about-wrap {
+        .about-inner {
+            flex-direction: column;
+            .image-left {
+                width: 100%;
+            }
+        }
+    }
+
+    .section-hero {
+        .text-bg {
+            font-size: 80px;
+            line-height: 100px;
+        }
+        .title {
+            font-size: 65px;
+            line-height: 65px;
+        }
+        .box-content {
+            padding: 70px 15px 70px;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .right {
+            padding-right: 0px;
+            .wg-video {
+                margin-bottom: 20px;    
+            }
+        }
+    }
+
+    .training-item {
+        gap: 30px !important;
+        .heading {
+            width: 30.7752%;
+            .number {
+                color: var(--Neon);
+                width: 30px;
+            }
+        }
+        .image {
+            width: 31.783%;
+            height: 270px;
+        }
+        .content {
+            display: block;
+            margin-left: 0;
+            opacity: 1;
+            visibility: visible;
+            padding: 0;
+            .list-text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .section-choose-us {
+        .image-choose {
+            left: -200px;
+        }
+        .choose-us-grid {
+            gap: 15px;
+        }
+    }
+
+    .features-item {
+        padding: 20px 15px;
+    }
+
+    .funfact-box {
+        padding: 50px 30px;
+    }
+
+    .pricing-item {
+        .pricing-box {
+            padding: 24px 15px;
+            .icon {
+                margin-bottom: 30px;
+            }
+            .sub {
+                margin-bottom: 15px;
+            }
+            .desc {
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            .list-text {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .testimonials-item {
+        flex-wrap: wrap;
+        justify-content: center;
+        .content {
+            max-width: 100%;
+        }
+        .image {
+            margin-right: 0;
+        }
+    }
+
+    .booking-box  {
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        padding: 30px;
+        .content {
+            max-width: unset;
+        }
+        .registation-wrap {
+            position: unset;
+        }
+    }
+
+    .tf-post {
+        .title-post {
+            display: flex;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &.style-1 .date {
+            top: 10px;
+            right: 10px;
+        }
+    }
+    
+    .date {
+        padding: 10px;
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+        align-items: center;
+    }
+
+    .tf-marquee.marquee-2 .text {
+        font-size: 120px;
+        line-height: 175px;
+    }
+
+    .footer {
+        .footer-cols .list-menu {
+            display: flex;
+            gap: 0 15px;
+        }
+        .footer-inner {
+            padding: 50px 15px;
+            .heading {
+                font-size: 50px;
+                line-height: 50px;
+            }
+        }
+        .bottom {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
     .arrow-btn {
         width: 40px;
@@ -1592,66 +1860,6 @@
         }
     }
 
-    .tf-spacing-1 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-2 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-3 {
-        margin-top: 0;
-        margin-bottom: 70px;
-    }
-
-    .tf-spacing-4 {
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
-
-    .tf-spacing-5 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-6 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-7 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-8 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-9 {
-        padding-top: 0;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-10 {
-        padding-top: 0;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-11 {
-        padding-top: 0;
-        padding-bottom: 70px;
-    }
-
-    .tf-spacing-12 {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
     .section-banner {
         &.h-2 {
             .wg-banner {
@@ -1836,63 +2044,6 @@
         }
     }
 
-    .footer {
-        padding-top: 40px;
-        padding-bottom: 40px;
-
-        .footer-inner {
-            padding-bottom: 40px;
-            flex-direction: column;
-            row-gap: 20px;
-        }
-
-        .top {
-            padding-bottom: 40px;
-        }
-
-
-        .footer-left {
-            max-width: 100%;
-
-            .middle {
-                padding-top: 40px;
-            }
-
-        }
-
-        .footer-right {
-            max-width: 100%;
-        }
-
-        .box-item-footer {
-            max-width: 100%;
-        }
-
-        .bottom {
-            margin-top: 0;
-        }
-
-        &.style-2 {
-            .footer-inner {
-                padding-bottom: 0;
-            }
-        }
-
-        &.style-4 {
-            .top {
-                margin-bottom: 70px;
-            }
-
-            .footer-inner {
-                padding-bottom: 0;
-            }
-
-            .middle {
-                margin-bottom: 70px;
-            }
-        }
-    }
-
     .tf-btn {
         padding: 14px 20px;
 
@@ -1911,8 +2062,8 @@
     }
 
     h2 {
-        font-size: 27px;
-        line-height: 35px;
+        font-size: 27px !important;
+        line-height: 35px !important;
     }
 
     h3 {
@@ -1942,20 +2093,117 @@
         }
     }
 
-    .footer {
-        .footer-cols {
-            flex-wrap: wrap;
+    .section-hero {
+        .title {
+            font-size: 40px;
+            line-height: 50px;
         }
-        .footer-inner {
-            .heading {
-                margin: 0;
-                font-size: 50px;
-                line-height: 50px;
+        .box-content {
+            padding: 70px 15px 50px;
+        }
+        .right {
+            .wg-video {
+                width: 100%;
             }
         }
     }
 
+    .about-wrap {
+        .heading {
+            flex-direction: column;
+            >* {
+                width: 100% !important;
+            }
+        }
+        .about-inner {
+            .image-left .content {
+                padding: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+            }
+            .content-right  {
+                .year {
+                    margin-bottom: 10px;
+                }
+                .bot {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .desc {
+                        padding-bottom: 0;
+                        .title {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
+    .section-fitness-courses .list-training {
+        gap: 30px;
+    }
+
+    .training-item {
+        flex-direction: column;
+        padding-top: 20px;
+        >* {
+            width: 100% !important;
+        }
+        .image {
+            height: unset;
+        }
+    }
+
+    .heading-section {
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+
+    .section-choose-us .choose-us-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .funfact-box {
+        margin-bottom: -50px;
+        .heading-section {
+            flex-direction: column;
+        }
+        .list-fact {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            .line {
+                width: 100%;
+                height: 2px;
+            }
+        }
+    }
+
+    .booking-box {
+        margin-bottom: -50px;
+    }
+
+    .fact-item {
+        text-align: center;
+    }
+
+    .pricing-item {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-item {
+        gap: 10px;
+        .reviews {
+            padding: 10px;
+        }
+        .image {
+            margin-left: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
 
 
 

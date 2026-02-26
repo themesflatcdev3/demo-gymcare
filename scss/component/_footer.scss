@@ -2,19 +2,14 @@
     position: relative;
     background-color: var(--Black);
     .footer-inner {
-        padding: 120px 15px 100px;
-        max-width: 1320px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        gap: 30px;
+        padding: 120px 15px 97px;
         .heading {
-            margin-top: -50px;
-            margin-left: -170px;
+            margin-top: -49px;
+            margin-left: -185px;
             font-weight: 700;
             font-size: 170px;
             line-height: 213px;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.07em;
             text-transform: uppercase;
         }
     }
@@ -29,7 +24,7 @@
         .title {
             font-weight: 700;
             font-size: 40px;
-            line-height: 100%;
+            line-height: 50px;
             letter-spacing: -0.03em;
             text-transform: uppercase;
             margin-bottom: 40px;
@@ -38,16 +33,25 @@
             display: flex;
             gap: 24px 70px;
             flex-wrap: wrap;
+            .text {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
     }
     .footer-newsletter {
         .title {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             text-transform: uppercase;
         }
         .text {
             color: #FFFFFFA6;
             margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
         }
     }
     .form-newsletter {
@@ -55,6 +59,10 @@
         gap: 10px;
         align-items: center;
         margin-bottom: 70px;
+        input {
+            font-size: 16px !important;
+            line-height: 20px;
+        }
     }
     .footer-cols {
         display: flex;
@@ -66,6 +74,7 @@
             line-height: 25px;
             letter-spacing: -0.03em;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .menu-item {
             position: relative;
@@ -106,11 +115,14 @@
         justify-content: space-between;
         gap: 30px;
         .text {
+            font-size: 18px;
+            line-height: 23px;
             color: #FFFFFFA6;
         }
         ul {
             display: flex;
-            gap: 20px;
+            flex-wrap: w;
+            gap: 10px 34px;
             a {
                 color: #FFFFFFA6;
             }

@@ -186,19 +186,14 @@
     .heading {
         display: flex;
         gap: 20px;
-        flex-wrap: wrap;
-        max-width: 1680px;
-        padding-left: 20px;
-        padding-right: 20px;
+        max-width: 1640px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 70px;
         >* {
             &:first-child {
                 width: 43%;
-            }
-            &:last-child {
-                width: 55.7%;
+                flex-shrink: 0;
             }
         }
     }
@@ -237,6 +232,7 @@
                 padding: 30px;
                 border-radius: 14px;
                 background-color: var(--Neon);
+                z-index: 2;
                 .text {
                     font-weight: 700;
                     font-size: 20px;
@@ -299,6 +295,7 @@
             }
             .bot {
                 display: flex;
+                gap: 30px;
                 justify-content: space-between;
                 align-items: flex-end;
                 padding-bottom: 21px;
@@ -348,7 +345,7 @@
     position: relative;
     .image-choose {
         position: absolute;
-        top: 227px;
+        top: 236px;
         left: 0;
     }
     .choose-us-grid {
@@ -356,7 +353,6 @@
         gap: 30px;
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 .funfact-box {
@@ -364,7 +360,7 @@
     padding: 100px 80px;
     border-radius: 14px;
     overflow: hidden;
-    margin-bottom: -70px;
+    margin-bottom: -121px;
     &::after {
         position: absolute;
         inset: 0;
@@ -384,7 +380,7 @@
     }
     .heading-section {
         display: flex;
-        margin-bottom: 100px;
+        margin-bottom: 123px;
         .title {
             min-width: 360px;
         }
@@ -434,6 +430,21 @@
             padding: 3px 8px;
             background-color: var(--Neon);
             border-radius: 7px;
+        }
+    }
+}
+
+.section-client-testimonials {
+
+    .testimonials-wrap {
+        position: relative;
+        padding-top: 70px;
+        border-top: 1px solid #0000001A;
+        .list-btn {
+            position: absolute;
+            right: 0;
+            bottom: 42px;
+            z-index: 1;
         }
     }
 }

@@ -46,6 +46,7 @@
     @include d-flex();
     align-items: center;
     gap: 10px;
+    height: 10px;
     .swiper-pagination-bullet {
         background: #00000033;
         opacity: 1;

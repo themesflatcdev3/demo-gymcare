@@ -544,7 +544,7 @@ h2,
   font-size: 48px;
   line-height: 60px;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.037em;
 }
 
 h3,
@@ -1145,7 +1145,6 @@ a:hover, a:focus {
 .header .nav-icon .nav-btn {
   display: flex;
 }
-
 .sub-menu {
   position: absolute;
   width: 233px;
@@ -1580,11 +1579,11 @@ a:hover, a:focus {
   position: relative;
 }
 #menu-mobile li.menu-item-has-children-mobile > a::after {
-  content: "\e905";
+  content: "\e936";
   position: absolute;
   font-family: "icomoon";
   position: absolute;
-  font-size: 10px;
+  font-size: 20px;
   right: 0;
   top: 50%;
   line-height: 16px;
@@ -1630,7 +1629,6 @@ a:hover, a:focus {
   box-shadow: 10px 4px 60px rgba(193, 193, 193, 0.25);
 }
 .header-sticky .header-content {
-  padding: 0;
   border-color: transparent;
 }
 .header-sticky.header-bg {
@@ -1644,20 +1642,15 @@ a:hover, a:focus {
   background-color: var(--Black);
 }
 .footer .footer-inner {
-  padding: 120px 15px 100px;
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  gap: 30px;
+  padding: 120px 15px 97px;
 }
 .footer .footer-inner .heading {
-  margin-top: -50px;
-  margin-left: -170px;
+  margin-top: -49px;
+  margin-left: -185px;
   font-weight: 700;
   font-size: 170px;
   line-height: 213px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.07em;
   text-transform: uppercase;
 }
 .footer .footer-contact {
@@ -1672,7 +1665,7 @@ a:hover, a:focus {
 .footer .footer-contact .title {
   font-weight: 700;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 50px;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -1682,19 +1675,32 @@ a:hover, a:focus {
   gap: 24px 70px;
   flex-wrap: wrap;
 }
+.footer .footer-contact .infor .text {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
 .footer .footer-newsletter .title {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 .footer .footer-newsletter .text {
   color: rgba(255, 255, 255, 0.6509803922);
   margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
 }
 .footer .form-newsletter {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 70px;
+}
+.footer .form-newsletter input {
+  font-size: 16px !important;
+  line-height: 20px;
 }
 .footer .footer-cols {
   display: flex;
@@ -1707,6 +1713,7 @@ a:hover, a:focus {
   line-height: 25px;
   letter-spacing: -0.03em;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 .footer .footer-cols .menu-item {
   position: relative;
@@ -1751,11 +1758,14 @@ a:hover, a:focus {
   gap: 30px;
 }
 .footer .bottom .text {
+  font-size: 18px;
+  line-height: 23px;
   color: rgba(255, 255, 255, 0.6509803922);
 }
 .footer .bottom ul {
   display: flex;
-  gap: 20px;
+  flex-wrap: w;
+  gap: 10px 34px;
 }
 .footer .bottom ul a {
   color: rgba(255, 255, 255, 0.6509803922);
@@ -2532,7 +2542,7 @@ fieldset {
 
 .form-booking {
   display: grid;
-  gap: 20px;
+  gap: 19px;
 }
 
 .has-icon-after {
@@ -2592,6 +2602,7 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 10px;
 }
 .sw-pagination .swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.2);
@@ -2798,7 +2809,8 @@ fieldset {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  align-items: flex-start;
+  padding: 10px 20px 15px;
   width: 85px;
   height: 91px;
   font-weight: 700;
@@ -2815,9 +2827,6 @@ fieldset {
 }
 .date .month {
   font-size: 20px;
-}
-.date:hover {
-  background-color: var(--black);
 }
 
 .tf-post .top-post {
@@ -2837,7 +2846,7 @@ fieldset {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -2854,7 +2863,10 @@ fieldset {
   font-weight: 600;
   letter-spacing: -0.2px;
   text-transform: uppercase;
-  padding: 5px 14px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 .tf-post .post-meta-1 {
   display: flex;
@@ -2868,6 +2880,10 @@ fieldset {
 }
 .tf-post .post-meta-1 a:hover {
   color: var(--Neon);
+}
+.tf-post.style-1 .date {
+  top: 20px;
+  right: 20px;
 }
 .tf-post.style-2 {
   position: relative;
@@ -3479,7 +3495,7 @@ form.form-search-siderbar .tf-btn-search i {
   text-align: end;
   flex-shrink: 0;
   width: 190px;
-  padding: 30px;
+  padding: 30px 30px 25px 30px;
   border-radius: 14px;
   overflow: hidden;
   background-color: var(--Neon);
@@ -3490,11 +3506,13 @@ form.form-search-siderbar .tf-btn-search i {
   left: 0;
 }
 .testimonials-item .reviews .icon {
-  margin-bottom: 50px;
+  margin-bottom: 39px;
   color: var(--Black);
+  font-size: 29px;
 }
 .testimonials-item .reviews .number {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
+  letter-spacing: -0.03em;
   font-weight: 600;
   font-size: 65px;
   line-height: 65px;
@@ -3519,6 +3537,7 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .testimonials-item .content {
   padding: 17px 0 16px;
+  max-width: 536px;
 }
 .testimonials-item .ratings {
   margin-bottom: 20px;
@@ -3527,6 +3546,7 @@ form.form-search-siderbar .tf-btn-search i {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
+  letter-spacing: -0.03em;
   color: var(--Title);
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -3538,6 +3558,10 @@ form.form-search-siderbar .tf-btn-search i {
   color: var(--Title);
   text-transform: uppercase;
   margin-bottom: 3px;
+}
+.testimonials-item .sub {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .ratings {
@@ -5366,6 +5390,7 @@ a.mapboxgl-ctrl-logo {
   position: relative;
   z-index: 2;
   color: var(--Paragraph);
+  letter-spacing: 0.06em;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -5404,18 +5429,23 @@ a.mapboxgl-ctrl-logo {
 
 .team-item .image {
   margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
 }
 .team-item .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 14px;
 }
 .team-item .name {
   display: flex;
   color: var(--Title);
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+.team-item .sub {
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .pricing-item {
@@ -5477,11 +5507,13 @@ a.mapboxgl-ctrl-logo {
   font-weight: 700;
   font-size: 22px;
   line-height: 28px;
+  letter-spacing: -0.03em;
   color: var(--White);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 .pricing-item .pricing-box .sub {
+  letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.6509803922);
   margin-bottom: 40px;
 }
@@ -5496,21 +5528,23 @@ a.mapboxgl-ctrl-logo {
   font-size: 18px;
   line-height: 23px;
   color: var(--White);
-  margin-bottom: 10px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
 }
 .pricing-item .pricing-box .desc {
   font-weight: 600;
   font-size: 18px;
   line-height: 23px;
+  letter-spacing: -0.03em;
   color: var(--White);
   text-transform: uppercase;
   margin-top: 40px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 .pricing-item .pricing-box .list-text {
   display: grid;
-  gap: 15px;
-  margin-bottom: 50px;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 .pricing-item .pricing-box .list-text .text-item {
   color: rgba(255, 255, 255, 0.6509803922);
@@ -5684,6 +5718,11 @@ a.mapboxgl-ctrl-logo {
   padding: 70px;
   border-radius: 14px;
   overflow: hidden;
+  margin-bottom: -146px;
+}
+.booking-box .content {
+  width: 100%;
+  max-width: 620px;
 }
 .booking-box .image {
   position: absolute;
@@ -5707,6 +5746,11 @@ a.mapboxgl-ctrl-logo {
 .booking-box .heading {
   margin-bottom: 50px;
   color: var(--White);
+}
+.booking-box .registation-wrap {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .provide-item {
@@ -6226,12 +6270,12 @@ a.mapboxgl-ctrl-logo {
   font-size: 50px;
   line-height: 50px;
   color: var(--Neon);
-  top: -20px;
-  right: -20px;
+  top: -28px;
+  right: -25px;
 }
 
 .fact-item .counter {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .fact-item .text {
   border-radius: 7px;
@@ -6241,6 +6285,66 @@ a.mapboxgl-ctrl-logo {
   font-size: 18px;
   line-height: 23px;
   color: var(--Title);
+}
+
+.progress-wrap {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear;
+  background: var(--Neon);
+}
+.progress-wrap::after {
+  position: absolute;
+  content: "\e914";
+  font-family: "icomoon";
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: var(--Title);
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+  transition: all 400ms linear;
+}
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.progress-wrap svg path {
+  fill: none;
+}
+.progress-wrap svg.progress-circle path {
+  box-sizing: border-box;
+  stroke: var(--Title);
+  stroke-width: 5;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
 }
 
 .box-page-title {
@@ -7960,82 +8064,6 @@ a.mapboxgl-ctrl-logo {
   border-radius: 7px;
 }
 
-.progress-wrap {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  display: block;
-  border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 2px rgba(130, 130, 130, 0.2);
-  box-shadow: inset 0 0 0 2px rgba(130, 130, 130, 0.2);
-  z-index: 99999;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-  -webkit-transition: all 300ms linear;
-  -o-transition: all 300ms linear;
-  transition: all 300ms linear;
-  background: var(--white);
-}
-.progress-wrap::after {
-  position: absolute;
-  content: "\e901";
-  font-family: "icomoon";
-  text-align: center;
-  line-height: 40px;
-  font-size: 10px;
-  color: var(--on-suface-container);
-  left: 0;
-  top: 0;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  display: block;
-  z-index: 1;
-  -webkit-transition: all 400ms linear;
-  -o-transition: all 400ms linear;
-  transition: all 400ms linear;
-  transform: rotate(180deg);
-  transform: rotate(-90deg);
-}
-.progress-wrap.active-progress {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-.progress-wrap svg path {
-  fill: none;
-}
-.progress-wrap svg.progress-circle path {
-  box-sizing: border-box;
-  stroke: var(--red);
-  stroke-width: 5;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 0.4s;
-  transition-timing-function: linear;
-}
-.progress-wrap.style-color-black-2 svg.progress-circle path {
-  stroke: var(--black-2);
-}
-.progress-wrap.style-color-yellow-2 svg.progress-circle path {
-  stroke: var(--yellow-2);
-}
-.progress-wrap.style-color-yellow-3 svg.progress-circle path {
-  stroke: var(--yellow-3);
-}
-.progress-wrap.style-color-blue-4 svg.progress-circle path {
-  stroke: var(--blue-4);
-}
-
 .info-doctor-details .image {
   display: block;
   margin-bottom: 10px;
@@ -8842,19 +8870,14 @@ a.mapboxgl-ctrl-logo {
 .about-wrap .heading {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1680px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1640px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 70px;
 }
 .about-wrap .heading > *:first-child {
   width: 43%;
-}
-.about-wrap .heading > *:last-child {
-  width: 55.7%;
+  flex-shrink: 0;
 }
 .about-wrap .about-inner {
   display: flex;
@@ -8891,6 +8914,7 @@ a.mapboxgl-ctrl-logo {
   padding: 30px;
   border-radius: 14px;
   background-color: var(--Neon);
+  z-index: 2;
 }
 .about-wrap .about-inner .image-left .content .text {
   font-weight: 700;
@@ -8951,6 +8975,7 @@ a.mapboxgl-ctrl-logo {
 }
 .about-wrap .about-inner .content-right .bot {
   display: flex;
+  gap: 30px;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 21px;
@@ -8993,7 +9018,7 @@ a.mapboxgl-ctrl-logo {
 }
 .section-choose-us .image-choose {
   position: absolute;
-  top: 227px;
+  top: 236px;
   left: 0;
 }
 .section-choose-us .choose-us-grid {
@@ -9007,7 +9032,7 @@ a.mapboxgl-ctrl-logo {
   padding: 100px 80px;
   border-radius: 14px;
   overflow: hidden;
-  margin-bottom: -70px;
+  margin-bottom: -121px;
 }
 .funfact-box::after {
   position: absolute;
@@ -9028,7 +9053,7 @@ a.mapboxgl-ctrl-logo {
 }
 .funfact-box .heading-section {
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 123px;
 }
 .funfact-box .heading-section .title {
   min-width: 360px;
@@ -9079,6 +9104,18 @@ a.mapboxgl-ctrl-logo {
   padding: 3px 8px;
   background-color: var(--Neon);
   border-radius: 7px;
+}
+
+.section-client-testimonials .testimonials-wrap {
+  position: relative;
+  padding-top: 70px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.section-client-testimonials .testimonials-wrap .list-btn {
+  position: absolute;
+  right: 0;
+  bottom: 42px;
+  z-index: 1;
 }
 
 .line-h2 {
@@ -10291,6 +10328,11 @@ a.mapboxgl-ctrl-logo {
     margin-right: 30px;
   }
 }
+@media (min-width: 1440px) {
+  .section-choose-us .choose-us-grid {
+    padding-right: 10px;
+  }
+}
 @media (min-width: 1501px) {
   .features-item.style-3-2 {
     padding: 40px 70px 43px;
@@ -10363,6 +10405,22 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 1440px) {
+  .section-fitness-courses .heading .top {
+    margin: 0;
+  }
+  .about-wrap .about-inner {
+    gap: 50px;
+  }
+  .section-hero .text-bg {
+    font-size: 120px;
+    line-height: 175px;
+  }
+  .section-hero .box-content {
+    padding: 70px 30px 70px;
+  }
+  .section-hero .right {
+    padding-right: 0px;
+  }
   .footer .footer-inner .heading {
     margin: 0;
     font-size: 100px;
@@ -10486,6 +10544,49 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 1200px) {
+  .section-hero .title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .section-hero .box-content {
+    padding: 70px 30px 70px;
+  }
+  .section-hero .right {
+    padding-right: 0px;
+  }
+  .section-hero .right .wg-video {
+    margin-bottom: 100px;
+  }
+  .counter-1 {
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 20px;
+  }
+  .about-wrap .heading > *:first-child {
+    width: 30%;
+  }
+  .about-wrap .about-inner .image-left .text-bg {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .about-wrap .about-inner .content-right .year {
+    margin-left: 0;
+  }
+  .funfact-box .heading-section .title {
+    min-width: 250px;
+  }
+  .tf-spacing-1 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .tf-spacing-2 {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  .tf-spacing-3 {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
   .info-doctor-details .info-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -10631,17 +10732,7 @@ a.mapboxgl-ctrl-logo {
     max-width: 100%;
   }
   .header .header-content {
-    padding-top: 15px;
-    padding-right: 15px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-  .header.header-bg .header-content {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 15px;
   }
   .header .main-menu {
     display: none;
@@ -10661,6 +10752,155 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 991px) {
+  .about-wrap .heading {
+    margin-bottom: 50px;
+  }
+  .about-wrap .about-inner .content-right .year {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  .counter-1 {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 0px;
+  }
+  .about-wrap .about-inner {
+    flex-direction: column;
+  }
+  .about-wrap .about-inner .image-left {
+    width: 100%;
+  }
+  .section-hero .text-bg {
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .section-hero .title {
+    font-size: 65px;
+    line-height: 65px;
+  }
+  .section-hero .box-content {
+    padding: 70px 15px 70px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .section-hero .right {
+    padding-right: 0px;
+  }
+  .section-hero .right .wg-video {
+    margin-bottom: 20px;
+  }
+  .training-item {
+    gap: 30px !important;
+  }
+  .training-item .heading {
+    width: 30.7752%;
+  }
+  .training-item .heading .number {
+    color: var(--Neon);
+    width: 30px;
+  }
+  .training-item .image {
+    width: 31.783%;
+    height: 270px;
+  }
+  .training-item .content {
+    display: block;
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+  }
+  .training-item .content .list-text {
+    margin-bottom: 20px;
+  }
+  .section-choose-us .image-choose {
+    left: -200px;
+  }
+  .section-choose-us .choose-us-grid {
+    gap: 15px;
+  }
+  .features-item {
+    padding: 20px 15px;
+  }
+  .funfact-box {
+    padding: 50px 30px;
+  }
+  .pricing-item .pricing-box {
+    padding: 24px 15px;
+  }
+  .pricing-item .pricing-box .icon {
+    margin-bottom: 30px;
+  }
+  .pricing-item .pricing-box .sub {
+    margin-bottom: 15px;
+  }
+  .pricing-item .pricing-box .desc {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .pricing-item .pricing-box .list-text {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .testimonials-item {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testimonials-item .content {
+    max-width: 100%;
+  }
+  .testimonials-item .image {
+    margin-right: 0;
+  }
+  .booking-box {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 30px;
+  }
+  .booking-box .content {
+    max-width: unset;
+  }
+  .booking-box .registation-wrap {
+    position: unset;
+  }
+  .tf-post .title-post {
+    display: flex;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .tf-post.style-1 .date {
+    top: 10px;
+    right: 10px;
+  }
+  .date {
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    align-items: center;
+  }
+  .tf-marquee.marquee-2 .text {
+    font-size: 120px;
+    line-height: 175px;
+  }
+  .footer .footer-cols .list-menu {
+    display: flex;
+    gap: 0 15px;
+  }
+  .footer .footer-inner {
+    padding: 50px 15px;
+  }
+  .footer .footer-inner .heading {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .footer .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
   .arrow-btn {
     width: 40px;
     height: 40px;
@@ -10935,54 +11175,6 @@ a.mapboxgl-ctrl-logo {
     height: 400px;
     max-width: 100%;
   }
-  .tf-spacing-1 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-2 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-3 {
-    margin-top: 0;
-    margin-bottom: 70px;
-  }
-  .tf-spacing-4 {
-    margin-top: 70px;
-    margin-bottom: 70px;
-  }
-  .tf-spacing-5 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-6 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-7 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-8 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-9 {
-    padding-top: 0;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-10 {
-    padding-top: 0;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-11 {
-    padding-top: 0;
-    padding-bottom: 70px;
-  }
-  .tf-spacing-12 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
   .section-banner.h-2 .wg-banner {
     max-width: 100%;
   }
@@ -11093,45 +11285,6 @@ a.mapboxgl-ctrl-logo {
   .breadkcum .dot {
     margin: 0 10px !important;
   }
-  .footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .footer .footer-inner {
-    padding-bottom: 40px;
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  .footer .top {
-    padding-bottom: 40px;
-  }
-  .footer .footer-left {
-    max-width: 100%;
-  }
-  .footer .footer-left .middle {
-    padding-top: 40px;
-  }
-  .footer .footer-right {
-    max-width: 100%;
-  }
-  .footer .box-item-footer {
-    max-width: 100%;
-  }
-  .footer .bottom {
-    margin-top: 0;
-  }
-  .footer.style-2 .footer-inner {
-    padding-bottom: 0;
-  }
-  .footer.style-4 .top {
-    margin-bottom: 70px;
-  }
-  .footer.style-4 .footer-inner {
-    padding-bottom: 0;
-  }
-  .footer.style-4 .middle {
-    margin-bottom: 70px;
-  }
   .tf-btn {
     padding: 14px 20px;
   }
@@ -11146,8 +11299,8 @@ a.mapboxgl-ctrl-logo {
     line-height: 35px;
   }
   h2 {
-    font-size: 27px;
-    line-height: 35px;
+    font-size: 27px !important;
+    line-height: 35px !important;
   }
   h3 {
     font-size: 24px;
@@ -11167,13 +11320,94 @@ a.mapboxgl-ctrl-logo {
     font-size: 50px;
     line-height: 50px;
   }
-  .footer .footer-cols {
-    flex-wrap: wrap;
-  }
-  .footer .footer-inner .heading {
-    margin: 0;
-    font-size: 50px;
+  .section-hero .title {
+    font-size: 40px;
     line-height: 50px;
+  }
+  .section-hero .box-content {
+    padding: 70px 15px 50px;
+  }
+  .section-hero .right .wg-video {
+    width: 100%;
+  }
+  .about-wrap .heading {
+    flex-direction: column;
+  }
+  .about-wrap .heading > * {
+    width: 100% !important;
+  }
+  .about-wrap .about-inner .image-left .content {
+    padding: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+  .about-wrap .about-inner .content-right .year {
+    margin-bottom: 10px;
+  }
+  .about-wrap .about-inner .content-right .bot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-wrap .about-inner .content-right .bot .desc {
+    padding-bottom: 0;
+  }
+  .about-wrap .about-inner .content-right .bot .desc .title {
+    margin-bottom: 10px;
+  }
+  .section-fitness-courses .list-training {
+    gap: 30px;
+  }
+  .training-item {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .training-item > * {
+    width: 100% !important;
+  }
+  .training-item .image {
+    height: unset;
+  }
+  .heading-section .title {
+    margin-bottom: 15px;
+  }
+  .section-choose-us .choose-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .funfact-box {
+    margin-bottom: -50px;
+  }
+  .funfact-box .heading-section {
+    flex-direction: column;
+  }
+  .funfact-box .list-fact {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .funfact-box .list-fact .line {
+    width: 100%;
+    height: 2px;
+  }
+  .booking-box {
+    margin-bottom: -50px;
+  }
+  .fact-item {
+    text-align: center;
+  }
+  .pricing-item {
+    margin-bottom: 20px;
+  }
+  .testimonials-item {
+    gap: 10px;
+  }
+  .testimonials-item .reviews {
+    padding: 10px;
+  }
+  .testimonials-item .image {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
   }
   .tf-sort {
     flex-wrap: wrap;
