@@ -9299,10 +9299,10 @@ a.mapboxgl-ctrl-logo {
   color: var(--Title);
 }
 
-.section-pricing-package {
+.section-provide {
   position: relative;
 }
-.section-pricing-package > .img-bg {
+.section-provide > .img-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -9311,7 +9311,7 @@ a.mapboxgl-ctrl-logo {
   object-fit: cover;
   z-index: -1;
 }
-.section-pricing-package::before {
+.section-provide::before {
   position: absolute;
   inset: 0;
   content: "";
@@ -9331,6 +9331,47 @@ a.mapboxgl-ctrl-logo {
   position: absolute;
   z-index: 0;
   transform: rotate(2deg);
+}
+
+.section-pricing-2 {
+  position: relative;
+}
+.section-pricing-2 > .img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.section-pricing-2::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, #000000 80%);
+}
+.section-pricing-2 .image-right {
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+}
+
+.section-trainers .left {
+  position: relative;
+  place-content: end;
+  height: 100%;
+}
+.section-trainers .left .text-bg {
+  position: absolute;
+  top: -32px;
+  left: -300px;
+  font-weight: 600;
+  font-size: 170px;
+  line-height: 213px;
+}
+.section-trainers .left .image img {
+  border-radius: 999px;
 }
 
 .line-h2 {
