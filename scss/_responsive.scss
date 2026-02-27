@@ -679,7 +679,29 @@
     }
 }
 
+@media (max-width: 1600px) {
+    .header.style-box {
+        .header-left {
+            gap: 30px;
+        }
+        .header-right {
+            gap: 30px;
+        }
+        .menu-primary-menu {
+            gap: 24px;
+        }
+    }
+}
+
 @media (max-width: 1440px) {
+
+    .header.style-box {
+        .header-right {
+            .btn-quote {
+                display: none;
+            }
+        }
+    }
 
     .section-fitness-courses .heading .top {
         margin: 0;
@@ -952,6 +974,11 @@
     .tf-spacing-3 {
         padding-top: 70px;
         padding-bottom: 80px;
+    }
+
+    .tf-spacing-4 {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .info-doctor-details {

@@ -636,6 +636,9 @@ a:hover, a:focus {
 .tf-container.w-full {
   max-width: 100%;
 }
+.tf-container.w1778 {
+  max-width: 1808px;
+}
 
 /* Extra classes
 -------------------------------------------------------------- */
@@ -1100,6 +1103,7 @@ a:hover, a:focus {
   z-index: 1;
 }
 .header .menu-primary-menu .menu-item .item-link {
+  display: flex;
   position: relative;
   font-weight: 600;
   font-size: 14px;
@@ -1155,13 +1159,29 @@ a:hover, a:focus {
   max-width: 1781px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 30px;
+  padding: 0px 30px;
   border-radius: 14px;
+}
+.header.style-box .header-left {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.header.style-box .header-left .logo-header {
+  padding: 21px 0;
 }
 .header.style-box .header-right {
   display: flex;
   gap: 50px;
   align-items: center;
+  padding: 15px 0;
+}
+.header.style-box .menu-primary-menu .menu-item.active .item-link {
+  color: var(--Neon);
+}
+.header.style-box .menu-primary-menu .menu-item .item-link {
+  line-height: 82px;
+  color: rgba(255, 255, 255, 0.6509803922);
 }
 
 .sub-menu {
@@ -1257,6 +1277,9 @@ a:hover, a:focus {
 }
 .mobile-button span:last-child {
   bottom: 0;
+}
+.mobile-button.style-white span {
+  background-color: var(--White);
 }
 
 .sub-menu-home {
@@ -5175,6 +5198,10 @@ a.mapboxgl-ctrl-logo {
   font-size: 220px;
   line-height: 275px;
 }
+.tf-marquee.marquee-3 {
+  padding: 10px 0;
+  background-color: var(--Black);
+}
 
 .wg-video {
   position: relative;
@@ -5560,25 +5587,11 @@ a.mapboxgl-ctrl-logo {
   margin-top: 40px;
   margin-bottom: 19px;
 }
-.pricing-item .pricing-box .list-text {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 48px;
-}
 .pricing-item .pricing-box .list-text .text-item {
   color: rgba(255, 255, 255, 0.6509803922);
-  padding-left: 17px;
-  position: relative;
 }
 .pricing-item .pricing-box .list-text .text-item::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  content: "";
-  width: 5px;
-  height: 5px;
   background-color: rgba(255, 255, 255, 0.6509803922);
-  transform: translateY(-50%) rotate(45deg);
 }
 .pricing-item.style-2::before {
   background: linear-gradient(293.18deg, rgba(255, 255, 255, 0) 69.15%, #FFFFFF 98.79%);
@@ -5666,6 +5679,27 @@ a.mapboxgl-ctrl-logo {
   padding: 48px;
 }
 
+.list-text {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.list-text .text-item {
+  color: var(--Title);
+  padding-left: 17px;
+  position: relative;
+}
+.list-text .text-item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: var(--Title);
+  transform: translateY(-50%) rotate(45deg);
+}
+
 .tf-switch-check {
   position: relative;
   width: 60px;
@@ -5712,6 +5746,14 @@ a.mapboxgl-ctrl-logo {
 }
 .list-avatar .item:not(:first-child) {
   margin-left: -7px;
+}
+.list-avatar.style-2 .item {
+  width: 50px;
+  height: 50px;
+  border: 0;
+}
+.list-avatar.style-2 .item:not(:first-child) {
+  margin-left: -10px;
 }
 
 .registation-wrap {
@@ -8730,6 +8772,11 @@ a.mapboxgl-ctrl-logo {
   padding-bottom: 130px;
 }
 
+.tf-spacing-4 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .page-title {
   padding: 260px 15px 65px;
   position: relative;
@@ -9140,6 +9187,150 @@ a.mapboxgl-ctrl-logo {
 .section-hero-2 {
   border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.section-hero-2 .wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  position: relative;
+  border-left: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.section-hero-2 .text-bg {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 170px;
+  line-height: 213px;
+  color: var(--Title);
+  text-transform: uppercase;
+  z-index: -1;
+}
+.section-hero-2 .left {
+  width: 26.1811%;
+}
+.section-hero-2 .left .tf-btn {
+  margin-bottom: 70px;
+}
+.section-hero-2 .image {
+  width: 47.6378%;
+}
+.section-hero-2 .right {
+  width: 26.1811%;
+}
+.section-hero-2 .text {
+  color: var(--Title);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.section-hero-2 .wg-video {
+  margin-bottom: 30px;
+}
+.section-hero-2 .wg-video img {
+  border-radius: 10px;
+}
+.section-hero-2 .avatar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.section-hero-2 .avatar .image {
+  width: 44px;
+  height: 44px;
+}
+.section-hero-2 .avatar .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.section-hero-2 .avatar .name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--Title);
+  text-transform: uppercase;
+}
+
+.section-about-gym .left {
+  padding-top: 20px;
+  max-width: 763px;
+}
+.section-about-gym .left .sub-title {
+  margin-bottom: 10px;
+}
+.section-about-gym .left .title {
+  margin-bottom: 40px;
+}
+.section-about-gym .left .text {
+  margin-bottom: 40px;
+}
+.section-about-gym .left .list-text {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+}
+.section-about-gym .right {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.section-about-gym .right::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(222, 251, 2, 0) 50%, #DEFB02 85%);
+  z-index: 1;
+}
+.section-about-gym .right .text {
+  position: absolute;
+  z-index: 2;
+  left: 60px;
+  right: 60px;
+  bottom: 50px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: var(--Title);
+}
+
+.section-pricing-package {
+  position: relative;
+}
+.section-pricing-package > .img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.section-pricing-package::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, #000000 100%);
+}
+
+.section-marque {
+  position: relative;
+  height: 129px;
+}
+.section-marque > *:first-child {
+  position: absolute;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+.section-marque > *:last-child {
+  position: absolute;
+  z-index: 0;
+  transform: rotate(2deg);
 }
 
 .line-h2 {
@@ -10428,7 +10619,21 @@ a.mapboxgl-ctrl-logo {
     padding-left: 100px;
   }
 }
+@media (max-width: 1600px) {
+  .header.style-box .header-left {
+    gap: 30px;
+  }
+  .header.style-box .header-right {
+    gap: 30px;
+  }
+  .header.style-box .menu-primary-menu {
+    gap: 24px;
+  }
+}
 @media (max-width: 1440px) {
+  .header.style-box .header-right .btn-quote {
+    display: none;
+  }
   .section-fitness-courses .heading .top {
     margin: 0;
   }
@@ -10610,6 +10815,10 @@ a.mapboxgl-ctrl-logo {
   .tf-spacing-3 {
     padding-top: 70px;
     padding-bottom: 80px;
+  }
+  .tf-spacing-4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .info-doctor-details .info-content {
     padding-left: 15px;

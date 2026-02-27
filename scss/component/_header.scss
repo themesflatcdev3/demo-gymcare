@@ -75,6 +75,7 @@
             }
     
             .item-link {
+                display: flex;
                 position: relative;
                 font-weight: 600;
                 font-size: 14px;
@@ -136,13 +137,33 @@
             max-width: 1781px;
             margin-left: auto;
             margin-right: auto;
-            padding: 20px 30px;
+            padding: 0px 30px;
             border-radius: 14px;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            .logo-header {
+                padding: 21px 0;
+            }
         }
         .header-right {
             display: flex;
             gap: 50px;
             align-items: center;
+            padding: 15px 0;
+        }
+        .menu-primary-menu .menu-item {
+            &.active {
+                .item-link {
+                    color: var(--Neon);
+                }
+            }
+            .item-link {
+                line-height: 82px;
+                color: #FFFFFFA6;
+            }
         }
     }
 
@@ -229,7 +250,6 @@
         position: relative;
         cursor: pointer;
     }
-
     span {
         position: absolute;
         display: block;
@@ -248,6 +268,11 @@
 
         &:last-child {
             bottom: 0;
+        }
+    }
+    &.style-white {
+        span {
+            background-color: var(--White);
         }
     }
 }
