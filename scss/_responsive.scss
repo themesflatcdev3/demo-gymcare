@@ -3007,6 +3007,9 @@
 
     .cols {
         flex-direction: column;
+        >* {
+            width: 100% !important;
+        }
     }
 
     .section-appointmrent {

@@ -76,6 +76,21 @@ form {
                 linear-gradient(93.27deg, #DEFB02 1.25%, rgba(255, 255, 255, 0) 46.86%) border-box;
             }
         }
+        &.style-4 {
+            padding: 15px 19px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            border: 1px solid #00000012;
+            color: var(--Title);
+            &::placeholder {
+                color: var(--Paragraph);
+            }
+            &:focus {
+                border-color: #000000;
+                background-color: var(--Gray);
+            }
+        }
     }
 
     input:-webkit-autofill {
@@ -179,6 +194,11 @@ fieldset {
 
     &.g-20 {
         gap: 20px;
+    }
+    &.cols-2 {
+        >* {
+            width: 50%;
+        }
     }
 }
 

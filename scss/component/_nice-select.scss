@@ -1,18 +1,21 @@
 .nice-select {
-    border-color: var(--border) !important;
-    border-radius: 999px;
+    display: flex;
+    border-color:#00000012 ;
     position: relative;
+    padding: 15px 19px;
+    border-radius: 10px;
 
     &::before {
-        content: '\e923';
+        content: '\e934';
         font-family: $fontIcon;
         position: absolute;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 6px;
+        font-size: 20px;
+        line-height: 20px;
         @include transition3();
-        color: var(--color-paragraph);
+        color: var(--Title);
     }
 
     &::after {
@@ -20,15 +23,17 @@
     }
 
     >span {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 16px;
-        line-height: 26px;
-        color: var(--color-paragraph);
+        line-height: 20px;
+        color: var(--Paragraph);
     }
 
-    &.no-border {
-        border: none !important;
-        padding: 0 !important;
+    .option {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 29px 10px 18px;
     }
 
     &.open {
@@ -36,15 +41,6 @@
 
         &::before {
             transform: translateY(-50%) rotate(180deg);
-        }
-    }
-
-    &.style-radius-50 {
-        border-radius: 999px;
-        border-color: var(--border-12);
-
-        &::before {
-            color: var(--color-paragraph);
         }
     }
 

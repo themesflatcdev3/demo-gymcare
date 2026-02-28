@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <!-- Magnific-popup -->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css" />
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="css/nice-select.css">
     <!-- Odometer -->
     <link rel="stylesheet" href="css/odometer-theme-default.css">
     <!-- Swiper -->
@@ -1445,13 +1447,14 @@
             </section>
             <!-- /section-trainers -->
 
-            <section>
+            <!-- section-bmi -->
+            <section class="tf-spacing-1 section-bmi">
                 <div class="tf-container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="left">
-                                <div class="title h2">What’s Your BMI?</div>
-                                <table class="table-bmi">
+                                <div class="title h2 mb-30">What’s Your BMI?</div>
+                                <table class="table-bmi mb-20">
                                     <thead>
                                         <tr>
                                             <td>BMI</td>
@@ -1484,30 +1487,56 @@
                             <div class="right">
                                 <div class="title h2 mb-10 text-Title text-uppercase">What’s Your BMI?</div>
                                 <div class="text mb-30">Understanding your Body Mass Index (BMI) is the first step toward achieving your fitness goals.</div>
-                                <!-- <form action="#" class="form-booking">
-                                    <div class="cols g-20">
-                                        <fieldset class="has-icon-after">
-                                            <input class="style-3" type="text" placeholder="Full Name">
-                                        </fieldset>
-                                        <fieldset class="has-icon-after">
-                                            <input class="style-3" type="email" placeholder="Email Address">
-                                        </fieldset>
-                                    </div>
-                                    <div class="cols g-20">
+                                <form action="#" class="form-booking">
+                                    <div class="cols cols-2 g-20">
                                         <fieldset>
-                                            <input class="style-3" value="2026-02-23" type="date" placeholder="Date">
+                                            <input class="style-4" type="text" placeholder="Height/inc">
                                         </fieldset>
                                         <fieldset>
-                                            <input class="style-3" value="15:45:30" type="time" placeholder="Time">
+                                            <input class="style-4" type="text" placeholder="Weight/ibs">
                                         </fieldset>
                                     </div>
-                                    <button type="submit" class="tf-btn text-uppercase justify-content-center w-100">book your seat</button>
-                                </form> -->
+                                    <div class="cols cols-2 g-20">
+                                        <fieldset>
+                                            <input class="style-4" type="text" placeholder="Age">
+                                        </fieldset>
+                                        <div class="nice-select">
+                                            <span class="current caption-1">Gender</span>
+                                            <ul class="list">
+                                                <li class="option option-all">
+                                                    Male
+                                                </li>
+                                                <li class="option">
+                                                    Female
+                                                </li>
+                                                <li class="option">
+                                                    Other
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="nice-select">
+                                        <span class="current caption-1">Select an activity factor</span>
+                                        <ul class="list">
+                                            <li class="option option-all">
+                                                Fitness
+                                            </li>
+                                            <li class="option">
+                                                Gym
+                                            </li>
+                                            <li class="option">
+                                                Personal
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="submit" class="tf-btn text-uppercase justify-content-center w-100">Calculate</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- /section-bmi -->
 
 
         </div>
@@ -1924,6 +1953,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-validate.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/gsap-animation.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
