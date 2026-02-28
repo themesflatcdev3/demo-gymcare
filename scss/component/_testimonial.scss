@@ -74,6 +74,18 @@
         font-size: 14px;
         line-height: 18px;
     }
+    &.style-2 {
+        .content {
+            padding: 0px;
+            max-width: unset;
+        }
+        .ratings .icon {
+            color: var(--Title);
+        }
+        .desc {
+            margin-bottom: 70px;
+        }
+    }
 }
 
 .ratings {

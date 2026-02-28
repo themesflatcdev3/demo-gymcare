@@ -655,6 +655,16 @@
     .table-bmi {
         background-color: var(--Gray);
         border-radius: 10px;
+        thead td {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            color: var(--Title);
+        }
+        tbody td {
+            font-size: 18px;
+            line-height: 26px;
+        }
         td {
             padding: 21px;
             text-align: center;
@@ -662,7 +672,47 @@
     }
 }
 
-
+.section-testimonial-1 {
+    position: relative;
+    padding: 173px 0 110px;
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.86%, #000000 100%);
+    }
+    >.img-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+    .testimonials-wrap {
+        padding: 70px;
+        max-width: 660px;
+        background-color: var(--Neon);
+        border-radius: 14px;
+        position: relative;
+        .list-btn {
+            position: absolute;
+            bottom: 70px;
+            right: 70px;
+            display: flex;
+            gap: 10px;
+            z-index: 1;
+        }
+    }
+    .tf-marquee {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+    }
+}
 
 
 
