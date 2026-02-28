@@ -545,6 +545,11 @@
             padding-right: 10px;
         }
     }
+    .section-provide {
+        .text-top {
+            margin-left: -21px;
+        }
+    }
 }
 
 @media (min-width: 1501px) {
@@ -691,9 +696,119 @@
             gap: 24px;
         }
     }
+    .section-hero-2 {
+        .left {
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+        .right {
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+        .text-bg {
+            font-size: 120px;
+            line-height: 175px;
+        }
+    }
+    .section-trainers .left-image .text-bg {
+        font-size: 100px;
+        line-height: 112px;
+        left: -100px;
+        top: 0;
+    }
+
+    .footer {
+        .footer-inner {
+            .logo-footer {
+                margin: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 1440px) {
+
+    .cta .content {
+        padding: 24px 15px;
+    }
+
+    .tf-post {
+        &.style-3 {
+            gap: 20px;
+            .top-post {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        &.style-2 .content {
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+        }
+    }
+
+    .section-testimonial-1 .testimonials-wrap {
+        padding: 24px;
+        .list-btn {
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+
+    .testimonials-item.style-2 .desc {
+        margin-bottom: 40px;
+    }
+
+    .pricing-item.style-2  {
+        .left {
+            padding: 24px 24px;
+        }
+        .right {
+            padding: 24px 24px;
+        }
+    }
+
+    .provide-item  {
+        padding: 28px 15px;
+        border-radius: 14px;
+        .title {
+            margin-bottom: 70px;
+        }
+    }
+
+    .section-about-gym .right {
+        .text {
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+
+    .section-hero-2 {
+        .wrap {
+            min-height: 600px;
+        }
+        .text-bg {
+            font-size: 80px;
+            line-height: 95px;
+        }
+    }
+
+    .features-item.style-2 {
+        padding: 24px 15px;
+        .icon {
+            margin-bottom: 90px;
+        }
+    }
+
+    .section-pricing-2 .image-right {
+        width: 40%;
+        right: 0px;
+    }
 
     .header.style-box {
         .header-right {
@@ -722,16 +837,6 @@
         }
         .right {
             padding-right: 0px;
-        }
-    }
-
-    .footer {
-        .footer-inner {
-            .heading {
-                margin: 0;
-                font-size: 100px;
-                line-height: 100px;
-            }
         }
     }
 
@@ -916,6 +1021,13 @@
 }
 
 @media (max-width: 1200px) {
+
+    .section-trainers .left-image .text-bg {
+        font-size: 50px;
+        line-height: 62px;
+        left: 0px;
+    }
+
     .section-hero {
         .title {
             font-size: 70px;
@@ -979,6 +1091,16 @@
     .tf-spacing-4 {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    .tf-spacing-5 {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    
+    .tf-spacing-6 {
+        padding-top: 50px;
+        padding-bottom: 75px;
     }
 
     .info-doctor-details {
@@ -1232,6 +1354,31 @@
 
 @media (max-width: 991px) {
 
+    .section-pricing-2 .image-right {
+        display: none;
+    }
+
+    .section-hero-2 {
+        .left {
+            width: 50%;
+        }
+        .right {
+            width: 50%;
+        }
+        .image {
+            display: none;
+        }
+    }
+
+    .tf-post.style-3 {
+        .post-meta-1 {
+            margin-bottom: 8px;
+        }
+        .title-post {
+            margin-bottom: 10px;
+        }
+    }
+
     .about-wrap {
         .heading {
             margin-bottom: 50px;
@@ -1401,10 +1548,6 @@
         }
         .footer-inner {
             padding: 50px 15px;
-            .heading {
-                font-size: 50px;
-                line-height: 50px;
-            }
         }
         .bottom {
             flex-direction: column;
@@ -1737,60 +1880,6 @@
         font-size: 25px;
     }
 
-    .testimonials-item {
-        &.style-2 {
-            padding: 40px 15px 54px;
-
-            .title {
-                margin-bottom: 30px;
-            }
-
-            .desc {
-                margin-bottom: 30px;
-            }
-
-            .icon {
-                i {
-                    font-size: 35px;
-                }
-            }
-        }
-
-        &.style-5 {
-            flex-direction: column;
-
-            .heading-section {
-                max-width: 100%;
-            }
-
-            .box-funfact {
-                display: none;
-            }
-
-            .testimonials-content {
-                max-width: 100%;
-                padding: 40px 71px;
-
-                .title {
-                    margin-bottom: 30px;
-                }
-
-                .desc {
-                    margin-bottom: 40px;
-                }
-            }
-
-            .arrow-btn {
-                display: none;
-            }
-
-            .icon {
-                i {
-                    font-size: 35px;
-                }
-            }
-        }
-    }
 
     .section-why {
         &.h-5 {
@@ -2110,6 +2199,99 @@
 }
 
 @media (max-width: 767px) {
+
+    .section-cta .cta {
+        flex-direction: column;
+        margin-bottom: 0;
+        >* {
+            width: 100% !important;
+        }
+    }
+
+    .section-testimonial-1 {
+        .tf-marquee {
+            bottom: 0;
+        }
+    }
+
+    .section-bmi .left {
+        margin-bottom: 30px;
+    }
+
+    .trainer-item .trainer-box {
+        padding: 22px 15px;
+        flex-wrap: wrap;
+        .left {
+            justify-content: start;
+        }
+        .wg-social {
+            margin-right: 0;
+        }
+        .social-item {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .pricing-item.style-2 .pricing-box {
+        flex-direction: column;
+        .left {
+            width: 100%;
+            border-right: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+        }
+        .right {
+            width: 100%;
+        }
+    }
+
+    .section-trainers .left-image  {
+        text-align: center;
+        padding-bottom: 30px;
+        .text-bg {
+            position: unset;
+        }
+    }
+
+    .md-mb-30 {
+        margin-bottom: 30px;
+    }
+
+    .provide-item {
+        margin-bottom: 30px;
+    }
+
+    .section-about-gym .left {
+        margin-bottom: 30px;
+    }
+
+    .section-hero-2 {
+        .text-bg {
+            position: unset;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 50px;
+            line-height: 60px;
+        }
+        .left {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            .tf-btn {
+                margin-bottom: 30px;
+            }
+        }
+        .right {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .wrap {
+            flex-direction: column;
+        }
+        
+    }
 
     .page-title {
         .page-title-content {

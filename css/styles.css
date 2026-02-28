@@ -1033,6 +1033,11 @@ a:hover, a:focus {
   font-size: 24px !important;
 }
 
+.simpleParallax {
+  width: 100%;
+  height: 100%;
+}
+
 /*------------ Components ---------------- */
 /*------------ header ---------------- */
 .top-bar .text-topbar {
@@ -1686,20 +1691,14 @@ a:hover, a:focus {
 .footer .footer-inner {
   padding: 120px 15px 97px;
 }
-.footer .footer-inner .heading {
-  margin-top: -49px;
-  margin-left: -185px;
-  font-weight: 700;
-  font-size: 170px;
-  line-height: 213px;
-  letter-spacing: -0.07em;
-  text-transform: uppercase;
+.footer .footer-inner .logo-footer {
+  margin-left: -178px;
 }
 .footer .footer-contact {
   max-width: 575px;
 }
 .footer .footer-contact .line {
-  margin-top: 30px;
+  margin-top: 72px;
   height: 1px;
   background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   margin-bottom: 50px;
@@ -2791,7 +2790,7 @@ fieldset {
 .tf-swiper .swiper-slide {
   height: auto;
 }
-.tf-swiper .swiper-slide > div {
+.tf-swiper .swiper-slide > * {
   height: 100%;
 }
 
@@ -2973,7 +2972,8 @@ fieldset {
 .tf-post .post-meta-1 {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 7px 20px;
   margin-bottom: 15px;
 }
 .tf-post .post-meta-1 a {
@@ -2992,9 +2992,12 @@ fieldset {
 }
 .tf-post.style-2 .content {
   position: absolute;
-  bottom: 40px;
+  bottom: 25px;
   left: 40px;
   right: 40px;
+}
+.tf-post.style-2 .top-post {
+  margin-bottom: 0;
 }
 .tf-post.style-2 .title-post {
   color: var(--White);
@@ -3674,6 +3677,13 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .testimonials-item.style-2 .desc {
   margin-bottom: 70px;
+}
+.testimonials-item.style-2 .quote-icon {
+  margin-bottom: 20px;
+}
+.testimonials-item.style-2 .sub {
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .ratings {
@@ -5267,7 +5277,11 @@ a.mapboxgl-ctrl-logo {
   line-height: 275px;
 }
 .tf-marquee.marquee-3 {
-  padding: 10px 0;
+  padding: 15px 0;
+  background-color: var(--Neon);
+}
+.tf-marquee.marquee-4 {
+  padding: 15px 0;
   background-color: var(--Black);
 }
 
@@ -5330,14 +5344,14 @@ a.mapboxgl-ctrl-logo {
 }
 
 .box-gradient-1 {
-  display: inline-flex;
+  width: max-content;
   padding: 10px 20px;
   border-radius: 10px;
   background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
 }
 
 .box-gradient-2 {
-  display: inline-flex;
+  width: max-content;
   padding: 7px 14px;
   border-radius: 10px;
   background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
@@ -5720,7 +5734,7 @@ a.mapboxgl-ctrl-logo {
   display: inline-flex;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 18px;
   color: var(--White);
   background-color: #202425;
   border-radius: 14px;
@@ -5739,12 +5753,15 @@ a.mapboxgl-ctrl-logo {
 }
 .pricing-item.style-2 .left {
   width: 50%;
-  padding: 38px;
+  padding: 38px 38px 33px;
   border-right: 1px solid rgba(255, 255, 255, 0.1019607843);
 }
 .pricing-item.style-2 .right {
   width: 50%;
-  padding: 48px;
+  padding: 47px 48px 36px 51px;
+}
+.pricing-item.style-2 .right .list-text {
+  gap: 17px;
 }
 
 .list-text {
@@ -5903,7 +5920,7 @@ a.mapboxgl-ctrl-logo {
   inset: 0;
   content: "";
   z-index: -1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.16) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
   backdrop-filter: blur(40px);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -5917,11 +5934,19 @@ a.mapboxgl-ctrl-logo {
 .provide-item .title {
   text-transform: uppercase;
   color: var(--White);
-  margin-bottom: 150px;
+  margin-bottom: 152px;
 }
 .provide-item .text {
+  font-size: 18px;
+  line-height: 26px;
   color: rgba(255, 255, 255, 0.6509803922);
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+}
+.provide-item .tf-btn {
+  padding: 11px 23px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
 }
 .provide-item:hover::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 80%);
@@ -6051,7 +6076,7 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 29px;
+  padding: 28px 29px 28.5px 29px;
   background-color: var(--White);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
   z-index: 3;
@@ -6091,6 +6116,7 @@ a.mapboxgl-ctrl-logo {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
+  letter-spacing: -0.03em;
 }
 .trainer-item .trainer-box .wg-social {
   margin-right: -196px;
@@ -6144,6 +6170,8 @@ a.mapboxgl-ctrl-logo {
 .cta .content .text {
   color: var(--Title);
   margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 26px;
 }
 .cta .image {
   width: 48.8372%;
@@ -8845,6 +8873,16 @@ a.mapboxgl-ctrl-logo {
   padding-bottom: 70px;
 }
 
+.tf-spacing-5 {
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+
+.tf-spacing-6 {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
 .page-title {
   padding: 260px 15px 65px;
   position: relative;
@@ -9207,12 +9245,13 @@ a.mapboxgl-ctrl-logo {
 }
 .section-pricing-package > .img-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: -1;
+}
+.section-pricing-package > .img-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 .section-pricing-package::before {
   position: absolute;
@@ -9273,25 +9312,28 @@ a.mapboxgl-ctrl-logo {
   font-weight: 700;
   font-size: 170px;
   line-height: 213px;
+  letter-spacing: -0.05em;
   color: var(--Title);
   text-transform: uppercase;
   z-index: -1;
 }
 .section-hero-2 .left {
   width: 26.1811%;
+  padding: 0 0 70px 68px;
 }
 .section-hero-2 .left .tf-btn {
   margin-bottom: 70px;
 }
 .section-hero-2 .image {
-  width: 47.6378%;
+  width: 46.2%;
 }
 .section-hero-2 .right {
   width: 26.1811%;
+  padding: 0px 75px 70px 108px;
 }
 .section-hero-2 .text {
   color: var(--Title);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
 }
 .section-hero-2 .wg-video {
@@ -9308,6 +9350,7 @@ a.mapboxgl-ctrl-logo {
 .section-hero-2 .avatar .image {
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
 }
 .section-hero-2 .avatar .image img {
   width: 100%;
@@ -9334,11 +9377,14 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 40px;
 }
 .section-about-gym .left .text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
   margin-bottom: 40px;
 }
 .section-about-gym .left .list-text {
   display: grid;
-  gap: 10px;
+  gap: 6px;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
 }
@@ -9359,10 +9405,11 @@ a.mapboxgl-ctrl-logo {
   z-index: 2;
   left: 60px;
   right: 60px;
-  bottom: 50px;
+  bottom: 49px;
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--Title);
 }
@@ -9372,12 +9419,13 @@ a.mapboxgl-ctrl-logo {
 }
 .section-provide > .img-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: -1;
+}
+.section-provide > .img-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 .section-provide::before {
   position: absolute;
@@ -9388,17 +9436,17 @@ a.mapboxgl-ctrl-logo {
 
 .section-marque {
   position: relative;
-  height: 129px;
+  height: 88px;
 }
 .section-marque > *:first-child {
-  position: absolute;
   transform: rotate(-2deg);
   z-index: 1;
+  position: relative;
+  margin-top: 36px;
 }
 .section-marque > *:last-child {
-  position: absolute;
-  z-index: 0;
   transform: rotate(2deg);
+  margin-top: -57px;
 }
 
 .section-pricing-2 {
@@ -9411,40 +9459,47 @@ a.mapboxgl-ctrl-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -3;
 }
 .section-pricing-2::before {
   position: absolute;
   inset: 0;
   content: "";
+  z-index: -2;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, #000000 80%);
 }
 .section-pricing-2 .image-right {
   position: absolute;
   bottom: 0;
   right: 35px;
+  z-index: -1;
 }
 
-.section-trainers .left {
+.section-trainers .left-image {
   position: relative;
   place-content: end;
   height: 100%;
 }
-.section-trainers .left .text-bg {
+.section-trainers .left-image .text-bg {
   position: absolute;
   top: -32px;
   left: -300px;
   font-weight: 600;
   font-size: 170px;
   line-height: 213px;
+  letter-spacing: -0.047em;
 }
-.section-trainers .left .image img {
+.section-trainers .left-image .image img {
   border-radius: 999px;
 }
 
 .section-bmi .table-bmi {
   background-color: var(--Gray);
   border-radius: 10px;
+}
+.section-bmi .table-bmi td {
+  padding: 21px;
+  text-align: center;
 }
 .section-bmi .table-bmi thead td {
   font-weight: 700;
@@ -9455,10 +9510,7 @@ a.mapboxgl-ctrl-logo {
 .section-bmi .table-bmi tbody td {
   font-size: 18px;
   line-height: 26px;
-}
-.section-bmi .table-bmi td {
-  padding: 21px;
-  text-align: center;
+  padding: 15px;
 }
 
 .section-testimonial-1 {
@@ -9474,12 +9526,13 @@ a.mapboxgl-ctrl-logo {
 }
 .section-testimonial-1 > .img-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: -2;
+}
+.section-testimonial-1 > .img-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
 }
 .section-testimonial-1 .testimonials-wrap {
   padding: 70px;
@@ -9490,7 +9543,7 @@ a.mapboxgl-ctrl-logo {
 }
 .section-testimonial-1 .testimonials-wrap .list-btn {
   position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   right: 70px;
   display: flex;
   gap: 10px;
@@ -9498,9 +9551,13 @@ a.mapboxgl-ctrl-logo {
 }
 .section-testimonial-1 .tf-marquee {
   position: absolute;
-  bottom: 70px;
+  bottom: 15px;
   left: 0;
   right: 0;
+}
+
+.section-cta .cta {
+  margin-bottom: -120px;
 }
 
 .line-h2 {
@@ -10717,6 +10774,9 @@ a.mapboxgl-ctrl-logo {
   .section-choose-us .choose-us-grid {
     padding-right: 10px;
   }
+  .section-provide .text-top {
+    margin-left: -21px;
+  }
 }
 @media (min-width: 1501px) {
   .features-item.style-3-2 {
@@ -10799,8 +10859,92 @@ a.mapboxgl-ctrl-logo {
   .header.style-box .menu-primary-menu {
     gap: 24px;
   }
+  .section-hero-2 .left {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+  .section-hero-2 .right {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+  .section-hero-2 .text-bg {
+    font-size: 120px;
+    line-height: 175px;
+  }
+  .section-trainers .left-image .text-bg {
+    font-size: 100px;
+    line-height: 112px;
+    left: -100px;
+    top: 0;
+  }
+  .footer .footer-inner .logo-footer {
+    margin: 0;
+  }
 }
 @media (max-width: 1440px) {
+  .cta .content {
+    padding: 24px 15px;
+  }
+  .tf-post.style-3 {
+    gap: 20px;
+  }
+  .tf-post.style-3 .top-post {
+    width: 150px;
+    height: 150px;
+  }
+  .tf-post.style-2 .content {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+  .section-testimonial-1 .testimonials-wrap {
+    padding: 24px;
+  }
+  .section-testimonial-1 .testimonials-wrap .list-btn {
+    bottom: 15px;
+    right: 15px;
+  }
+  .testimonials-item.style-2 .desc {
+    margin-bottom: 40px;
+  }
+  .pricing-item.style-2 .left {
+    padding: 24px 24px;
+  }
+  .pricing-item.style-2 .right {
+    padding: 24px 24px;
+  }
+  .provide-item {
+    padding: 28px 15px;
+    border-radius: 14px;
+  }
+  .provide-item .title {
+    margin-bottom: 70px;
+  }
+  .section-about-gym .right .text {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .section-hero-2 .wrap {
+    min-height: 600px;
+  }
+  .section-hero-2 .text-bg {
+    font-size: 80px;
+    line-height: 95px;
+  }
+  .features-item.style-2 {
+    padding: 24px 15px;
+  }
+  .features-item.style-2 .icon {
+    margin-bottom: 90px;
+  }
+  .section-pricing-2 .image-right {
+    width: 40%;
+    right: 0px;
+  }
   .header.style-box .header-right .btn-quote {
     display: none;
   }
@@ -10819,11 +10963,6 @@ a.mapboxgl-ctrl-logo {
   }
   .section-hero .right {
     padding-right: 0px;
-  }
-  .footer .footer-inner .heading {
-    margin: 0;
-    font-size: 100px;
-    line-height: 100px;
   }
   .page-title .page-title-content .title {
     font-size: 100px;
@@ -10943,6 +11082,11 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 1200px) {
+  .section-trainers .left-image .text-bg {
+    font-size: 50px;
+    line-height: 62px;
+    left: 0px;
+  }
   .section-hero .title {
     font-size: 70px;
     line-height: 70px;
@@ -10989,6 +11133,14 @@ a.mapboxgl-ctrl-logo {
   .tf-spacing-4 {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  .tf-spacing-5 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  .tf-spacing-6 {
+    padding-top: 50px;
+    padding-bottom: 75px;
   }
   .info-doctor-details .info-content {
     padding-left: 15px;
@@ -11155,6 +11307,24 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 991px) {
+  .section-pricing-2 .image-right {
+    display: none;
+  }
+  .section-hero-2 .left {
+    width: 50%;
+  }
+  .section-hero-2 .right {
+    width: 50%;
+  }
+  .section-hero-2 .image {
+    display: none;
+  }
+  .tf-post.style-3 .post-meta-1 {
+    margin-bottom: 8px;
+  }
+  .tf-post.style-3 .title-post {
+    margin-bottom: 10px;
+  }
   .about-wrap .heading {
     margin-bottom: 50px;
   }
@@ -11295,10 +11465,6 @@ a.mapboxgl-ctrl-logo {
   }
   .footer .footer-inner {
     padding: 50px 15px;
-  }
-  .footer .footer-inner .heading {
-    font-size: 50px;
-    line-height: 50px;
   }
   .footer .bottom {
     flex-direction: column;
@@ -11487,43 +11653,6 @@ a.mapboxgl-ctrl-logo {
   }
   .fs-40 {
     font-size: 25px;
-  }
-  .testimonials-item.style-2 {
-    padding: 40px 15px 54px;
-  }
-  .testimonials-item.style-2 .title {
-    margin-bottom: 30px;
-  }
-  .testimonials-item.style-2 .desc {
-    margin-bottom: 30px;
-  }
-  .testimonials-item.style-2 .icon i {
-    font-size: 35px;
-  }
-  .testimonials-item.style-5 {
-    flex-direction: column;
-  }
-  .testimonials-item.style-5 .heading-section {
-    max-width: 100%;
-  }
-  .testimonials-item.style-5 .box-funfact {
-    display: none;
-  }
-  .testimonials-item.style-5 .testimonials-content {
-    max-width: 100%;
-    padding: 40px 71px;
-  }
-  .testimonials-item.style-5 .testimonials-content .title {
-    margin-bottom: 30px;
-  }
-  .testimonials-item.style-5 .testimonials-content .desc {
-    margin-bottom: 40px;
-  }
-  .testimonials-item.style-5 .arrow-btn {
-    display: none;
-  }
-  .testimonials-item.style-5 .icon i {
-    font-size: 35px;
   }
   .section-why.h-5 .section-why-inner {
     flex-direction: column;
@@ -11719,6 +11848,84 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 767px) {
+  .section-cta .cta {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .section-cta .cta > * {
+    width: 100% !important;
+  }
+  .section-testimonial-1 .tf-marquee {
+    bottom: 0;
+  }
+  .section-bmi .left {
+    margin-bottom: 30px;
+  }
+  .trainer-item .trainer-box {
+    padding: 22px 15px;
+    flex-wrap: wrap;
+  }
+  .trainer-item .trainer-box .left {
+    justify-content: start;
+  }
+  .trainer-item .trainer-box .wg-social {
+    margin-right: 0;
+  }
+  .trainer-item .trainer-box .social-item {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .pricing-item.style-2 .pricing-box {
+    flex-direction: column;
+  }
+  .pricing-item.style-2 .pricing-box .left {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+  }
+  .pricing-item.style-2 .pricing-box .right {
+    width: 100%;
+  }
+  .section-trainers .left-image {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section-trainers .left-image .text-bg {
+    position: unset;
+  }
+  .md-mb-30 {
+    margin-bottom: 30px;
+  }
+  .provide-item {
+    margin-bottom: 30px;
+  }
+  .section-about-gym .left {
+    margin-bottom: 30px;
+  }
+  .section-hero-2 .text-bg {
+    position: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .section-hero-2 .left {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section-hero-2 .left .tf-btn {
+    margin-bottom: 30px;
+  }
+  .section-hero-2 .right {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section-hero-2 .wrap {
+    flex-direction: column;
+  }
   .page-title .page-title-content .title {
     font-size: 50px;
     line-height: 50px;

@@ -3,20 +3,14 @@
     background-color: var(--Black);
     .footer-inner {
         padding: 120px 15px 97px;
-        .heading {
-            margin-top: -49px;
-            margin-left: -185px;
-            font-weight: 700;
-            font-size: 170px;
-            line-height: 213px;
-            letter-spacing: -0.07em;
-            text-transform: uppercase;
+        .logo-footer {
+            margin-left: -178px;
         }
     }
     .footer-contact {
         max-width: 575px;
         .line {
-            margin-top: 30px;
+            margin-top: 72px;
             height: 1px;
             background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
             margin-bottom: 50px;

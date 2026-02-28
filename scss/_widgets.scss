@@ -37,7 +37,11 @@
         }
     }
     &.marquee-3 {
-        padding: 10px 0;
+        padding: 15px 0;
+        background-color: var(--Neon);
+    }
+    &.marquee-4 {
+        padding: 15px 0;
         background-color: var(--Black);
     }
 }
@@ -93,14 +97,14 @@
 }
 
 .box-gradient-1 {
-    display: inline-flex;
+    width: max-content;
     padding: 10px 20px;
     border-radius: 10px;
     background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
 }
 
 .box-gradient-2 {
-    display: inline-flex;
+    width: max-content;
     padding: 7px 14px;
     border-radius: 10px;
     background: linear-gradient(90deg, #DEFB02 0%, rgba(222, 251, 2, 0) 100%);
@@ -469,7 +473,7 @@
             display: inline-flex;
             font-weight: 600;
             font-size: 16px;
-            line-height: 20px;
+            line-height: 18px;
             color: var(--White);
             background-color: #202425;
             border-radius: 14px;
@@ -488,12 +492,15 @@
         }
         .left {
             width: 50%;
-            padding: 38px;
+            padding: 38px 38px 33px;
             border-right: 1px solid #FFFFFF1A;
         }
         .right {
             width: 50%;
-            padding: 48px;
+            padding: 47px 48px 36px 51px;
+            .list-text {
+                gap: 17px;
+            }
         }
     }
 }
@@ -657,7 +664,7 @@
         inset: 0;
         content: '';
         z-index: -1;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.16) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
         backdrop-filter: blur(40px);
         @include transition3;
     }
@@ -667,11 +674,19 @@
     .title {
         text-transform: uppercase;
         color: var(--White);
-        margin-bottom: 150px;
+        margin-bottom: 152px;
     }
     .text {
+        font-size: 18px;
+        line-height: 26px;
         color: #FFFFFFA6;
-        margin-bottom: 30px;
+        margin-bottom: 29px;
+    }
+    .tf-btn {
+        padding: 11px 23px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
     }
     &:hover {
         &::before {
@@ -803,7 +818,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 15px;
-        padding: 29px;
+        padding: 28px 29px 28.5px 29px;
         background-color: var(--White);
         border-bottom: 1px solid #0000001A;
         z-index: 3;
@@ -834,6 +849,7 @@
             font-weight: 700;
             font-size: 30px;
             line-height: 38px;
+            letter-spacing: -0.03em;
         }
         .wg-social {
             margin-right: -196px;
@@ -885,6 +901,8 @@
         .text {
             color: var(--Title);
             margin-bottom: 25px;
+            font-size: 18px;
+            line-height: 26px;
         }
     }
     .image {

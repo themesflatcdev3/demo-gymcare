@@ -60,7 +60,8 @@
     .post-meta-1 {
         display: flex;
         align-items: center;
-        gap: 20px;
+        flex-wrap: wrap;
+        gap: 7px 20px;
         margin-bottom: 15px;
         a {
             color: #FFFFFFA6;
@@ -80,9 +81,12 @@
         position: relative;
         .content {
             position: absolute;
-            bottom: 40px;
+            bottom: 25px;
             left: 40px;
             right: 40px;
+        }
+        .top-post {
+            margin-bottom: 0;
         }
         .title-post {
             color: var(--White);
