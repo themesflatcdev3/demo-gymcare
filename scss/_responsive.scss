@@ -1352,6 +1352,12 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .schedule-wrap {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
 @media (max-width: 991px) {
 
     .section-pricing-2 .image-right {
@@ -2199,6 +2205,10 @@
 }
 
 @media (max-width: 767px) {
+
+    .schedule-wrap {
+        grid-template-columns: repeat(1,1fr);
+    }
 
     .section-cta .cta {
         flex-direction: column;

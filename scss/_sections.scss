@@ -745,6 +745,61 @@
     }
 }
 
+.schedule-wrap {
+    display: grid;
+    gap: 20px 5px;
+    grid-template-columns: repeat(6,1fr);
+    .schedule-col {
+        display: grid;
+        gap: 5px;
+    }
+    .schedule-day {
+        border-radius: 10px;
+        padding: 16px;
+        background-color: var(--Black);
+        font-weight: 600;
+        color: var(--White);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .schedule-item {
+        display: grid;
+        gap: 4px;
+        background: #0000000D;
+        border: 1px solid #0000000F;
+        border-radius: 10px;
+        padding: 19px 0;
+        text-align: center;
+        @include transition3;
+        .schedule-title {
+            font-weight: 700;
+            color: var(--Black);
+            text-transform: uppercase;
+        }
+        &.active,
+        &:hover {
+            background-color: var(--Neon);
+        }
+    }
+    .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

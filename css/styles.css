@@ -9560,6 +9560,51 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: -120px;
 }
 
+.schedule-wrap {
+  display: grid;
+  gap: 20px 5px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.schedule-wrap .schedule-col {
+  display: grid;
+  gap: 5px;
+}
+.schedule-wrap .schedule-day {
+  border-radius: 10px;
+  padding: 16px;
+  background-color: var(--Black);
+  font-weight: 600;
+  color: var(--White);
+  text-transform: uppercase;
+  text-align: center;
+}
+.schedule-wrap .schedule-item {
+  display: grid;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.0509803922);
+  border: 1px solid rgba(0, 0, 0, 0.0588235294);
+  border-radius: 10px;
+  padding: 19px 0;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.schedule-wrap .schedule-item .schedule-title {
+  font-weight: 700;
+  color: var(--Black);
+  text-transform: uppercase;
+}
+.schedule-wrap .schedule-item.active, .schedule-wrap .schedule-item:hover {
+  background-color: var(--Neon);
+}
+.schedule-wrap .text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .line-h2 {
   width: 100%;
   height: 1px;
@@ -11306,6 +11351,11 @@ a.mapboxgl-ctrl-logo {
     max-width: 120px !important;
   }
 }
+@media (max-width: 1024px) {
+  .schedule-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 991px) {
   .section-pricing-2 .image-right {
     display: none;
@@ -11848,6 +11898,9 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 767px) {
+  .schedule-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .section-cta .cta {
     flex-direction: column;
     margin-bottom: 0;
