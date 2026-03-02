@@ -885,6 +885,7 @@
         border-radius: 14px;
         background-color: var(--Neon);
         padding: 40px 50px;
+        position: relative;
         .sub {
             display: inline-flex;
             padding: 6px 13px;
@@ -917,6 +918,59 @@
                 font-size: 18px;
             }
         }
+        .text-bg {
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-51%);
+            text-align: center;
+            font-weight: 700;
+            font-size: 220px;
+            line-height: 200px;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+    }
+    &.style-2 {
+        gap: 20px;
+        .content {
+            width: calc(50% - 10px);
+            padding: 70px 80px;
+            .text-bg {
+                position: absolute;
+                z-index: 1;
+                top: 50px;
+                left: 80px;
+                right: 0;
+                font-size: 190px;
+                line-height: 160px;
+            }
+            .img-bg {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                right: 20px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                inset: 0;
+                background: linear-gradient(180deg, rgba(222, 251, 2, 0) 0%, #DEFB02 90%);
+                z-index: 3;
+            }
+            .title {
+                border-bottom: 1px solid #0000001A;
+                padding-bottom: 68px;
+                margin-bottom: 68px;
+                letter-spacing: -0.03em;
+            }
+            .text {
+                font-weight: 500;
+                letter-spacing: 0.01em;
+            }
+        }
     }
 }
 
@@ -925,7 +979,7 @@
         position: relative;
         border: 1px solid #0000001A;
         padding: 29px 29px 267px;
-        margin-bottom: -250px;
+        margin-bottom: -229px;
         @include transition3;
         .heading {
             display: flex;
@@ -949,8 +1003,10 @@
         .text {
             color: var(--Paragraph);
             border-top: 1px solid #0000001A;
-            padding-top: 30px;
-            margin-top: 30px;
+            padding-top: 31px;
+            margin-top: 31px;
+            font-size: 18px;
+            line-height: 26px;
         }
         &::before {
             position: absolute;
@@ -987,9 +1043,9 @@
     }
     &.style-2 {
         .content {
-            margin-top: -250px;
+            margin-top: -229px;
             margin-bottom: 0;
-            padding: 267px 29px 29px;
+            padding: 263px 29px 33px;
             &::before {
                 top: unset;
                 bottom: 0;
@@ -1167,6 +1223,20 @@
         font-size: 18px;
         line-height: 23px;
         color: var(--Title);
+    }
+    &.style-2 {
+        .counter {
+            color: var(--Title);
+            margin-bottom: -5px;
+            .pre {
+                color: var(--Title);
+            }
+        }
+        .sub {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+        }
     }
 }
 

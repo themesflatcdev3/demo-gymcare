@@ -5,7 +5,7 @@
 .according-item {
     border-top: 1px dashed #FFFFFF4D;
     border-radius: 0px;
-    padding: 30px 0;
+    padding: 30px 0 20px;
     @include transition3();
     .title-according {
         @include d-flex();
@@ -45,6 +45,8 @@
         padding: 25px 94px 0 122px;
         .text {
             color: #FFFFFFA6;
+            font-size: 18px;
+            line-height: 26px;
         }
     }
 }

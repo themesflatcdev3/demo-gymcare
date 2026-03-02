@@ -554,6 +554,16 @@
 
 @media (min-width: 1501px) {
 
+    .section-programs .image-left {
+        img {
+            position: absolute;
+            bottom: 30px;
+            left: -230px;
+            width: 655px;
+            height: 430px;
+        }
+    }
+
     .features-item {
         &.style-3-2 {
             padding: 40px 70px 43px;
@@ -593,6 +603,10 @@
 }
 
 @media (min-width: 1700px) {
+
+    .section-hero-3 .image {
+        margin-left: -117px;
+    }
 
     .section-history {
         &.p-history {
