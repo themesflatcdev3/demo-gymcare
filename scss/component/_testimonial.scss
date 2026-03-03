@@ -100,6 +100,7 @@
             border: 1px solid #0000001A;
             background-color: var(--Gray);
             max-width: unset;
+            height: 100%;
             @include transition3;
             &:hover {
                 background-color: var(--Neon);

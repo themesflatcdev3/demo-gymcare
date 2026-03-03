@@ -117,7 +117,7 @@
             padding: 0 30px 25px;
         }
         .post-meta-1 {
-            gap: 15px 30px;
+            gap: 7px 30px;
             flex-wrap: wrap;
         }
         .title-post {
@@ -134,7 +134,8 @@
 
 .post-meta {
     display: inline-flex;
-    gap: 31px;
+    gap: 7px 32px;
+    flex-wrap: wrap;
     align-items: center;
     padding: 9px 19px;
     border: 1px solid #0000001A;
@@ -177,11 +178,11 @@
     .col-left {
         display: grid;
         gap: 50px;
-        padding-right: 10px;
+        padding-right: 20px;
     }
     .col-right {
         border-left: 1px solid var(--White);
-        padding-left: 40px;
+        padding-left: 59px;
     }
 }
 
@@ -243,6 +244,9 @@
 .sidebar-wrap {
     display: grid;
     gap: 50px;
+    .sidebar-title {
+        text-transform: uppercase;
+    }
 }
 
 .categories-item {
@@ -436,6 +440,7 @@ form.form-search-siderbar {
         display: flex;
         padding: 5px 14px;
         border-radius: 10px;
+        font-size: 16px;
         line-height: 20px;
         border: 1px solid #0000001A;
         color: var(--Paragraph);
@@ -470,6 +475,12 @@ form.form-search-siderbar {
         .title {
             color: var(--White);
             margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .tf-btn {
+            font-size: 14px;
+            line-height: 18px;
+            padding: 12px 24px;
         }
     }
 }
@@ -598,7 +609,6 @@ form.form-search-siderbar {
     align-items: center;
     gap: 30px;
     position: relative;
-    padding-right: 60px;
     .image {
         flex-shrink: 0;
         width: 100px;
@@ -608,6 +618,9 @@ form.form-search-siderbar {
             height: 100%;
             border-radius: 50%;
         }
+    }
+    .name {
+        padding-right: 60px;
     }
     .btn-rep {
         position: absolute;

@@ -62,6 +62,14 @@
             background: var(--Black);
         }
     }
+    &.pagination-white {
+        .swiper-pagination-bullet {
+            background: var(--Paragraph);
+            &.swiper-pagination-bullet-active {
+                background: var(--White);
+            }
+        }
+    }
 }
 
 .arrow-btn {
