@@ -961,6 +961,10 @@ a {
     margin-bottom: 70px;
 }
 
+.mb-75 {
+    margin-bottom: 75px;
+}
+
 .mx-27 {
     margin: 0 27px !important;
 }
@@ -1033,4 +1037,8 @@ a {
 
 .place-content-end {
     place-content: end;
+}
+
+.line-bot {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

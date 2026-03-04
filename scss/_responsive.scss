@@ -5,9 +5,9 @@
 }
 
 @media (min-width: 992px) {
-    .page-title {
-        .page-title-content {
-            // background-attachment: fixed;
+    .heading-section {
+        &.mb-100 {
+            margin-bottom: 100px;
         }
     }
 
@@ -348,6 +348,10 @@
 }
 
 @media (min-width: 1200px) {
+
+    .row-xl-gap-70 {
+        row-gap: 70px;
+    }
 
     .tf-grid-layout.xl-col-3 {
         grid-template-columns: repeat(3, 1fr);
@@ -745,6 +749,14 @@
 
 @media (max-width: 1440px) {
 
+    .services-box {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &.has-pl {
+            padding-left: 15px;
+        }
+    }
+
     .wg-tab-price .tab-price-content > .item {
         padding: 26px 15px;
     }
@@ -1092,6 +1104,11 @@
 
 @media (max-width: 1200px) {
 
+    h2 {
+        font-size: 34px !important;
+        line-height: 44px !important;
+    }
+
     .tf-post.style-4 .content {
         padding-left: 10px;
         padding-right: 10px;
@@ -1156,7 +1173,7 @@
             }
         }
         .about-inner {
-            .image-left .text-bg {
+            .about-image .text-bg {
                 font-size: 70px;
                 line-height: 70px;
             }
@@ -1461,6 +1478,17 @@
 
 @media (max-width: 991px) {
 
+    .box-mission-vision {
+        padding: 26px 15px;
+        .tab-mission-vision {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .list-text {
+            margin-bottom: 20px;
+        }
+    }
+
     .wg-author {
         padding: 24px 15px;
         flex-direction: column;
@@ -1570,7 +1598,7 @@
     .about-wrap {
         .about-inner {
             flex-direction: column;
-            .image-left {
+            .about-image {
                 width: 100%;
             }
         }
@@ -2369,6 +2397,19 @@
 
 @media (max-width: 767px) {
 
+    .services-details-wrap .list-text {
+        grid-template-columns: 1fr;
+    }
+
+    .tf-marquee.marquee-2 .text {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+    .box-mission-vision {
+        margin-bottom: 30px;
+    }
+
     .tf-spacing-1 {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -2584,7 +2625,7 @@
             }
         }
         .about-inner {
-            .image-left .content {
+            .about-image .content {
                 padding: 15px;
                 bottom: 15px;
                 left: 15px;

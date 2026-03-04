@@ -596,6 +596,16 @@ form.form-search-siderbar {
             border-color: var(--Black);
         }
     }
+    &.style-white {
+        .social-item {
+            background-color: var(--White);
+            color: var(--Title);
+            &:hover {
+                border-color: var(--Neon);
+                background-color: var(--Neon);
+            }
+        }
+    }
 }
 
 .wg-comments {
