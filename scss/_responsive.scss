@@ -749,6 +749,19 @@
 
 @media (max-width: 1440px) {
 
+    .portfolio-projects .projects-wrap {
+        gap: 30px;
+    }
+
+    .project-item {
+        gap: 20px;
+        &:hover {
+            .title {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
     .services-box {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -826,15 +839,24 @@
     }
 
     .section-testimonial-1 .testimonials-wrap {
-        padding: 24px;
         .list-btn {
             bottom: 15px;
             right: 15px;
         }
     }
 
-    .testimonials-item.style-2 .desc {
-        margin-bottom: 40px;
+    .testimonials-item  {
+        &.style-2 {
+            padding: 24px;
+            .desc {
+                margin-bottom: 40px;
+            }
+        }
+        &.style-4,
+        &.style-5,
+        &.style-6 {
+            padding: 24px;
+        }
     }
 
     .pricing-item.style-2  {
@@ -1103,6 +1125,19 @@
 }
 
 @media (max-width: 1200px) {
+
+    .faqs-according-item {
+        padding: 29px 39px;
+        .title-according {
+            .number {
+                min-width: 60px;
+            }
+        }
+        .according-content {
+            padding-left: 60px;
+            padding-right: 25px;
+        }
+    }
 
     h2 {
         font-size: 34px !important;
@@ -1477,6 +1512,19 @@
 }
 
 @media (max-width: 991px) {
+
+    .project-item .image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .portfolio-overview .content {
+        gap: 30px;
+    }
+
+    .portfolio-challenges .desc .list-text {
+        grid-template-columns: 1fr;
+    }
 
     .box-mission-vision {
         padding: 26px 15px;
@@ -2396,6 +2444,37 @@
 }
 
 @media (max-width: 767px) {
+
+    .faqs-according-item {
+        padding: 15px 22px;
+        .title-according {
+            .number {
+                min-width: 45px;
+            }
+        }
+        .according-content {
+            padding-left: 45px;
+            .list-text {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .portfolio-overview .wrap-image {
+        flex-wrap: wrap;
+        >*:nth-child(2),
+        >*:nth-child(3) {
+            width: calc(50% - 5px)
+        }
+    }
+
+    .portfolio-projects .projects-wrap {
+        flex-direction: column;
+    }
+
+    .portfolio-overview .content {
+        flex-direction: column;
+    }
 
     .services-details-wrap .list-text {
         grid-template-columns: 1fr;

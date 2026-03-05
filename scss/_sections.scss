@@ -131,6 +131,15 @@
 
 .heading-section {
     margin-bottom: 70px;
+    &.mb-50 {
+        margin-bottom: 50px;
+    }
+    &.mb-40 {
+        margin-bottom: 40px;
+    }
+    &.mb-30 {
+        margin-bottom: 30px;
+    }
 }
 
 .section-hero {
@@ -455,6 +464,11 @@
             border-radius: 7px;
         }
     }
+    &.no-bg {
+        &::before {
+            display: none;
+        }
+    }
 }
 
 .section-client-testimonials {
@@ -621,6 +635,40 @@
     }
 }
 
+.section-about-gym-2 {
+    .content {
+        padding-top: 11px;
+        .text {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 30px;
+        }
+        .list-text {
+            margin-bottom: 40px;
+            gap: 10px;
+            .text-item {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23px;
+            }
+        }
+    }
+    .wrap-img {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+        .registation-wrap {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+}
+
 .section-provide {
     position: relative;
     >.img-bg {
@@ -773,11 +821,8 @@
         }
     }
     .testimonials-wrap {
-        padding: 70px;
-        max-width: 660px;
-        background-color: var(--Neon);
-        border-radius: 14px;
         position: relative;
+        max-width: 660px;
         .list-btn {
             position: absolute;
             bottom: 60px;
@@ -1129,13 +1174,75 @@
             }
         }
     }
-
 }
 
+.portfolio-overview {
 
+    .wrap-image {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 70px;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .content {
+        display: flex;
+        gap: 100px;
+        max-width: 946px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 29px;
+        border-bottom: 1px solid #0000001A
+    }
+}
 
+.portfolio-challenges {
+    .desc {
+        .text {
+            font-size: 18px;
+            line-height: 26px;
+            color: var(--Paragraph);
+            margin-bottom: 50px;
+        }
+        .list-text {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 100px;
+            .text-item {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23px;
+            }
+        }
+        .wrap-image {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 0px;
+            img {
+                border-radius: 14px;
+            }
+        }
+    }
+}
 
-
+.portfolio-projects {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        height: 1px;
+        width: 100%;
+        max-width: 1290px;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .projects-wrap {
+        display: flex;
+        gap: 125px;
+    }
+}
 
 
 

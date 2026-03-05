@@ -75,6 +75,9 @@
         line-height: 18px;
     }
     &.style-2 {
+        padding: 70px;
+        background-color: var(--Neon);
+        border-radius: 14px;
         .content {
             padding: 0px;
             max-width: unset;
@@ -144,6 +147,79 @@
                 line-height: 23px;
                 color: var(--Title);
             }
+        }
+    }
+    &.style-4 {
+        padding: 50px 55px 43px 60px;
+        background-color: var(--Neon);
+        border-radius: 14px;
+        .content {
+            padding: 0px;
+            max-width: unset;
+        }
+        .ratings .icon {
+            color: var(--Title);
+        }
+        .desc {
+            margin-bottom: 40px;
+        }
+        .quote-icon {
+            margin-bottom: 20px;
+        }
+        .sub {
+            font-size: 18px;
+            line-height: 23px;
+        }
+    }
+    &.style-5 {
+        padding: 50px 50px 40px 60px;
+        background-color: var(--Black);
+        border-radius: 14px;
+        .content {
+            padding: 0px;
+            max-width: unset;
+        }
+        .ratings .icon {
+            color: var(--Neon);
+        }
+        .desc {
+            margin-bottom: 35px;
+        }
+        .bot {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        .quote-icon {
+            margin-bottom: 0px;
+        }
+        .sub {
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFFA6;
+        }
+    }
+    &.style-6 {
+        padding: 50px 55px 43px 60px;
+        background-color: var(--Black);
+        border-radius: 14px;
+        .content {
+            padding: 0px;
+            max-width: unset;
+        }
+        .ratings .icon {
+            color: var(--Neon);
+        }
+        .desc {
+            margin-bottom: 40px;
+        }
+        .quote-icon {
+            margin-bottom: 20px;
+        }
+        .sub {
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFFA6;
         }
     }
 }
