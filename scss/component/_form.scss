@@ -91,6 +91,20 @@ form {
                 background-color: var(--Gray);
             }
         }
+        &.style-5 {
+            padding:0 0 15px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #0000001A;
+            border-radius: 0;
+            color: var(--Title);
+            &::placeholder {
+                color: var(--Title);
+            }
+        }
     }
 
     input:-webkit-autofill {
@@ -128,6 +142,21 @@ form {
                 linear-gradient(180deg, #0E0E0E 0%, #0A0A0A 100%) padding-box,
                 linear-gradient(93.27deg, #DEFB02 1.25%, rgba(255, 255, 255, 0) 46.86%) border-box;
             }        
+        }
+        &.style-5 {
+            height: 127px;
+            padding: 0 0 15px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #0000001A;
+            border-radius: 0;
+            color: var(--Title);
+            &::placeholder {
+                color: var(--Title);
+            }
         }
     }
 
@@ -226,5 +255,29 @@ fieldset {
         right: 20px;
         font-size: 18px;
         display: flex;
+    }
+}
+
+.form-contact {
+    display: grid;
+    gap: 30px;
+    .text {
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--Paragraph);
+    }
+}
+
+.form-send-email {
+    display: flex;
+    gap: 10px;
+    max-width: 621px;
+    input {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        padding: 15px 19px !important;
+    }
+    .tf-btn {
+        padding: 16px 35px;
     }
 }

@@ -88,6 +88,13 @@
         background-color: var(--Neon);
         border-color: var(--Neon);
     }
+    &.style-2 {
+        &:hover {
+            background-color: var(--Black);
+            border-color: var(--Black);
+            color: var(--White);
+        }
+    }
 }
 
 

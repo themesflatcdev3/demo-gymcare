@@ -749,6 +749,15 @@
 
 @media (max-width: 1440px) {
 
+    .coming-soon-wrap {
+        .left {
+            width: 100%;
+        }
+        .right {
+            display: none;
+        }
+    }
+
     .portfolio-projects .projects-wrap {
         gap: 30px;
     }
@@ -1125,6 +1134,13 @@
 }
 
 @media (max-width: 1200px) {
+
+    .contact-form-wrap {
+        padding: 22px 15px;
+        .sub {
+            margin-bottom: 30px;
+        }
+    }
 
     .faqs-according-item {
         padding: 29px 39px;
@@ -1512,6 +1528,33 @@
 }
 
 @media (max-width: 991px) {
+
+    .coming-soon-wrap {
+        .left {
+            padding: 40px 20px;
+            .heading {
+                margin-bottom: 30px;
+                font-size: 60px;
+                line-height: 60px;
+            }
+        }
+    }
+
+    .section-contact .tf-marquee {
+        bottom: -44px;
+    }
+
+    .testimonials-item {
+        &.style-5 {
+            .desc {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            .bot {  
+                gap: 20px;
+            }
+        }
+    }
 
     .project-item .image {
         width: 160px;
@@ -2422,6 +2465,7 @@
         line-height: 35px;
     }
 
+    .h2,
     h2 {
         font-size: 27px !important;
         line-height: 35px !important;
@@ -2444,6 +2488,56 @@
 }
 
 @media (max-width: 767px) {
+
+    .tf-countdown-1 {
+        .countdown__timer {
+            gap: 30px;
+        }
+        .countdown__item {
+            width: 100px;
+            height: 100px;
+            .countdown__value {
+                font-size: 50px;
+                line-height: 50px;
+            }
+            .countdown__label {
+                font-size: 16px;
+                line-height: 26px;
+            }
+            &::after {
+                font-size: 50px !important;
+                line-height: 50px !important;
+                right: -23px !important;
+            }
+        }
+    }
+
+    .coming-soon-wrap {
+        .left {
+            .heading {
+                font-size: 40px;
+                line-height: 40px;
+                .text-flip::before {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .wrap-404 {
+        .image {
+            margin-bottom: 50px;
+        }
+    }
+
+    .section-contact .tf-marquee {
+        bottom: -12px;
+    }
+
+    .contact-content {
+        gap: 30px;
+    }
 
     .faqs-according-item {
         padding: 15px 22px;

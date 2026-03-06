@@ -36,11 +36,13 @@
     margin: 0 20px;
     .image {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
         object-fit: cover;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &::before {
         content: "";
@@ -825,7 +827,7 @@
         max-width: 660px;
         .list-btn {
             position: absolute;
-            bottom: 60px;
+            bottom: 70px;
             right: 70px;
             display: flex;
             gap: 10px;
@@ -1244,13 +1246,173 @@
     }
 }
 
+.contact-content {
+    display: grid;
+    gap: 50px;
+    padding-top: 30px;
+    .sub {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        color: #A9A9A9;
+        text-transform: uppercase;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.02em;
+        color: var(--Title);
+    }
+    .social-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: var(--Paragraph);
+        &:hover {
+            color: var(--Title);
+        }
+    }
+}
 
+.contact-form-wrap {
+    padding: 49px 69px;
+    background-color: var(--Gray);
+    border: 1px solid #00000012;
+    border-radius: 14px;
+    .heading {
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        color: var(--Title);
+    }
+    .sub {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 70px;
+    }
+}
 
+.section-contact {
+    position: relative;
+    .tf-marquee {
+        position: absolute;
+        bottom: -67px;
+        left: 0;
+        right: 0;
+    }
+}
 
+.wg-map {
+    display: flex;
+    border-radius: 14px;
+    overflow: hidden;
+}
 
+.wrap-404 {
+    text-align: center;
+    .image {
+        margin-bottom: 130px;
+    }
+    .heading {
+        text-transform: uppercase;
+        color: var(--Title);
+        margin-bottom: 15px;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+}
 
+.coming-soon-wrap {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    .left {
+        position: relative;
+        z-index: 1;
+        width: 64.9%;
+        padding: 70px 30px 70px 70px;
+        .logo {
+            margin-bottom: 70px;
+            img {
+                width: 220px;
+                height: 50px;
+            }
+        }
+        .sub {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: var(--Paragraph);
+        }
+        .heading {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 100px;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            color: var(--Title);
+            margin-bottom: 70px;
+            .text-flip {
+                color: var(--Neon);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 6px;
+                    left: -2px;
+                    right: -6px;
+                    bottom: 4px;
+                    background-color: var(--Black);
+                    border-radius: 10px;
+                }
 
-
+            }
+        }
+        .countdown {
+            margin-bottom: 70px;
+        }
+    }
+    .image1 {
+        position: absolute;
+        z-index: 2;
+        top: 34px;
+        right: 70px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .right {
+        position: relative;
+        background-color: var(--Neon);
+        width: 35.1%;
+        .image2 {
+            position: absolute;
+            z-index: 2;
+            top: 253px;
+            right: 140px;
+        }
+        .image3 {
+            position: absolute;
+            top: 69px;
+            right: -75px;
+            z-index: 1;
+            animation: rotated2 4s infinite linear;
+        }
+    }
+    .tf-marquee {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+}
 
 
 

@@ -1566,7 +1566,48 @@
     }
 }
 
-
+.tf-countdown-1 {
+    .countdown__timer {
+        display: flex;
+        gap: 130px;
+        align-items: center;
+    }
+    .countdown__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 170px;
+        height: 170px;
+        border-radius: 14px;
+        border: 1px solid #0000001A;
+        .countdown__value {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 104px;
+            color: var(--Title);
+        }
+        .countdown__label {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 29px;
+            color: var(--Paragraph);
+        }
+        &:nth-child(2),
+        &:nth-child(1) {
+            &::after {
+                position: absolute;
+                content: ':';
+                font-weight: 700;
+                font-size: 100px;
+                line-height: 100px;
+                color: var(--Title);
+                right: -78px;
+            }
+        }
+    }
+}
 
 
 
@@ -4102,7 +4143,7 @@
 }
 
 #loading {
-    background-color: var(--white);
+    background-color: var(--White);
     height: 100%;
     width: 100%;
     position: fixed;

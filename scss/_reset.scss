@@ -1021,6 +1021,16 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-6 {
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px #0000001A;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gray2 {
+    color: #11111112;
+}
+
 .px-20 {
     padding: 0 20px;
 }
