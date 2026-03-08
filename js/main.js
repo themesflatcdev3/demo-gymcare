@@ -1,34 +1,23 @@
 /**
- *
- * preloader
- * headerSticky
- * footer
- * changeValue
- * video
- * btnSearch
- * infiniteScroll
- * textRotate
- * counter
- * progresslevel
- * totalNumberVariant
- * deleteFile
- * datePicker
- * autoPopup
- * ajaxContactForm
- * handleSidebarFilter
- * checkPaymentCard
- * handleAccordionBorders
- * togglePassword
- * parallaxImage
- * goTop
- * preloader
+ * 
+ *  headerSticky
+ *  video
+ *  btnSearch
+ *  counter
+ *  progresslevel
+ *  circlesProgressLevel
+ *  handleAccordionBorders
+ *  parallaxImage
+ *  gotop
+ *  switchPrice
+ *  preloader
  *
  **/
 
 (function ($) {
     ("use strict");
 
-     var headerSticky = function () {
+    var headerSticky = function () {
         let lastScrollTop = 0;
         let delta = 5;
         let ticking = false;
@@ -76,59 +65,9 @@
         updateHeader();
     };
     
-    var footer = function () {
-        function checkScreenSize() {
-            if (window.matchMedia("(max-width: 550px)").matches) {
-                $(".tf-collapse-content").css("display", "none");
-            } else {
-                $(".footer-menu-list").siblings().removeClass("open");
-                $(".tf-collapse-content").css("display", "unset");
-            }
-        }
-        checkScreenSize();
-        window.addEventListener("resize", checkScreenSize);
-        var args = { duration: 250 };
-        $(".title-mobile").on("click", function () {
-            $(this).parent(".footer-col-block").toggleClass("open");
-            if (!$(this).parent(".footer-col-block").is(".open")) {
-                $(this).next().slideUp(args);
-            } else {
-                $(this).next().slideDown(args);
-            }
-        });
-    };
-
-    var changeValue = function () {
-        if ($(".tf-dropdown-sort").length > 0) {
-            $(".select-item").click(function (event) {
-                $(this)
-                    .closest(".tf-dropdown-sort")
-                    .find(".text-sort-value")
-                    .text($(this).find(".text-value-item").text());
-
-                $(this)
-                    .closest(".dropdown-menu")
-                    .find(".select-item.active")
-                    .removeClass("active");
-
-                $(this).addClass("active");
-
-                var color = $(this).data("value-color");
-                $(this)
-                    .closest(".tf-dropdown-sort")
-                    .find(".btn-select")
-                    .find(".current-color")
-                    .css("background", color);
-            });
-        }
-    };
-
     var video = function () {
-        if (
-            $("div").hasClass("wg-video") ||
-            $("div").hasClass("post-format-video")
-        ) {
-            $(".popup-youtube, .wg-curve-text-video").magnificPopup({
+        if ($(".wg-video").length) {
+            $(".popup-youtube").magnificPopup({
                 type: "iframe",
             });
         }
@@ -163,92 +102,6 @@
         });
     };
 
-    var infiniteScroll = function () {
-        if ($("body").hasClass("loadmore")) {
-            $(".fl-item").slice(0, 9).show();
-            $(".fl-item-1").slice(0, 6).show();
-            $(".fl-item-2").slice(0, 9).show();
-            $(".fl-item-3").slice(0, 9).show();
-            $(".fl-item-4").slice(0, 9).show();
-            $(".fl-item-5").slice(0, 12).show();
-            if ($(".scroll-loadmore").length > 0) {
-                $(window).scroll(function () {
-                    if (
-                        $(window).scrollTop() >=
-                        $(document).height() - $(window).height()
-                    ) {
-                        setTimeout(() => {
-                            $(".fl-item:hidden").slice(0, 4).show();
-                            if ($(".fl-item:hidden").length === 0) {
-                                $(".view-more-button").hide();
-                            }
-                        });
-                    }
-                });
-            }
-            if ($(".loadmore-item").length > 0) {
-                $(".btn-loadmore").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item:hidden").slice(0, 3).show();
-                        if ($(".fl-item:hidden").length === 0) {
-                            $(".view-more-button").hide();
-                        }
-                    }, 600);
-                });
-            }
-            if ($(".loadmore-item-1").length > 0) {
-                $(".btn-loadmore-1").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item-1:hidden").slice(0, 3).show();
-                        if ($(".fl-item-1:hidden").length === 0) {
-                            $(".view-more-button-1").hide();
-                        }
-                    }, 600);
-                });
-            }
-            if ($(".loadmore-item-2").length > 0) {
-                $(".btn-loadmore-2").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item-2:hidden").slice(0, 3).show();
-                        if ($(".fl-item-2:hidden").length === 0) {
-                            $(".view-more-button-2").hide();
-                        }
-                    }, 600);
-                });
-            }
-            if ($(".loadmore-item-3").length > 0) {
-                $(".btn-loadmore-3").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item-3:hidden").slice(0, 3).show();
-                        if ($(".fl-item-3:hidden").length === 0) {
-                            $(".view-more-button-3").hide();
-                        }
-                    }, 600);
-                });
-            }
-            if ($(".loadmore-item-4").length > 0) {
-                $(".btn-loadmore-4").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item-4:hidden").slice(0, 3).show();
-                        if ($(".fl-item-4:hidden").length === 0) {
-                            $(".view-more-button-4").hide();
-                        }
-                    }, 600);
-                });
-            }
-            if ($(".loadmore-item-5").length > 0) {
-                $(".btn-loadmore-5").on("click", function () {
-                    setTimeout(() => {
-                        $(".fl-item-5:hidden").slice(0, 3).show();
-                        if ($(".fl-item-5:hidden").length === 0) {
-                            $(".view-more-button-5").hide();
-                        }
-                    }, 600);
-                });
-            }
-        }
-    };
-
     var counter = function () {
         if ($(document.body).hasClass("counter-scroll")) {
             const observer = new IntersectionObserver(
@@ -278,7 +131,7 @@
     };
 
     var progresslevel = function () {
-        if ($("div").hasClass("progress-bars")) {
+        if ($(".progress-bars").length) {
             var bars = document.querySelectorAll(".progress-bars-line > div");
             setInterval(function () {
                 bars.forEach(function (bar) {
@@ -340,152 +193,6 @@
         });
     };
 
-    var totalNumberVariant = function () {
-        $(".tf-product-info-wrap,.tf-cart-item").each(function () {
-            var productItem = $(this);
-            var quantityInput = productItem.find(".quantity-product");
-            var quantityEl = productItem.find(".quantity-product-2");
-            var priceEl = productItem.find(".cart-price");
-            var totalEl = productItem.find(".cart-total");
-
-            var updateTotalPrice = function () {
-                var currentQuantity = parseInt(quantityInput.val(),10);
-                var price = parseFloat(priceEl.text().replace("$", ""));
-                var totalPrice = (currentQuantity * price).toFixed(2);
-                totalEl.text("$" + totalPrice);
-                console.log(totalPrice);
-            };
-
-            productItem.find(".btn-increase").on("click", function () {
-                var currentQuantity = parseInt(quantityInput.val(),10);
-                quantityInput.val(currentQuantity + 1);
-                quantityEl.val(currentQuantity + 1);
-                updateTotalPrice();
-            });
-
-            productItem.find(".btn-decrease").on("click", function () {
-                var currentQuantity = parseInt(quantityInput.val(),10);
-                if (currentQuantity > 1) {
-                    quantityInput.val(currentQuantity - 1);
-                    quantityEl.val(currentQuantity - 1);
-                    updateTotalPrice();
-                }
-            });
-        });
-    };
-
-    var deleteFile = function (e) {
-        $(".remove").on("click", function (e) {
-            e.preventDefault();
-            var $this = $(this);
-            $this.closest(".file-delete").remove();
-        });
-        $(".clear-file-delete").on("click", function (e) {
-            e.preventDefault();
-            $(this).closest(".list-file-delete").find(".file-delete").remove();
-        });
-    };
-
-    var datePicker = function () {
-        if ($("#datepicker").length > 0) {
-            $("#datepicker").datepicker({
-                firstDay: 1,
-                dateFormat: "dd/mm/yy",
-            });
-        }
-        if ($("#datepicker2").length > 0) {
-            $("#datepicker2").datepicker({
-                firstDay: 1,
-                dateFormat: "dd/mm/yy",
-            });
-        }
-        if ($("#datepicker3").length > 0) {
-            $("#datepicker3").datepicker({
-                firstDay: 1,
-                dateFormat: "dd/mm/yy",
-            });
-        }
-    };
-
-    var ajaxContactForm = function () {
-        $("#contactform,#commentform").each(function () {
-            $(this).validate({
-                submitHandler: function (form) {
-                    var $form = $(form),
-                        str = $form.serialize(),
-                        loading = $("<div />", { class: "loading" });
-
-                    $.ajax({
-                        type: "POST",
-                        url: $form.attr("action"),
-                        data: str,
-                        beforeSend: function () {
-                            $form.find(".send-wrap").append(loading);
-                        },
-                        success: function (msg) {
-                            var result, cls;
-                            if (msg === "Success") {
-                                result = "Message Sent Successfully To Email Administrator";
-                                cls = "msg-success";
-                            } else {
-                                result = "Error sending email.";
-                                cls = "msg-error";
-                            }
-
-                            $form.prepend(
-                                $("<div />", {
-                                    class: "flat-alert mb-20 " + cls,
-                                    text: result,
-                                }).append(
-                                    $(
-                                        '<a class="close mt-0" href="#"><i class="fa fa-close"></i></a>'
-                                    )
-                                )
-                            );
-
-                            $form.find(":input").not(".submit").val("");
-                        },
-                        complete: function (xhr, status, error_thrown) {
-                            $form.find(".loading").remove();
-                        },
-                    });
-                },
-            });
-        });
-    };
-
-    var handleSidebarFilter = function () {
-        $("#filterShop,.sidebar-btn").on("click", function () {
-            if ($(window).width() <= 1200) {
-                $(".sidebar-filter,.overlay-filter").addClass("show");
-            }
-        });
-        $(".close-filter,.overlay-filter").on("click", function () {
-            $(".sidebar-filter,.overlay-filter").removeClass("show");
-        });
-    };
-
-    var checkPaymentCard = function () {
-        $(".payment-box").on(
-            "click",
-            ".payment-choose-card .payment-header",
-            function (event) {
-                var paymentItem = $(this).closest(".payment-choose-card");
-                $(".payment-box .payment-choose-card")
-                    .not(paymentItem)
-                    .removeClass("active");
-                paymentItem.toggleClass("active");
-            }
-        );
-        $(".payment-box").on("show.bs.collapse", function (e) {
-            $(e.target).closest(".payment-choose-card").addClass("active");
-        });
-
-        $(".payment-box").on("hide.bs.collapse", function (e) {
-            $(e.target).closest(".payment-choose-card").removeClass("active");
-        });
-    };
-
     var handleAccordionBorders = function () {
         if (document.querySelector(".according-active")) {
             var accordions = document.querySelectorAll(".according-active .collapse");
@@ -513,22 +220,6 @@
                 collapseEl.addEventListener("hide.bs.collapse", removeActiveBorder);
             });
         }
-    };
-
-    var togglePassword = function () {
-        $(".form-has-password")
-            .find(".toggle-password")
-            .on("click", function () {
-                const $passwordInput = $(this)
-                    .closest(".password-item")
-                    .find(".input-password");
-                const type =
-                    $passwordInput.attr("type") === "password"
-                        ? "text"
-                        : "password";
-                $passwordInput.attr("type", type);
-                $(this).toggleClass("unshow");
-            });
     };
 
     var parallaxImage = function () {
@@ -616,22 +307,12 @@
     // Dom Ready
     $(function () {
         headerSticky();
-        footer();
-        changeValue();
         video();
         btnSearch();
-        infiniteScroll();
         counter();
         progresslevel();
         circlesProgressLevel();
-        totalNumberVariant();
-        deleteFile();
-        datePicker();
-        ajaxContactForm();
-        handleSidebarFilter();
-        checkPaymentCard();
         handleAccordionBorders();
-        togglePassword();
         parallaxImage();
         gotop();
         switchPrice();
