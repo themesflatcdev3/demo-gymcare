@@ -845,11 +845,12 @@
     display: grid;
     gap: 20px;
     .image {
+        border-radius: 14px;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 14px;
         }
     }
 }

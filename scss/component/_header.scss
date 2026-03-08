@@ -653,19 +653,9 @@
     }
 }
 
-
-.current-item {
-    background-color: var(--red) !important;
-
-    >a {
-        color: var(--white) !important;
-    }
-}
-
-
 .current-menu-mobile-item {
     >a {
-        color: var(--red) !important;
+        text-decoration: underline;
     }
 }
 
