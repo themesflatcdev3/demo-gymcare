@@ -12,7 +12,7 @@
                 $el.wordSplit = new SplitText($el, { type: "words", wordsClass: "word-wrapper" });
                 $el.charSplit = new SplitText($el.wordSplit.words, { type: "chars", charsClass: "char-wrapper" });
 
-                gsap.set($el.charSplit.chars, { color: "#646464" });
+                gsap.set($el.charSplit.chars, { color: "#F6F6F6" });
 
                 gsap.to($el.charSplit.chars, {
                     color: "#111111",

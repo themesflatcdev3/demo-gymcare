@@ -33,16 +33,10 @@
 
             if (st > navbarHeight + 100) {
                 a(".header-sticky").addClass("header-bg");
-                if (st > lastScrollTop + delta) {
-                    a(".header-sticky").css({
-                        transform: "translateY(-110%)",
-                        top: adminBarHeight,
-                    });
-                } else if (st < lastScrollTop - delta) {
-                    a(".header-sticky").css({
-                        transform: "translateY(0%)",
-                    });
-                }
+                a(".header-sticky").css({
+                    transform: "translateY(0%)",
+                    top: adminBarHeight,
+                });
             } else {
                 a(".header-sticky").removeClass("header-bg");
                 a(".header-sticky").css({
@@ -73,7 +67,7 @@
         }
     };
 
-    var btnSearch = function () {
+    var btn = function () {
         $(document).on("click", function (e) {
             if (!$(e.target).closest(".search-btn, .form-search").length) {
                 $(".top-search, .search-btn").removeClass("active");
@@ -99,6 +93,40 @@
         $(".button-close").on("click", function () {
             $(".top-search, .search-btn").removeClass("active");
             $("body").removeClass("no-scroll");
+        });
+
+        $(".item-check").on("click", function () {
+            $(this).closest(".list-checks").find(".active").removeClass("active");
+            $(this).addClass("active");
+        });
+
+    };
+    
+    var change_image = () => {
+        $('.trainer-item').on('mouseenter', function(){
+            if(!$(this).hasClass('active-img')) {
+                $('.trainer-item').removeClass('active-img');
+                $(this).addClass('active-img');
+    
+                const newImg = $(this).data('img');
+                $('.trainer-image').find('img').css('opacity', 0);
+                setTimeout(() => {
+                  $('.trainer-image').find('img').attr('src', newImg).css('opacity', 1);
+                }, 200);
+            }
+        });
+        
+        $('.programs-item').on('click', function(){
+            if(!$(this).hasClass('active-img')) {
+                $('.programs-item').removeClass('active-img');
+                $(this).addClass('active-img');
+    
+                const newImg = $(this).data('img');
+                $('.programs-image').find('img').css('opacity', 0);
+                setTimeout(() => {
+                  $('.programs-image').find('img').attr('src', newImg).css('opacity', 1);
+                }, 200);
+            }
         });
     };
 
@@ -308,7 +336,8 @@
     $(function () {
         headerSticky();
         video();
-        btnSearch();
+        btn();
+        change_image();
         counter();
         progresslevel();
         circlesProgressLevel();

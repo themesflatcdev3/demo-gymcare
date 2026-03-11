@@ -48,6 +48,10 @@
     
         .menu-item {
             cursor: pointer;
+
+            a:hover {
+                color: var(--Title);
+            }
     
             &:not(.menu-item-has-children) {
                 padding-right: 0;
@@ -457,10 +461,6 @@
             @include d-flex();
             align-items: center;
             justify-content: space-between;
-        }
-
-        a {
-            color: var(--on-suface-container);
         }
 
     }

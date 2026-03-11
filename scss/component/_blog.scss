@@ -1,8 +1,8 @@
 .date {
-    @include flex(center, center);
+    @include flex(start, center);
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 20px 15px;
+    padding: 16px 20px 15px;
     width: 85px;
     height: 91px;
     font-weight: 700;
@@ -14,6 +14,7 @@
     @include transition3();
     .month {
         font-size: 20px;
+        line-height: 26px;
     }
 }
 
@@ -588,7 +589,7 @@ form.form-search-siderbar {
         height: 40px;
         font-size: 18px;
         color: var(--Paragraph);
-        border-radius: 50%;
+        border-radius: 7px;
         border: 1px solid #0000001A;
         &:hover {
             color: var(--White);

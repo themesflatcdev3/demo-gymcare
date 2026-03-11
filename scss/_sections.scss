@@ -159,11 +159,12 @@
         position: absolute;
         inset: 0;
         z-index: 1;
+        border-radius: 14px;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 14px;
         }
     }
     .text-bg {
@@ -242,7 +243,7 @@
             }
             .year {
                 display: flex;
-                gap: 28px;
+                gap: 70px;
                 align-items: center;
                 margin-left: -29px;
                 margin-bottom: 5px;
@@ -595,9 +596,10 @@
         position: relative;
         border-radius: 14px;
         overflow: hidden;
+        height: 100%;
         &::before {
             position: absolute;
-            inset: 0;
+            inset: -4px;
             content: '';
             background: linear-gradient(180deg, rgba(222, 251, 2, 0) 50%, #DEFB02 85%);
             z-index: 1;
@@ -629,10 +631,13 @@
             letter-spacing: -0.045em;
             text-transform: uppercase;
         }
-        img {
-            width: 100%;
+        .image {
             height: 100%;
-            object-fit: cover;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
@@ -711,7 +716,7 @@
     }
     .tf-marquee {
         margin-top: -66px;
-        margin-bottom: 91px;
+        margin-bottom: 42px;
     }
 }
 
@@ -755,6 +760,17 @@
         bottom: 0;
         right: 35px;
         z-index: -1;
+        .img-1 {
+            position: relative;
+            z-index: 3;
+        }
+        .img-2 {
+            position: absolute;
+            top: 107px;
+            left: 33px;
+            animation: rotated2 6s infinite linear;
+            z-index: 2;
+        }
     }
 }
 
@@ -784,6 +800,7 @@
     .table-bmi {
         background-color: var(--Gray);
         border-radius: 10px;
+        overflow: hidden;
         td {
             padding: 21px;
             text-align: center;
@@ -1414,5 +1431,15 @@
         left: 0;
         right: 0;
         z-index: 0;
+    }
+}
+
+.section-programs {
+    .image-left .image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

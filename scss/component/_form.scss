@@ -63,12 +63,17 @@ form {
             padding: 15px 19px;
             font-size: 16px;
             line-height: 20px;
+            font-weight: 500;
             border: 1px solid #FFFFFF1A;
             background: linear-gradient(180deg, rgba(159, 159, 159, 0.09) 0%, rgba(118, 118, 118, 0.08) 100%);
             backdrop-filter: blur(30px);
             color: var(--White);
+            letter-spacing: -0.02em;
             &::placeholder {
                 color: var(--White);
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 500;
             }
             &:hover {
                 background:
@@ -164,7 +169,7 @@ form {
     input[type="time"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.25);
     }
 
     button,

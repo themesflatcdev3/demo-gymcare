@@ -3,7 +3,7 @@
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    padding: 16px 35px;
+    padding: 15px 34px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -11,6 +11,7 @@
     border-radius: 10px;
     color: var(--Black);
     background-color: var(--Neon);
+    border: 1px solid  var(--Neon);
     position: relative;
     @include transition3();
 
@@ -22,6 +23,7 @@
     &.style-black {
         color: var(--White);
         background-color: var(--Black);
+        border-color: var(--Black);
         &:hover {
             background-color: var(--Neon);
             color: var(--Black);
@@ -41,7 +43,7 @@
     }
 
     &.style-sm {
-        padding: 11px 23px;
+        padding: 10px 22px;
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
@@ -114,15 +116,22 @@
     .icon {
         font-size: 18px;
     }
+    &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        bottom: 0;
+        width: 0;
+        right: 0;
+        left: auto;
+        background-color: currentColor;
+        @include transition3;
+    }
     &:hover {
         &::after {
-            position: absolute;
-            content: '';
-            height: 1px;
-            bottom: 0;
+            width: 100%;
             left: 0;
-            right: 0;
-            background-color: currentColor;
+            right: auto;
         }
     }
 }
