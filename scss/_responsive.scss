@@ -554,6 +554,11 @@
 }
 
 @media (min-width: 1440px) {
+
+    .min-xxl--ml-20 {
+        margin-left: -20px;
+    }
+
     .footer .footer-cols .list-menu > *:first-child {
         width: 199px;
     }
@@ -897,25 +902,29 @@
         }
     }
 
-    .pricing-item.style-2  {
-        .left {
-            padding: 24px 24px;
-        }
-        .right {
-            padding: 24px 24px;
-        }
-    }
-
     .provide-item  {
         padding: 28px 15px;
         border-radius: 14px;
         .title {
             margin-bottom: 70px;
         }
-        &.style-2 .content {
-            padding: 75px 20px 30px;
-            .icon {
-                left: 20px;
+        &.style-2  {
+            .left {
+                padding: 24px 24px;
+            }
+            .right {
+                padding: 24px 24px;
+            }
+            .content {
+                padding: 75px 20px 30px;
+                .icon {
+                    left: 20px;
+                }
+            }
+        }
+        &.style-3 {
+            .image {
+                border-radius: 14px;
             }
         }
     }
@@ -1586,7 +1595,7 @@
     }
 
     .section-contact .tf-marquee {
-        bottom: -44px;
+        position: unset;
     }
 
     .testimonials-item {
@@ -2905,6 +2914,11 @@
         }
         .image {
             height: unset !important;
+        }
+        &.style-2 {
+            .heading {
+                align-items: center;
+            }
         }
     }
 

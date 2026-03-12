@@ -256,7 +256,7 @@
                 new SimpleParallax(this, {
                     delay: 0.6,
                     orientation: "up",
-                    scale: 1.3,
+                    scale: 1.17,
                     transition: "cubic-bezier(0,0,0,1)",
                     customContainer: "",
                     customWrapper: "",

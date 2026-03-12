@@ -1017,7 +1017,7 @@ a:hover, a:focus {
 
 .tf-grid-layout {
   display: grid;
-  gap: 70px 30px;
+  gap: 60px 30px;
 }
 
 .text-gradient-1 {
@@ -1084,6 +1084,13 @@ a:hover, a:focus {
 
 .line-bot {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 100px;
 }
 
 /*------------ Components ---------------- */
@@ -3473,7 +3480,7 @@ form.form-search-siderbar .tf-btn-search i {
 }
 
 .grid-blog .tf-grid-layout {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .blog-details-content {
@@ -5282,6 +5289,9 @@ form.form-search-siderbar .tf-btn-search i {
   background: var(--White);
   backdrop-filter: blur(0px);
 }
+.provide-item.style-3 .image {
+  border-radius: 82px;
+}
 .provide-item.style-3 .title {
   color: var(--Title);
 }
@@ -6036,7 +6046,7 @@ form.form-search-siderbar .tf-btn-search i {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  padding: 11px 33px;
+  padding: 11px 23px;
   border: 1px solid rgba(0, 0, 0, 0.1019607843);
   opacity: 0;
   visibility: hidden;
@@ -7328,9 +7338,8 @@ form.form-search-siderbar .tf-btn-search i {
   border-radius: 10px;
   margin-bottom: 30px;
 }
-.services-box .icon svg path {
-  fill: var(--Title);
-  stroke: var(--White);
+.services-box .icon.active {
+  background-color: var(--Neon);
 }
 .services-box .title {
   color: var(--Title);
@@ -7339,12 +7348,6 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .services-box.has-pl {
   padding-left: 100px;
-}
-.services-box:hover .icon {
-  background-color: var(--Neon);
-}
-.services-box:hover .icon svg path {
-  stroke: var(--Title);
 }
 
 .portfolio-overview .wrap-image {
@@ -7374,6 +7377,7 @@ form.form-search-siderbar .tf-btn-search i {
 .portfolio-challenges .desc .list-text {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 100px;
+  gap: 10px;
 }
 .portfolio-challenges .desc .list-text .text-item {
   font-size: 18px;
@@ -7405,7 +7409,7 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .portfolio-projects .projects-wrap {
   display: flex;
-  gap: 125px;
+  gap: 128px;
 }
 
 .contact-content {
@@ -7572,7 +7576,7 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .coming-soon-wrap .tf-marquee {
   position: absolute;
-  bottom: 0;
+  bottom: -25px;
   left: 0;
   right: 0;
   z-index: 0;
@@ -7894,6 +7898,9 @@ form.form-search-siderbar .tf-btn-search i {
   }
 }
 @media (min-width: 1440px) {
+  .min-xxl--ml-20 {
+    margin-left: -20px;
+  }
   .footer .footer-cols .list-menu > *:first-child {
     width: 199px;
   }
@@ -8120,12 +8127,6 @@ form.form-search-siderbar .tf-btn-search i {
   .testimonials-item.style-4, .testimonials-item.style-5, .testimonials-item.style-6 {
     padding: 24px;
   }
-  .pricing-item.style-2 .left {
-    padding: 24px 24px;
-  }
-  .pricing-item.style-2 .right {
-    padding: 24px 24px;
-  }
   .provide-item {
     padding: 28px 15px;
     border-radius: 14px;
@@ -8133,11 +8134,20 @@ form.form-search-siderbar .tf-btn-search i {
   .provide-item .title {
     margin-bottom: 70px;
   }
+  .provide-item.style-2 .left {
+    padding: 24px 24px;
+  }
+  .provide-item.style-2 .right {
+    padding: 24px 24px;
+  }
   .provide-item.style-2 .content {
     padding: 75px 20px 30px;
   }
   .provide-item.style-2 .content .icon {
     left: 20px;
+  }
+  .provide-item.style-3 .image {
+    border-radius: 14px;
   }
   .section-about-gym .right .text {
     left: 20px;
@@ -8597,7 +8607,7 @@ form.form-search-siderbar .tf-btn-search i {
     line-height: 60px;
   }
   .section-contact .tf-marquee {
-    bottom: -44px;
+    position: unset;
   }
   .testimonials-item.style-5 .desc {
     font-size: 20px;
@@ -9513,6 +9523,9 @@ form.form-search-siderbar .tf-btn-search i {
   }
   .training-item .image {
     height: unset !important;
+  }
+  .training-item.style-2 .heading {
+    align-items: center;
   }
   .heading-section .title {
     margin-bottom: 15px;

@@ -938,7 +938,9 @@
             background: var(--White);
             backdrop-filter: blur(0px);
         }
-       
+        .image {
+            border-radius: 82px;
+        }
         .title {
             color: var(--Title);
         }
@@ -1685,7 +1687,7 @@
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
-        padding: 11px 33px;
+        padding: 11px 23px;
         border: 1px solid #0000001A;
         opacity: 0;
         visibility: hidden;

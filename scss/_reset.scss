@@ -988,7 +988,7 @@ a {
 
 .tf-grid-layout {
     display: grid;
-    gap: 70px 30px;
+    gap: 60px 30px;
 }
 
 .text-gradient-1 {
@@ -1055,4 +1055,11 @@ a {
 
 .line-bot {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 100px;
 }

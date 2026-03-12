@@ -1172,9 +1172,8 @@
         background-color: var(--Black);
         border-radius: 10px;
         margin-bottom: 30px;
-        svg path {
-            fill: var(--Title);
-            stroke: var(--White);
+        &.active {
+            background-color: var(--Neon);
         }
     }
     .title {
@@ -1185,14 +1184,7 @@
     &.has-pl {
         padding-left: 100px;
     }
-    &:hover {
-        .icon {
-            background-color: var(--Neon);
-            svg path {
-                stroke: var(--Title);
-            }
-        }
-    }
+   
 }
 
 .portfolio-overview {
@@ -1227,6 +1219,7 @@
         .list-text {
             grid-template-columns: 1fr 1fr;
             margin-bottom: 100px;
+            gap: 10px;
             .text-item {
                 font-size: 18px;
                 font-weight: 500;
@@ -1259,7 +1252,7 @@
     }
     .projects-wrap {
         display: flex;
-        gap: 125px;
+        gap: 128px;
     }
 }
 
@@ -1427,7 +1420,7 @@
     }
     .tf-marquee {
         position: absolute;
-        bottom: 0;
+        bottom: -25px;
         left: 0;
         right: 0;
         z-index: 0;
