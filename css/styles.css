@@ -1737,7 +1737,7 @@ a:hover, a:focus {
   background-color: var(--Black);
 }
 .footer .footer-inner {
-  padding: 120px 15px 97px;
+  padding: 120px 0 97px;
 }
 .footer .footer-inner .logo-footer {
   margin-left: -178px;
@@ -2705,9 +2705,13 @@ fieldset {
 .has-icon-after .icon {
   position: absolute;
   top: 17px;
-  right: 20px;
+  right: 22px;
   font-size: 18px;
   display: flex;
+}
+.has-icon-after .icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .form-contact {
@@ -4580,12 +4584,12 @@ form.form-search-siderbar .tf-btn-search i {
   border-radius: 14px;
 }
 .training-item .content {
-  display: none;
   opacity: 0;
   visibility: hidden;
   padding-top: 17px;
   padding-right: 20px;
   width: 331px;
+  min-width: 331px;
   height: 100%;
   margin-left: -331px;
   -webkit-transition: all 0.3s ease;
@@ -4628,7 +4632,6 @@ form.form-search-siderbar .tf-btn-search i {
   height: 270px;
 }
 .training-item.active .content {
-  display: block;
   margin-left: 0;
   opacity: 1;
   visibility: visible;
@@ -5184,6 +5187,7 @@ form.form-search-siderbar .tf-btn-search i {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 80px;
   overflow: hidden;
+  height: 100%;
 }
 .provide-item .image {
   position: absolute;
@@ -5253,6 +5257,7 @@ form.form-search-siderbar .tf-btn-search i {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 90px 49px 39px;
   overflow: unset;
+  height: 100%;
 }
 .provide-item.style-2 .content .icon {
   position: absolute;
@@ -7548,7 +7553,7 @@ form.form-search-siderbar .tf-btn-search i {
 .coming-soon-wrap .image1 {
   position: absolute;
   z-index: 2;
-  top: 34px;
+  bottom: 0;
   right: 70px;
 }
 .coming-soon-wrap .image1 img {
@@ -8763,6 +8768,7 @@ form.form-search-siderbar .tf-btn-search i {
     opacity: 1;
     visibility: visible;
     padding: 0;
+    min-width: unset;
   }
   .training-item .content .list-text {
     margin-bottom: 20px;
@@ -8859,7 +8865,7 @@ form.form-search-siderbar .tf-btn-search i {
     gap: 0 15px;
   }
   .footer .footer-inner {
-    padding: 50px 15px;
+    padding: 50px 0;
   }
   .footer .bottom {
     flex-direction: column;
@@ -9244,6 +9250,10 @@ form.form-search-siderbar .tf-btn-search i {
   }
 }
 @media (max-width: 767px) {
+  .section-about-gym .left .text {
+    font-size: 20px;
+    line-height: 30px;
+  }
   .md-box-shadow {
     box-shadow: 10px 4px 60px 0px rgba(153, 153, 153, 0.2509803922);
   }
@@ -9439,8 +9449,17 @@ form.form-search-siderbar .tf-btn-search i {
   .md-mb-30 {
     margin-bottom: 30px;
   }
-  .provide-item {
-    margin-bottom: 30px;
+  .section-provide-2 .tf-marquee {
+    margin-top: -37px;
+  }
+  .section-testimonial-2 .top {
+    margin-bottom: 40px;
+  }
+  .section-testimonial-2 .top > *:first-child {
+    margin-top: -33px;
+  }
+  .section-testimonial-2 .top > *:last-child {
+    margin-top: 5px;
   }
   .section-about-gym .left {
     margin-bottom: 30px;
@@ -9764,30 +9783,12 @@ form.form-search-siderbar .tf-btn-search i {
   .footer .footer-contact .infor {
     margin-bottom: 30px;
   }
-  .footer .form-newsletter fieldset {
-    flex-wrap: wrap;
-  }
-  .footer .form-newsletter input {
-    max-width: 100%;
-  }
-  .footer .middle {
-    flex-wrap: wrap;
-    row-gap: 30px;
-  }
-  .footer .middle .footer-about {
-    flex: 1 1 auto;
-    max-width: 100%;
-  }
-  .footer .middle .footer-content {
-    padding-top: 0;
-    flex: 1 1 auto;
-    max-width: 50%;
-  }
-  .footer .bottom {
-    align-items: center;
-    text-align: center;
+  .footer .footer-cols {
     flex-direction: column;
-    row-gap: 10px;
+  }
+  .footer .form-newsletter,
+  .footer .footer-newsletter .text {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 550px) {

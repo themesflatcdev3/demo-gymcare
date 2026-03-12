@@ -1790,6 +1790,7 @@
             opacity: 1;
             visibility: visible;
             padding: 0;
+            min-width: unset;
             .list-text {
                 margin-bottom: 20px;
             }
@@ -1905,7 +1906,7 @@
             gap: 0 15px;
         }
         .footer-inner {
-            padding: 50px 15px;
+            padding: 50px 0;
         }
         .bottom {
             flex-direction: column;
@@ -2559,6 +2560,11 @@
 
 @media (max-width: 767px) {
 
+    .section-about-gym .left .text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
     .md-box-shadow {
         box-shadow: 10px 4px 60px 0px #99999940;
     }
@@ -2807,8 +2813,20 @@
         margin-bottom: 30px;
     }
 
-    .provide-item {
-        margin-bottom: 30px;
+    .section-provide-2 .tf-marquee {
+        margin-top: -37px;
+    }
+
+    .section-testimonial-2 {
+        .top {
+            margin-bottom: 40px;
+            > *:first-child {
+                margin-top: -33px;
+            }
+            > *:last-child {
+                margin-top: 5px;
+            }
+        }
     }
 
     .section-about-gym .left {
@@ -3269,37 +3287,12 @@
                 margin-bottom: 30px;
             }
         }
-        .form-newsletter {
-            fieldset {
-                flex-wrap: wrap;
-            }
-
-            input {
-                max-width: 100%;
-            }
-        }
-
-        .middle {
-            flex-wrap: wrap;
-            row-gap: 30px;
-
-            .footer-about {
-                flex: 1 1 auto;
-                max-width: 100%;
-            }
-
-            .footer-content {
-                padding-top: 0;
-                flex: 1 1 auto;
-                max-width: 50%;
-            }
-        }
-
-        .bottom {
-            align-items: center;
-            text-align: center;
+        .footer-cols {
             flex-direction: column;
-            row-gap: 10px;
+        }
+        .form-newsletter,
+        .footer-newsletter .text {
+            margin-bottom: 30px;
         }
     }
 }
