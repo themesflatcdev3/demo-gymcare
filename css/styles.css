@@ -5197,7 +5197,6 @@ form.form-search-siderbar .tf-btn-search i {
   border-color: rgba(0, 0, 0, 0.1019607843);
 }
 .provide-item.style-3:hover svg path {
-  stroke: var(--Neon);
   fill: var(--Neon);
 }
 .provide-item.style-3:hover::before {
@@ -7429,7 +7428,7 @@ form.form-search-siderbar .tf-btn-search i {
 }
 .coming-soon-wrap .image1 {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   bottom: 0;
   right: 70px;
 }
