@@ -352,63 +352,6 @@ form.form-search-siderbar {
             text-transform: uppercase;
         }
     }
-
-    &.small-2 {
-        gap: 10px;
-
-        .image {
-            max-width: 45.24%;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .post-content {
-            max-width: calc(100% - 45.24% - 10px);
-            width: 100%;
-            padding: 25px 30px 22px 30px;
-            background-color: var(--gray-light);
-            border-radius: 10px;
-        }
-
-        h5 {
-            padding-bottom: 20px;
-        }
-
-        .name-post {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .post-metas {
-            padding-top: 18px;
-            padding-bottom: 0;
-            gap: 0 25px;
-            border-top: 1px solid var(--border-7);
-            flex-wrap: wrap;
-        }
-
-        .metas-item {
-            padding-right: 30px;
-
-            &::before {
-                background: rgba(12, 23, 26, 0.2);
-            }
-
-            &:last-child {
-                padding-right: 0;
-
-                &::before {
-                    display: none;
-                }
-            }
-
-            a {
-                color: var(--color-paragraph);
-            }
-        }
-    }
 }
 
 .sidebar-recent-posts {

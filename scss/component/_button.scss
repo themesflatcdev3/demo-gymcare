@@ -76,35 +76,6 @@
     }
 }
 
-.btn-arrow-details {
-    @include d-flex();
-    align-items: center;
-    gap: 30px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid var(--border);
-
-    .icon {
-        width: 50px;
-        height: 50px;
-        border: 1px solid var(--border);
-        @include flex(center, center);
-        border-radius: 50%;
-
-        i {
-            color: var(--red);
-        }
-    }
-
-    .text {
-        max-width: 215px;
-    }
-
-    &.next-details {
-        flex-direction: row-reverse;
-        text-align: end;
-    }
-}
-
 .tf-btn-default {
     position: relative;
     display: inline-flex;
